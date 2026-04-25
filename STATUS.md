@@ -18,11 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-001B
+ID: RIC-001C
 
-Title: Align README with canonical governance controls
+Title: Add Git push discipline to agent governance
 
-Evidence: README reviewed as coherent with canonical governance files. Trigger approved final review and commit for RIC-001B.
+Evidence: Git Push Discipline reviewed in `AGENTS.md` and `docs/ops/boot-rules.md`; Trigger approved formal DONE closure and commit for RIC-001C.
 
 ## Blocked Items
 

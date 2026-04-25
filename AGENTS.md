@@ -39,6 +39,39 @@ The framework must remain stack-agnostic unless the Trigger approves a specific 
 Each commit must represent one coherent task only.
 Do not mix documentation foundation, tooling, automation, design, and implementation in the same commit.
 
+Git Push Discipline:
+A task is not fully recoverable until its final commit has been pushed to the remote repository.
+
+Commit rule:
+- Create a commit when one coherent task or slice is completed and validated.
+- Use one commit for one small documentation task closed as DONE.
+- Use one commit for one functional task closed as DONE.
+- Use one commit for one validated bug fix.
+- Do not mix unrelated scopes in the same commit.
+
+Push rule:
+- Push only after Trigger approval.
+- Push when the working tree is clean and there are 1 to 3 good local commits ready.
+- Push before pausing the workday, changing agent/session/machine/context, external validation, or deploy.
+- Push after an important functional task or critical documentation/governance update.
+
+Do not push when:
+- The working tree is dirty.
+- A task is half-implemented.
+- Required validation was not executed.
+- Unrelated files were changed accidentally.
+- Secrets or real credentials may be present.
+- The current state is broken and not intentionally documented as blocked.
+
+Required checks before push:
+- Run `git status`.
+- Run `git log --oneline -5`.
+- Confirm the commits belong to the approved scope.
+
+DONE states:
+- Local DONE means the task is complete, validated, committed, and documented locally.
+- Remote DONE means Local DONE plus the final commit has been pushed to the remote repository.
+
 7. No real secrets.
 Never write real tokens, credentials, API keys, passwords, private URLs, or production secrets into the repository.
 
