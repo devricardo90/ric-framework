@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Add strict agent governance rules and crash recovery controls to the RIC Framework repository.
+Await the Trigger's next approved task after formal closure of RIC-001A.
 
 ## Active Task
 
@@ -10,15 +10,15 @@ ID: RIC-001A
 
 Title: Add Agent Governance and Recovery Control
 
-Status: In Progress
+Status: DONE
 
 ## Last Completed Action
 
-Created `STATUS.md`, `backlog.md`, `docs/ops/execution-log.md`, and `docs/ops/decisions.md`; updated recovery state for RIC-001A.
+The Trigger approved formal closure of RIC-001A as DONE.
 
 ## Current State
 
-The repository has the initial RIC Framework documentation committed. RIC-001A is active and authorized by the Trigger. Governance and recovery control files are being prepared for validation and commit.
+RIC-001A is formally closed as DONE by Trigger approval. The repository has agent governance and recovery controls committed in `b297a2e docs: add agent governance and recovery controls`. The next recommended candidate is aligning `README.md` with the canonical governance and recovery control files.
 
 ## Files Changed
 
@@ -42,6 +42,7 @@ The repository has the initial RIC Framework documentation committed. RIC-001A i
 - `Get-Content AGENTS.md`
 - `Get-Content docs\ops\boot-rules.md`
 - `git status --short`
+- `git status`
 
 ## Validation Result
 
@@ -50,9 +51,14 @@ Pre-commit validation:
 - `git status` showed untracked files limited to `AGENTS.md`, `STATUS.md`, `backlog.md`, and `docs/ops/`.
 - `rg --files` listed no `package.json`, backend application, frontend application, CLI, dependency manifest, or automation script added by RIC-001A.
 
+Known closure evidence:
+
+- Commit: `b297a2e docs: add agent governance and recovery controls`.
+- Post-commit `git status`: clean / `nothing to commit`.
+
 ## Pending Decisions for the Trigger
 
-- Trigger closure decision after validation and commit.
+- None for RIC-001A.
 
 ## Blockers
 
@@ -61,12 +67,12 @@ Pre-commit validation:
 ## Next 3 Steps
 
 1. Run `git status`.
-2. Commit the approved RIC-001A scope with `docs: add agent governance and recovery controls`.
-3. Run `git status` again and report the result to the Trigger.
+2. Wait for Trigger approval before opening the README alignment candidate as READY.
+3. If approved, update README to reference `AGENTS.md`, `STATUS.md`, `backlog.md`, and `docs/ops/` recovery controls.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not mark RIC-001A as DONE without Trigger closure.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not promote the README alignment candidate to READY without Trigger approval.
 
 ## Resume Instruction for Next Agent
 
