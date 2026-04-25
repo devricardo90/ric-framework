@@ -44,22 +44,37 @@ RIC Framework organizes work through six lifecycle stages.
 
 RIC Framework relies on a small set of living documents. Each one has a job.
 
-- Backlog: tracks proposed, active, blocked, and completed work.
-- Status: shows the current project state, active task, blockers, owner, and next action.
-- Decisions: records meaningful technical, product, and process decisions with rationale.
-- Evidence: captures validation output, test results, screenshots, deployment checks, logs, and review notes.
+- `AGENTS.md`: defines agent governance, Trigger authority, allowed actions, forbidden actions, and session rules.
+- `STATUS.md`: shows the canonical project state, active task, last completed task, blockers, and next recommended action.
+- `backlog.md`: tracks proposed, recommended, active, blocked, and completed work under Trigger control.
+- `docs/ops/boot-rules.md`: defines the required startup reading order before execution.
+- `docs/ops/session-handoff.md`: preserves recovery context when a session, notebook, IDE, or agent process stops.
+- `docs/ops/execution-log.md`: records chronological execution evidence and task history.
+- `docs/ops/decisions.md`: records approved decisions only.
 - Version matrix: maps versions, environments, commits, releases, migrations, and validation state.
-- Session handoff: gives the next contributor enough context to resume without re-discovery.
 
 ## Recommended Agent Model
 
-RIC Framework recommends a controlled three-agent model for most projects.
+RIC Framework recommends a governed agent model for most projects.
 
+- Trigger: the only authority allowed to approve decisions, change direction, open new scope, promote tasks to READY, mark tasks as DONE, or authorize commits.
 - Orchestrator: owns planning, sequencing, task boundaries, status discipline, and handoff quality.
 - Executor: implements scoped work according to the current context, backlog item, and acceptance criteria.
-- Auditor: reviews outputs, checks evidence, challenges unsupported claims, and verifies delivery gates.
+- Consultor/Auditor: reviews outputs, checks evidence, challenges unsupported claims, and verifies delivery gates.
 
 Specialist agents can be added when needed, but they should operate from a written brief and return evidence, risks, and handoff notes.
+
+## Resume Flow
+
+To resume work, use the repository files as the source of truth. Do not rely on memory from previous chat sessions.
+
+Minimum resume flow:
+
+1. Read `AGENTS.md`.
+2. Read `docs/ops/boot-rules.md`.
+3. Read `docs/ops/session-handoff.md`.
+4. Check `STATUS.md`.
+5. Check `backlog.md`.
 
 ## Start a New Project
 
@@ -79,6 +94,7 @@ The sample project in `examples/sample-project/` shows the intended structure in
 
 ```text
 docs/       Framework concepts, lifecycle, governance, and delivery rules.
+docs/ops/   Operational boot, handoff, execution log, and decision records.
 templates/  Reusable project documents.
 playbooks/  Operational workflows for common project moments.
 agents/     Agent role definitions and operating contracts.

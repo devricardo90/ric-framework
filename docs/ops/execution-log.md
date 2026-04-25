@@ -50,3 +50,52 @@ The Trigger approved formal closure of RIC-001A as DONE on 2026-04-25.
 ## Next Action
 
 Recommend the next backlog candidate: align `README.md` with the canonical governance and recovery control files.
+
+## 2026-04-25 - RIC-001B
+
+Actor: Execution Agent
+
+Task: RIC-001B - Align README with canonical governance controls
+
+Status: DONE by Trigger approval
+
+## Work Performed
+
+- Read required boot files.
+- Confirmed pre-change `git status` was clean.
+- Opened RIC-001B as READY by Trigger approval.
+- Updated `README.md` to reference canonical governance and recovery files.
+- Updated `STATUS.md`, `backlog.md`, and `docs/ops/session-handoff.md` for RIC-001B state.
+- Reviewed `README.md` against `AGENTS.md`, `STATUS.md`, `backlog.md`, `docs/ops/boot-rules.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and `docs/ops/decisions.md`.
+- Marked RIC-001B as DONE after Trigger-approved final review.
+
+## Commands Executed
+
+- `Get-Content README.md`
+- `Get-Content STATUS.md`
+- `Get-Content backlog.md`
+- `Get-Content docs\ops\session-handoff.md`
+- `Get-Content docs\ops\decisions.md`
+- `Get-Content docs\ops\execution-log.md`
+- `git status`
+
+## Validation Evidence
+
+- Pre-change `git status`: `nothing to commit, working tree clean`.
+- README covers Protocolo RIC, Trigger, Orchestrator, Executor, Consultor/Auditor, minimum resume flow, and canonical governance files.
+- Pre-commit `git status` showed modified documentation files only.
+- `git diff --check` passed with no errors.
+- Post-commit `git status` remains pending until after commit.
+
+## Closure Decision
+
+The Trigger approved final review, formal DONE closure, and commit for RIC-001B on 2026-04-25.
+
+## Risks or Gaps
+
+- No RIC-001B closure blocker remains.
+- No push was authorized.
+
+## Next Action
+
+Commit RIC-001B with `docs: align README with governance controls`, then verify final `git status`.

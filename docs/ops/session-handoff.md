@@ -2,33 +2,31 @@
 
 ## Current Objective
 
-Await the Trigger's next approved task after formal closure of RIC-001A.
+Await the Trigger's next approved task after closing RIC-001B.
 
 ## Active Task
 
-ID: RIC-001A
+ID: RIC-001B
 
-Title: Add Agent Governance and Recovery Control
+Title: Align README with canonical governance controls
 
 Status: DONE
 
 ## Last Completed Action
 
-The Trigger approved formal closure of RIC-001A as DONE.
+Reviewed README against canonical governance files and marked RIC-001B as DONE by Trigger approval.
 
 ## Current State
 
-RIC-001A is formally closed as DONE by Trigger approval. The repository has agent governance and recovery controls committed in `b297a2e docs: add agent governance and recovery controls`. The next recommended candidate is aligning `README.md` with the canonical governance and recovery control files.
+RIC-001A is formally closed as DONE. RIC-001B is formally closed as DONE by Trigger approval. Commit is being created for documentation-only changes.
 
 ## Files Changed
 
-- `AGENTS.md`
+- `README.md`
 - `STATUS.md`
 - `backlog.md`
-- `docs/ops/boot-rules.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
-- `docs/ops/decisions.md`
 
 ## Commands Executed
 
@@ -51,14 +49,23 @@ Pre-commit validation:
 - `git status` showed untracked files limited to `AGENTS.md`, `STATUS.md`, `backlog.md`, and `docs/ops/`.
 - `rg --files` listed no `package.json`, backend application, frontend application, CLI, dependency manifest, or automation script added by RIC-001A.
 
-Known closure evidence:
+Known RIC-001A closure evidence:
 
 - Commit: `b297a2e docs: add agent governance and recovery controls`.
 - Post-commit `git status`: clean / `nothing to commit`.
 
+RIC-001B validation:
+
+- Pre-change `git status`: clean / `nothing to commit`.
+- README is coherent with `AGENTS.md`, `STATUS.md`, `backlog.md`, `docs/ops/boot-rules.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and `docs/ops/decisions.md`.
+- README covers Protocolo RIC, Trigger, Orchestrator, Executor, Consultor/Auditor, minimum resume flow, and canonical governance files.
+- Pre-commit `git status` showed modified documentation files only.
+- `git diff --check` passed with no errors.
+- Post-commit `git status` remains pending until after commit.
+
 ## Pending Decisions for the Trigger
 
-- None for RIC-001A.
+- None for RIC-001B.
 
 ## Blockers
 
@@ -66,13 +73,13 @@ Known closure evidence:
 
 ## Next 3 Steps
 
-1. Run `git status`.
-2. Wait for Trigger approval before opening the README alignment candidate as READY.
-3. If approved, update README to reference `AGENTS.md`, `STATUS.md`, `backlog.md`, and `docs/ops/` recovery controls.
+1. Run `git status` before commit.
+2. Run `git diff --check`.
+3. Commit RIC-001B and run final `git status`.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not promote the README alignment candidate to READY without Trigger approval.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not open a new READY task.
 
 ## Resume Instruction for Next Agent
 

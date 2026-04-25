@@ -18,11 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-001A
+ID: RIC-001B
 
-Title: Add Agent Governance and Recovery Control
+Title: Align README with canonical governance controls
 
-Evidence: Trigger approved formal closure. Commit `b297a2e docs: add agent governance and recovery controls`; `git status` was clean after commit.
+Evidence: README reviewed as coherent with canonical governance files. Trigger approved final review and commit for RIC-001B.
 
 ## Blocked Items
 
@@ -34,4 +34,4 @@ Await the Trigger's next approved task.
 
 ## Next Recommended Action
 
-Prepare a candidate backlog item to align `README.md` with the canonical governance and recovery control files. Do not promote it to READY without Trigger approval.
+Keep `RIC-002 - Choose and publish repository license` as Recommended only until the Trigger promotes it.
