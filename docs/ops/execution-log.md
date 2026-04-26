@@ -145,4 +145,50 @@ The Trigger approved formal RIC-001C closure and commit on 2026-04-25.
 
 ## Next Action
 
-Commit RIC-001C with `docs: add git push discipline to governance`, then verify final `git status`.
+RIC-001C was committed in `6c495e8 docs: add git push discipline to governance`. Keep the repository Idle until the Trigger approves the next READY task.
+
+## 2026-04-26 - Operational Documentation Correction
+
+Actor: Execution Agent
+
+Task: Correct post-audit operational documentation divergence
+
+Status: Completed locally, commit authorized by Trigger
+
+## Work Performed
+
+- Reviewed the audit-confirmed divergence in `docs/ops/session-handoff.md` and `docs/ops/execution-log.md`.
+- Confirmed `STATUS.md` already records the repository as Idle with no active task.
+- Confirmed `backlog.md` already records no active task, no READY task, and `RIC-002 - Choose and publish repository license` as Recommended only.
+- Updated `docs/ops/session-handoff.md` to reflect that RIC-001C was completed and committed in `6c495e8 docs: add git push discipline to governance`.
+- Updated this execution log to remove the stale RIC-001C next action that treated the commit as pending.
+
+## Commands Executed
+
+- `git status --short`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `git diff --check`
+- `git diff -- docs/ops/session-handoff.md docs/ops/execution-log.md STATUS.md backlog.md`
+
+## Validation Evidence
+
+- Pre-change `git status --short` was clean.
+- `git status --short` shows only `docs/ops/session-handoff.md` and `docs/ops/execution-log.md` modified.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the two edited files.
+- `git diff -- docs/ops/session-handoff.md docs/ops/execution-log.md STATUS.md backlog.md` shows changes limited to the two operational files that had documented divergence.
+
+## Closure Decision
+
+Not applicable. This correction did not create or close a backlog task.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Keep `RIC-002 - Choose and publish repository license` as Recommended only until Trigger approval. Do not push without Trigger authorization.

@@ -2,79 +2,50 @@
 
 ## Current Objective
 
-Await the Trigger's next approved step after closing RIC-001C.
+Maintain the repository in Idle state after correcting the operational documentation divergence for RIC-001C.
 
 ## Active Task
 
-ID: RIC-001C
+ID: None
 
-Title: Add Git push discipline to agent governance
+Title: None
 
-Status: DONE
+Status: None
 
 ## Last Completed Action
 
-Reviewed Git Push Discipline in `AGENTS.md` and `docs/ops/boot-rules.md`; marked RIC-001C as DONE by Trigger approval.
+Corrected operational handoff state to reflect that RIC-001C was completed and committed in `6c495e8 docs: add git push discipline to governance`.
 
 ## Current State
 
-RIC-001A, RIC-001B, and RIC-001C are formally closed as DONE by Trigger approval. RIC-001C is being committed as documentation-only governance work. Push is not authorized in this step.
+RIC-001, RIC-001A, RIC-001B, and RIC-001C are formally closed as DONE. RIC-001C has been committed in `6c495e8 docs: add git push discipline to governance`. The repository remains Idle. No task is active. No task is READY. RIC-002 remains Recommended only and requires Trigger approval before READY.
 
 ## Files Changed
 
-- `AGENTS.md`
-- `STATUS.md`
-- `backlog.md`
-- `docs/ops/boot-rules.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
 
 ## Commands Executed
 
-- `Get-Content README.md`
-- `if (Test-Path STATUS.md) { Get-Content STATUS.md }`
-- `if (Test-Path backlog.md) { Get-Content backlog.md }`
-- `if (Test-Path docs\ops\session-handoff.md) { Get-Content docs\ops\session-handoff.md }`
-- `if (Test-Path docs\ops\decisions.md) { Get-Content docs\ops\decisions.md }`
-- `if (Test-Path docs\ops\execution-log.md) { Get-Content docs\ops\execution-log.md }`
-- `if (Test-Path docs\ops\boot-rules.md) { Get-Content docs\ops\boot-rules.md }`
-- `Get-Content AGENTS.md`
-- `Get-Content docs\ops\boot-rules.md`
 - `git status --short`
-- `git status`
-- `Select-String -Path AGENTS.md,docs\ops\boot-rules.md -Pattern "Git Push Discipline|Commit rule|Push rule|Do not push|git status|git log --oneline -5|Local DONE|Remote DONE|dirty|Trigger approval"`
-- `git diff -- AGENTS.md docs/ops/boot-rules.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `git diff --check`
+- `git diff -- docs/ops/session-handoff.md docs/ops/execution-log.md STATUS.md backlog.md`
 
 ## Validation Result
 
-Pre-commit validation:
-
-- `git status` showed untracked files limited to `AGENTS.md`, `STATUS.md`, `backlog.md`, and `docs/ops/`.
-- `rg --files` listed no `package.json`, backend application, frontend application, CLI, dependency manifest, or automation script added by RIC-001A.
-
-Known RIC-001A closure evidence:
-
-- Commit: `b297a2e docs: add agent governance and recovery controls`.
-- Post-commit `git status`: clean / `nothing to commit`.
-
-RIC-001B validation:
-
-- Pre-change `git status`: clean / `nothing to commit`.
-- README is coherent with `AGENTS.md`, `STATUS.md`, `backlog.md`, `docs/ops/boot-rules.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and `docs/ops/decisions.md`.
-- README covers Protocolo RIC, Trigger, Orchestrator, Executor, Consultor/Auditor, minimum resume flow, and canonical governance files.
-- Pre-commit `git status` showed modified documentation files only.
-- `git diff --check` passed with no errors.
-- Post-commit `git status` remains pending until after commit.
-
-RIC-001C validation:
-
-- Pre-commit `git status` showed modified documentation files only.
-- Rule review confirmed `AGENTS.md` and `docs/ops/boot-rules.md` define when to commit, when to push, when not to push, required pre-push checks, Local DONE, Remote DONE, and no push with dirty working tree.
-- Required final validation pending: `git diff --check` and post-commit `git status`.
+- Pre-change `git status --short` was clean.
+- `STATUS.md` and `backlog.md` were reviewed and did not require changes.
+- `git status --short` shows only `docs/ops/session-handoff.md` and `docs/ops/execution-log.md` modified.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the two edited files.
+- `git diff -- docs/ops/session-handoff.md docs/ops/execution-log.md STATUS.md backlog.md` shows changes limited to the two operational files that had documented divergence.
 
 ## Pending Decisions for the Trigger
 
-- None for RIC-001C.
+- Whether to promote `RIC-002 - Choose and publish repository license` from Recommended to READY.
 
 ## Blockers
 
@@ -82,14 +53,14 @@ RIC-001C validation:
 
 ## Next 3 Steps
 
-1. Run `git diff --check`.
-2. Commit RIC-001C with `docs: add git push discipline to governance`.
-3. Run final `git status`.
+1. Keep the repository Idle until the Trigger approves the next task.
+2. If approved, promote `RIC-002 - Choose and publish repository license` to READY.
+3. Execute only the approved RIC-002 scope after promotion.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not open RIC-002 as READY. Do not push in this step.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not open RIC-002 as READY without Trigger approval. Do not change the license yet. Do not push without Trigger authorization.
 
 ## Resume Instruction for Next Agent
 
-Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/decisions.md`, `docs/ops/execution-log.md`, then continue only from this handoff.
+Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then wait for Trigger approval before opening any new READY task.
