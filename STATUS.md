@@ -2,19 +2,19 @@
 
 ## Current Canonical Status
 
-Status: Idle
+Status: READY task available
 
-Current Task: None
+Current Task: RIC-002
 
-Last Updated: 2026-04-25
+Last Updated: 2026-04-26
 
 ## Active Task
 
-ID: None
+ID: RIC-002
 
-Title: None
+Title: Choose and publish repository license
 
-Status: None
+Status: READY, not started
 
 ## Last Completed Task
 
@@ -30,8 +30,8 @@ Evidence: Git Push Discipline reviewed in `AGENTS.md` and `docs/ops/boot-rules.m
 
 ## Current Objective
 
-Await the Trigger's next approved task.
+Await Trigger authorization to execute RIC-002. The task is READY but not started.
 
 ## Next Recommended Action
 
-Keep `RIC-002 - Choose and publish repository license` as Recommended only until the Trigger promotes it.
+Execute only the approved RIC-002 scope after Trigger authorization. Do not create or alter `LICENSE` before the license choice is formally recorded.

@@ -2,50 +2,53 @@
 
 ## Current Objective
 
-Maintain the repository in Idle state after correcting the operational documentation divergence for RIC-001C.
+Prepare for RIC-002 execution after Trigger-approved promotion to READY. Do not execute the license publication step yet.
 
 ## Active Task
 
-ID: None
+ID: RIC-002
 
-Title: None
+Title: Choose and publish repository license
 
-Status: None
+Status: READY, not started
 
 ## Last Completed Action
 
-Corrected operational handoff state to reflect that RIC-001C was completed and committed in `6c495e8 docs: add git push discipline to governance`.
+Promoted RIC-002 from Recommended to READY by Trigger decision without starting execution.
 
 ## Current State
 
-RIC-001, RIC-001A, RIC-001B, and RIC-001C are formally closed as DONE. RIC-001C has been committed in `6c495e8 docs: add git push discipline to governance`. The repository remains Idle. No task is active. No task is READY. RIC-002 remains Recommended only and requires Trigger approval before READY.
+RIC-001, RIC-001A, RIC-001B, and RIC-001C are formally closed as DONE. RIC-002 is READY but not started. The preliminary license recommendation for RIC-002 is MIT License because it is simple, recognized, suitable for a public framework, and supports adoption, portfolio use, and open sharing. The license choice must be formally recorded before creating or altering `LICENSE`.
 
 ## Files Changed
 
+- `backlog.md`
+- `STATUS.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
 
 ## Commands Executed
 
 - `git status --short`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw STATUS.md`
 - `Get-Content -Raw docs/ops/session-handoff.md`
 - `Get-Content -Raw docs/ops/execution-log.md`
-- `Get-Content -Raw STATUS.md`
-- `Get-Content -Raw backlog.md`
 - `git diff --check`
-- `git diff -- docs/ops/session-handoff.md docs/ops/execution-log.md STATUS.md backlog.md`
+- `git diff -- backlog.md STATUS.md docs/ops/session-handoff.md docs/ops/execution-log.md`
 
 ## Validation Result
 
 - Pre-change `git status --short` was clean.
-- `STATUS.md` and `backlog.md` were reviewed and did not require changes.
-- `git status --short` shows only `docs/ops/session-handoff.md` and `docs/ops/execution-log.md` modified.
-- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the two edited files.
-- `git diff -- docs/ops/session-handoff.md docs/ops/execution-log.md STATUS.md backlog.md` shows changes limited to the two operational files that had documented divergence.
+- `git status --short` shows only `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md` modified.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited files.
+- `git diff -- backlog.md STATUS.md docs/ops/session-handoff.md docs/ops/execution-log.md` shows RIC-002 promoted to READY without creating `LICENSE`, marking DOING, marking DONE, or opening another task.
 
 ## Pending Decisions for the Trigger
 
-- Whether to promote `RIC-002 - Choose and publish repository license` from Recommended to READY.
+- Whether to authorize execution of RIC-002.
+- Whether to approve MIT License as the formal repository license during RIC-002 execution.
+- Whether to authorize a commit for this READY promotion slice.
 
 ## Blockers
 
@@ -53,14 +56,14 @@ RIC-001, RIC-001A, RIC-001B, and RIC-001C are formally closed as DONE. RIC-001C 
 
 ## Next 3 Steps
 
-1. Keep the repository Idle until the Trigger approves the next task.
-2. If approved, promote `RIC-002 - Choose and publish repository license` to READY.
-3. Execute only the approved RIC-002 scope after promotion.
+1. Wait for Trigger authorization to execute RIC-002.
+2. During RIC-002 execution, formally record the license choice before creating or altering `LICENSE`.
+3. Validate the RIC-002 documentation changes before requesting commit authorization.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not open RIC-002 as READY without Trigger approval. Do not change the license yet. Do not push without Trigger authorization.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not execute RIC-002 yet. Do not create or alter `LICENSE` yet. Do not mark RIC-002 as DOING or DONE. Do not push without Trigger authorization.
 
 ## Resume Instruction for Next Agent
 
-Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then wait for Trigger approval before opening any new READY task.
+Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then wait for Trigger authorization before executing RIC-002.

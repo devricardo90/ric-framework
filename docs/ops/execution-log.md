@@ -192,3 +192,50 @@ Not applicable. This correction did not create or close a backlog task.
 ## Next Action
 
 Keep `RIC-002 - Choose and publish repository license` as Recommended only until Trigger approval. Do not push without Trigger authorization.
+
+## 2026-04-26 - RIC-002 READY Promotion
+
+Actor: Execution Agent
+
+Task: RIC-002 - Choose and publish repository license
+
+Status: READY, not started
+
+## Work Performed
+
+- Recorded the Trigger decision to promote RIC-002 from Recommended to READY.
+- Updated `backlog.md` so RIC-002 is listed as READY.
+- Updated `STATUS.md` so the project has a READY task available without starting execution.
+- Updated `docs/ops/session-handoff.md` with the next task and execution guardrails.
+- Preserved the preliminary MIT License recommendation as direction to be formally resolved during RIC-002 execution.
+
+## Commands Executed
+
+- `git status --short`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `git diff --check`
+- `git diff -- backlog.md STATUS.md docs/ops/session-handoff.md docs/ops/execution-log.md`
+
+## Validation Evidence
+
+- Pre-change `git status --short` was clean.
+- `git status --short` shows only `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md` modified.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited files.
+- `git diff -- backlog.md STATUS.md docs/ops/session-handoff.md docs/ops/execution-log.md` shows RIC-002 promoted to READY without creating `LICENSE`, marking DOING, marking DONE, or opening another task.
+
+## Closure Decision
+
+RIC-002 is not DONE. It has only been promoted to READY by Trigger decision.
+
+## Risks or Gaps
+
+- MIT License is recommended but not yet formally recorded as the final license decision.
+- No `LICENSE` file has been created or altered.
+- Push is not authorized in this step.
+
+## Next Action
+
+Wait for Trigger authorization to execute RIC-002. Do not mark RIC-002 as DOING or DONE until execution and validation occur.

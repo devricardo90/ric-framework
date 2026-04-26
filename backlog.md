@@ -10,7 +10,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| None | None | None | None | None | None |
+| RIC-002 | Choose and publish repository license | READY | Formally choose the repository license before publishing it. Preliminary Trigger direction: MIT License is recommended for simplicity, recognition, public framework adoption, portfolio use, and open sharing. | Confirm the license choice is recorded before any `LICENSE` file is created or changed. | One documentation commit only after the approved RIC-002 scope is completed and validated. |
 
 ## Completed Items
 
@@ -31,4 +31,4 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| RIC-002 | Choose and publish repository license | Recommended | Requires Trigger approval before READY |
+| None | None | None | None |
