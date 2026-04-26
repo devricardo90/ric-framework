@@ -293,3 +293,56 @@ RIC-002 is DONE after required validation passed. Commit is pending Trigger auth
 ## Next Action
 
 Request Trigger authorization to commit completed RIC-002. Do not open a new READY task in this step.
+
+## 2026-04-26 - RIC-003 Execution
+
+Actor: Execution Agent
+
+Task: RIC-003 - Add Discussion and Execution Sprint Model
+
+Status: DONE by Trigger-approved validation
+
+## Work Performed
+
+- Recorded the Trigger decision to execute RIC-003.
+- Added Discussion / Decision Mode and Execution / Sprint Mode rules to `AGENTS.md`.
+- Added a concise Operating Modes section to `README.md`.
+- Added startup mode-selection and transition rules to `docs/ops/boot-rules.md`.
+- Updated `backlog.md`, `STATUS.md`, and `docs/ops/session-handoff.md` to reflect RIC-003 execution and completion state.
+- Confirmed `docs/architecture/decision-log.md` does not exist, so no architecture decision log was updated.
+
+## Commands Executed
+
+- `git status --short`
+- `Get-Content -Raw AGENTS.md`
+- `Get-Content -Raw README.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `Get-Content -Raw docs/ops/boot-rules.md`
+- `if (Test-Path docs/architecture/decision-log.md) { Get-Content -Raw docs/architecture/decision-log.md } else { Write-Output '__MISSING__ docs/architecture/decision-log.md' }`
+- `git diff --check`
+- `git diff -- AGENTS.md README.md backlog.md STATUS.md docs/ops/session-handoff.md docs/ops/execution-log.md docs/ops/boot-rules.md docs/architecture/decision-log.md`
+- `Select-String -Path AGENTS.md,README.md,docs/ops/boot-rules.md -Pattern 'Discussion / Decision Mode|Execution / Sprint Mode|NEEDS_DECISION|BLOCKED|architectural, version, stack, provider, deploy, or compatibility'`
+
+## Validation Evidence
+
+- Pre-change `git status --short` was clean.
+- `git status --short` shows only `AGENTS.md`, `README.md`, `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and `docs/ops/boot-rules.md` modified.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the seven edited files.
+- `git diff -- AGENTS.md README.md backlog.md STATUS.md docs/ops/session-handoff.md docs/ops/execution-log.md docs/ops/boot-rules.md docs/architecture/decision-log.md` shows only RIC-003 protocol and operational documentation changes.
+- `Select-String` confirmed the expected Discussion / Decision Mode, Execution / Sprint Mode, BLOCKED, NEEDS_DECISION, and pending decision gate text in the protocol files.
+
+## Closure Decision
+
+RIC-003 is DONE after required validation passed. Commit is pending Trigger authorization.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Request Trigger authorization to commit completed RIC-003. Do not open a new READY task in this step.

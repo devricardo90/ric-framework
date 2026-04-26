@@ -18,11 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-002
+ID: RIC-003
 
-Title: Choose and publish repository license
+Title: Add Discussion and Execution Sprint Model
 
-Evidence: MIT License published in `LICENSE` with `Copyright (c) 2026 Ricardo Souza`; operational documents record the formal Trigger license decision; validation passed with `git diff --check`.
+Evidence: Discussion / Decision Mode and Execution / Sprint Mode added to `AGENTS.md`, `README.md`, and `docs/ops/boot-rules.md`; transition rules and blocked decision handling recorded; validation passed with `git diff --check`.
 
 ## Blocked Items
 
@@ -30,8 +30,8 @@ Evidence: MIT License published in `LICENSE` with `Copyright (c) 2026 Ricardo So
 
 ## Current Objective
 
-Await Trigger authorization to commit the completed RIC-002 documentation work.
+Await Trigger authorization to commit the completed RIC-003 documentation work.
 
 ## Next Recommended Action
 
-Review the RIC-002 diff and authorize a commit if accepted. Do not open a new READY task yet.
+Review the RIC-003 diff and authorize a commit if accepted. Do not open a new READY task yet.

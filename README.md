@@ -40,6 +40,16 @@ RIC Framework organizes work through six lifecycle stages.
 5. Deploy: confirm the deployed version, environment, checks, rollback notes, and version matrix updates.
 6. Handoff: summarize current state, completed work, open risks, next actions, and recovery context.
 
+## Operating Modes
+
+RIC Framework separates discussion from execution.
+
+Discussion / Decision Mode is used before execution when the project needs architectural clarification, stack or version review, provider selection, web/mobile compatibility analysis, risk review, scope definition, READY criteria, DONE criteria, or validation criteria. Its outputs are decision notes, backlog candidates, risk lists, recommendations, and handoff updates. It must not change product code, expand scope without control, mark tasks DONE, or start execution before a task is READY.
+
+Execution / Sprint Mode is used only after a task is READY and the scope is closed. It requires one active task, clear objective, allowed files, validation commands, evidence, status updates, and handoff records. It must not change architecture mid-task without a decision, open unrelated scope, mark DONE without evidence, or push with a dirty working tree.
+
+A task can move from Discussion / Decision Mode to Execution / Sprint Mode only when the decision is documented, scope is clear, risks are known, validation is defined, Trigger approval exists, and the backlog marks the task as READY. If a structural question appears during execution, the agent pauses, records BLOCKED or NEEDS_DECISION, and returns the decision to the Trigger.
+
 ## Core Execution Records
 
 RIC Framework relies on a small set of living documents. Each one has a job.

@@ -72,6 +72,57 @@ DONE states:
 - Local DONE means the task is complete, validated, committed, and documented locally.
 - Remote DONE means Local DONE plus the final commit has been pushed to the remote repository.
 
+Execution modes:
+
+Discussion / Decision Mode:
+Use this mode before execution when the project needs clarification, architectural decision, stack or version review, provider decision, web/mobile compatibility analysis, risk review, scope decision, backlog shaping, READY criteria, DONE criteria, or validation criteria.
+
+Allowed outputs:
+- Decision notes.
+- Backlog candidates.
+- READY criteria.
+- DONE criteria.
+- Risk lists.
+- Version or stack recommendations.
+- Handoff updates.
+
+Forbidden in Discussion / Decision Mode:
+- Product code changes.
+- Uncontrolled scope expansion.
+- Marking tasks DONE.
+- Starting execution without READY state.
+
+Execution / Sprint Mode:
+Use this mode only after a task is READY and the scope is closed.
+
+Required in Execution / Sprint Mode:
+- One active task.
+- Clear objective.
+- Allowed files.
+- Validation commands.
+- Evidence.
+- Final status update.
+- Clean git state before handoff unless the dirty state is intentionally documented as blocked or pending commit.
+
+Forbidden in Execution / Sprint Mode:
+- Changing architecture mid-task without a recorded decision.
+- Opening unrelated scope.
+- Marking DONE without evidence.
+- Pushing with dirty working tree.
+
+Transition rules:
+A task can move from Discussion / Decision Mode to Execution / Sprint Mode only when:
+- The decision is documented.
+- Scope is clear.
+- Risks are known.
+- Validation is defined.
+- Trigger approval exists.
+- The backlog marks the task as READY.
+
+No relevant execution task may begin while an architectural, version, stack, provider, deploy, or compatibility decision remains pending.
+
+If a structural question appears during execution, the agent must pause, record the state as BLOCKED or NEEDS_DECISION, and return the decision to the Trigger.
+
 7. No real secrets.
 Never write real tokens, credentials, API keys, passwords, private URLs, or production secrets into the repository.
 
