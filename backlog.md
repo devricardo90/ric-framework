@@ -10,7 +10,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-002 | Choose and publish repository license | READY | Formally choose the repository license before publishing it. Preliminary Trigger direction: MIT License is recommended for simplicity, recognition, public framework adoption, portfolio use, and open sharing. | Confirm the license choice is recorded before any `LICENSE` file is created or changed. | One documentation commit only after the approved RIC-002 scope is completed and validated. |
+| None | None | None | None | None | None |
 
 ## Completed Items
 
@@ -20,6 +20,7 @@
 | RIC-001A | Add Agent Governance and Recovery Control | Trigger approved formal closure; commit `b297a2e docs: add agent governance and recovery controls`; `git status` was clean after commit |
 | RIC-001B | Align README with canonical governance controls | README reviewed as coherent with canonical governance controls; commit authorized by Trigger |
 | RIC-001C | Add Git push discipline to agent governance | Git Push Discipline added to `AGENTS.md` and `docs/ops/boot-rules.md`; rule reviewed as complete and commit authorized by Trigger |
+| RIC-002 | Choose and publish repository license | MIT License published in `LICENSE` with `Copyright (c) 2026 Ricardo Souza`; operational documents record the Trigger license decision; validation passed with `git diff --check` |
 
 ## Blocked Items
 
