@@ -768,3 +768,114 @@ RIC-007A is Local DONE after Trigger approval and required validation. Remote DO
 ## Next Action
 
 Create the authorized local commit, then wait for Trigger authorization before pushing.
+
+## 2026-04-29 - RIC-007A Remote DONE Confirmation
+
+Actor: Execution Agent
+
+Task: RIC-007A - Define Operational Source of Truth Rules
+
+Status: Remote DONE by Trigger confirmation
+
+## Work Performed
+
+- Pushed RIC-007A commit `7f2ff99 docs: define operational source of truth rules` to `origin/main` after Trigger authorization.
+- Confirmed post-push `main` is synchronized with `origin/main`.
+- Confirmed the working tree is clean.
+- Confirmed no new task was READY after the push.
+
+## Commands Executed
+
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+- `git push origin main`
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+
+## Validation Evidence
+
+- Pre-push `git status --short` was clean.
+- Pre-push `git status -sb` showed `## main...origin/main [ahead 1]`.
+- Push succeeded: `edd3d1a..7f2ff99 main -> main`.
+- Post-push `git status --short` was clean.
+- Post-push `git status -sb` showed `## main...origin/main`.
+- Post-push last three commits began with `7f2ff99 docs: define operational source of truth rules`.
+
+## Closure Decision
+
+RIC-007A is Remote DONE by Trigger confirmation.
+
+## Risks or Gaps
+
+- No blocker recorded.
+
+## Next Action
+
+Use Discussion Gate before promoting any future task to READY.
+
+## 2026-04-29 - RIC-008A Execution
+
+Actor: Execution Agent
+
+Task: RIC-008A - Define Architecture Decision Rules
+
+Status: Local DONE by Trigger approval
+
+## Work Performed
+
+- Read required startup files in order.
+- Confirmed the working tree was clean before RIC-008A execution.
+- Confirmed `main` was synchronized with `origin/main`.
+- Recorded Trigger approval to promote RIC-008A to READY and execute it.
+- Created `docs/architecture/architecture-decision-rules.md`.
+- Defined when technical decisions require Discussion Gate before execution.
+- Documented stack, version, compatibility, provider, database, authentication, storage, deploy, and architecture decision boundaries.
+- Documented the rule against silent technology swaps inside functional tasks.
+- Separated architecture decision work from execution work.
+- Documented technical clarity blockers and agent authority boundaries.
+- Updated operational records for RIC-008A execution state.
+- Closed RIC-008A as Local DONE by Trigger approval.
+- Prepared local commit with message `docs: define architecture decision rules`.
+
+## Commands Executed
+
+- `Get-Content -Raw README.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/decisions.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+- `Get-ChildItem -Recurse docs/architecture | Select-Object -ExpandProperty FullName`
+- `if (Test-Path docs/architecture/documentation-architecture.md) { Get-Content -Raw docs/architecture/documentation-architecture.md } else { Write-Output '__MISSING__ docs/architecture/documentation-architecture.md' }`
+- `git status --short`
+- `git diff --check`
+- `git diff --name-only`
+- `git ls-files --others --exclude-standard`
+- Trigger approval to close RIC-008A as Local DONE and create the local commit.
+- `git status --short`
+- `git diff --check`
+
+## Validation Evidence
+
+- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/architecture/architecture-decision-rules.md`.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final Local DONE validation passed: `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/architecture/architecture-decision-rules.md`.
+- Final `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+
+## Closure Decision
+
+RIC-008A is Local DONE after Trigger approval and required validation. Remote DONE is not claimed because push is not authorized in this step.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Create the authorized local commit, then wait for Trigger authorization before pushing.

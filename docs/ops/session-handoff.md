@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Remain Idle after RIC-007A Local DONE.
+Remain Idle after RIC-008A Local DONE.
 
 ## Active Task
 
@@ -14,11 +14,11 @@ Status: None
 
 ## Last Completed Action
 
-Closed RIC-007A as Local DONE by Trigger approval and prepared the authorized local commit.
+Closed RIC-008A as Local DONE by Trigger approval and prepared the authorized local commit.
 
 ## Current State
 
-RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-005, RIC-005A, and RIC-006 are closed as DONE. RIC-006 is Remote DONE with commit `b8000d9 docs: define product-to-execution gate` and operational commit `edd3d1a docs: reconcile post RIC-006 operational state` pushed to `origin/main`. RIC-007A is Local DONE. No task is active. No other task is READY.
+RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-005, RIC-005A, RIC-006, and RIC-007A are closed as DONE. RIC-007A is Remote DONE with commit `7f2ff99 docs: define operational source of truth rules` pushed to `origin/main`. RIC-008A is Local DONE. No task is active. No other task is READY.
 
 ## Files Changed
 
@@ -26,7 +26,7 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 - `backlog.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
-- `docs/ops/source-of-truth-rules.md`
+- `docs/architecture/architecture-decision-rules.md`
 
 ## Commands Executed
 
@@ -64,6 +64,27 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 - Trigger approval to close RIC-007A as Local DONE and create the local commit.
 - `git status --short`
 - `git diff --check`
+- Trigger approval to push RIC-007A to `origin/main`.
+- `git push origin main`
+- Trigger approval to promote RIC-008A to READY and execute it.
+- `Get-Content -Raw README.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/decisions.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+- `Get-ChildItem -Recurse docs/architecture | Select-Object -ExpandProperty FullName`
+- `if (Test-Path docs/architecture/documentation-architecture.md) { Get-Content -Raw docs/architecture/documentation-architecture.md } else { Write-Output '__MISSING__ docs/architecture/documentation-architecture.md' }`
+- `git status --short`
+- `git diff --check`
+- `git diff --name-only`
+- `git ls-files --others --exclude-standard`
+- Trigger approval to close RIC-008A as Local DONE and create the local commit.
+- `git status --short`
+- `git diff --check`
 
 ## Validation Result
 
@@ -78,10 +99,15 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 - `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
 - Final RIC-007A Local DONE validation passed: `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/ops/source-of-truth-rules.md`.
 - Final `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- RIC-007A push succeeded and post-push verification showed `main` synchronized with `origin/main`, working tree clean, and commit `7f2ff99 docs: define operational source of truth rules` at the top of history.
+- RIC-008A validation passed: `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/architecture/architecture-decision-rules.md`.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final RIC-008A Local DONE validation passed: `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/architecture/architecture-decision-rules.md`.
+- Final `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize push of the RIC-007A Local DONE commit.
+- Whether to authorize push of the RIC-008A Local DONE commit.
 
 ## Blockers
 
@@ -89,13 +115,13 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 
 ## Next 3 Steps
 
-1. Verify the RIC-007A local commit and clean working tree.
-2. Request Trigger authorization before pushing RIC-007A.
+1. Verify the RIC-008A local commit and clean working tree.
+2. Request Trigger authorization before pushing RIC-008A.
 3. Use a Discussion Gate before promoting any future task to READY.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, workflows, templates, examples, playbooks, or files outside a future approved scope. Do not alter `AGENTS.md` or `README.md`. Do not open RIC-007, RIC-008, RIC-009, or any future task as READY. Do not push without Trigger approval.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, workflows, templates, examples, playbooks, version matrix, or files outside a future approved scope. Do not alter `AGENTS.md` or `README.md`. Do not open RIC-008B, RIC-009, or any future task as READY. Do not push without Trigger approval.
 
 ## Resume Instruction for Next Agent
 
