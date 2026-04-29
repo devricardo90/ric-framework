@@ -501,3 +501,53 @@ RIC-004A is DONE after Trigger approval and required validation. Commit is autho
 ## Next Action
 
 Commit the approved RIC-004A documentation slice, then verify repository status. Do not push without Trigger authorization.
+
+## 2026-04-29 - RIC-005 Execution
+
+Actor: Execution Agent
+
+Task: RIC-005 - Product Discipline Core
+
+Status: DONE by Trigger approval
+
+## Work Performed
+
+- Confirmed the initial working tree was clean.
+- Recorded Trigger approval to promote RIC-005 to READY and execute it.
+- Moved RIC-005 to IN_PROGRESS in operational status.
+- Created `docs/product/product-discipline.md`.
+- Defined product in RIC Framework as problem, user, value, scope, and acceptance criteria.
+- Distinguished idea, product, requirement, and execution task.
+- Documented minimum product clarity before architecture, stack, agents, and execution.
+- Documented conditions that block execution for lack of product clarity.
+- Recorded future product discipline topics for MVP scope rules and product-to-execution gate without opening another READY task.
+- Closed RIC-005 as DONE by Trigger approval.
+- Recorded MVP Scope Rules and Product-to-Execution Gate as recommended only, not READY.
+
+## Commands Executed
+
+- `git status --short`
+- `if (Test-Path docs/product/product-discipline.md) { Get-Content -Raw docs/product/product-discipline.md } else { Write-Output '__MISSING__ docs/product/product-discipline.md' }`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+
+## Validation Evidence
+
+- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and the new authorized `docs/product/` path modified or untracked.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final pre-commit validation for RIC-005 closure passed: `git status --short` showed only RIC-005 scoped files modified or untracked, and `git diff --check` passed with no whitespace errors.
+
+## Closure Decision
+
+RIC-005 is DONE after Trigger approval and required validation. Commit is authorized with message `docs: define product discipline core`.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- No push has been performed.
+
+## Next Action
+
+Commit the approved RIC-005 documentation slice, then verify repository status. Do not push without Trigger authorization.

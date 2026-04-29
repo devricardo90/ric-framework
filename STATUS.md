@@ -18,11 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-004A
+ID: RIC-005
 
-Title: Define Repository Language Standard
+Title: Product Discipline Core
 
-Evidence: Repository-facing language standard recorded in `AGENTS.md` and referenced in `docs/architecture/documentation-architecture.md`; RIC-005 remained Recommended only; validation passed with `git diff --check`.
+Evidence: Core product discipline recorded in `docs/product/product-discipline.md`; product defined as problem, user, value, scope, and acceptance criteria; execution blockers and future product discipline topics documented; validation passed with `git diff --check`.
 
 ## Repository State
 
@@ -44,8 +44,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Remain Idle after completing RIC-004A.
+Remain Idle after completing RIC-005.
 
 ## Next Recommended Action
 
-Request Trigger authorization before opening RIC-005 as READY. Do not open a new READY task yet.
+Request Trigger authorization before opening any future product discipline task as READY.

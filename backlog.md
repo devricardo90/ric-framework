@@ -24,6 +24,7 @@
 | RIC-003 | Add Discussion and Execution Sprint Model | Commit `cdab8bf docs: add discussion and execution sprint modes`; Discussion / Decision Mode and Execution / Sprint Mode added to `AGENTS.md`, `README.md`, and `docs/ops/boot-rules.md`; validation passed with `git diff --check` |
 | RIC-004 | Define Product-First Documentation Architecture | Product-first documentation architecture recorded in `docs/architecture/documentation-architecture.md`; root `docs/` separated from templates, examples, baselines, playbooks, and agents; reserved areas and risks documented; validation passed with `git diff --check` |
 | RIC-004A | Define Repository Language Standard | Repository-facing language standard recorded in `AGENTS.md` and referenced in `docs/architecture/documentation-architecture.md`; Trigger-facing communication may use Portuguese; RIC-005 remained Recommended only; validation passed with `git diff --check` |
+| RIC-005 | Product Discipline Core | Core product discipline recorded in `docs/product/product-discipline.md`; product defined as problem, user, value, scope, and acceptance criteria; blockers and future product discipline topics documented; validation passed with `git diff --check` |
 
 ## Blocked Items
 
@@ -35,8 +36,9 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| RIC-005 | Product Discipline Core | Recommended | Candidate only; define the first `docs/product/` product discipline core document after Trigger approval |
+| RIC-006 | MVP Scope Rules | Recommended | Candidate only; define MVP scope rules after Trigger approval |
+| RIC-007 | Product-to-Execution Gate | Recommended | Candidate only; define the gate from product context into architecture, agents, and execution after Trigger approval |
 
 ## Next Process Step
 
-RIC-004 is DONE by Trigger approval. RIC-005 is recommended only and is not READY.
+RIC-005 is DONE by Trigger approval. Future product discipline tasks are recommended only and are not READY.

@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Remain Idle after completing RIC-004A.
+Remain Idle after completing RIC-005.
 
 ## Active Task
 
@@ -14,44 +14,40 @@ Status: None
 
 ## Last Completed Action
 
-Closed RIC-004A as DONE by Trigger approval after validation.
+Closed RIC-005 as DONE by Trigger approval after validation.
 
 ## Current State
 
-RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, and RIC-004A are closed as DONE. RIC-004A defines the official repository language standard: repository-facing content uses professional English, and Trigger-facing communication may use Portuguese. The project is Idle. No task is active. No task is READY. RIC-005 - Product Discipline Core is recommended only and must not be opened without Trigger approval.
+RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, and RIC-005 are closed as DONE. RIC-005 created the core product discipline document. The project is Idle. No task is active. No task is READY. Future product discipline topics for MVP scope rules and product-to-execution gate are recommended only and require separate Trigger approval.
 
 ## Files Changed
 
 - `STATUS.md`
 - `backlog.md`
-- `AGENTS.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
-- `docs/architecture/documentation-architecture.md`
+- `docs/product/product-discipline.md`
 
 ## Commands Executed
 
 - `git status --short`
-- `git status -sb`
-- `git log --oneline -5`
-- `git log --oneline origin/main..HEAD`
-- `git log --oneline HEAD..origin/main`
-- `Get-Content -Raw backlog.md`
+- `if (Test-Path docs/product/product-discipline.md) { Get-Content -Raw docs/product/product-discipline.md } else { Write-Output '__MISSING__ docs/product/product-discipline.md' }`
 - `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
 - `Get-Content -Raw docs/ops/session-handoff.md`
 - `Get-Content -Raw docs/ops/execution-log.md`
-- `if (Test-Path docs/architecture/documentation-architecture.md) { Get-Content -Raw docs/architecture/documentation-architecture.md } else { Write-Output '__MISSING__ docs/architecture/documentation-architecture.md' }`
-- `Get-Content -Raw AGENTS.md`
-- `Get-Content -Raw docs/architecture/documentation-architecture.md`
-- Trigger approval to open, execute, close, and commit RIC-004A.
+- Trigger approval to promote RIC-005 to READY and execute it.
+- Trigger approval to close RIC-005 as DONE.
 
 ## Validation Result
 
-- RIC-004A final validation passed: `git status --short` showed only the six RIC-004A scoped files modified, and `git diff --check` passed with no whitespace errors.
+- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and the new authorized `docs/product/` path modified or untracked.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final pre-commit validation for RIC-005 closure passed: `git status --short` showed only RIC-005 scoped files modified or untracked, and `git diff --check` passed with no whitespace errors.
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize push after the RIC-004A commit is created.
+- Whether to authorize push after the RIC-005 commit is created.
 
 ## Blockers
 
@@ -59,14 +55,14 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, and RIC-004A a
 
 ## Next 3 Steps
 
-1. Commit the approved RIC-004A documentation slice.
+1. Commit the approved RIC-005 documentation slice.
 2. After commit, verify `git status -sb`, `git status --short`, and `git log --oneline -5`.
-3. Request Trigger authorization before any push or before promoting RIC-005 to READY.
+3. Request Trigger authorization before any push or before promoting any future product discipline task to READY.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, workflows, full templates, or files outside the RIC-004 scope. Do not open another READY task. Do not push without Trigger authorization.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, workflows, templates, examples, playbooks, `mvp-scope-rules.md`, `product-to-execution-gate.md`, or files outside the RIC-005 scope. Do not open another READY task. Do not push without Trigger authorization.
 
 ## Resume Instruction for Next Agent
 
-Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then wait for Trigger approval before push or before promoting RIC-005 to READY.
+Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then wait for Trigger approval before push or before promoting any future product discipline task to READY.
