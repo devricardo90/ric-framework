@@ -551,3 +551,54 @@ RIC-005 is DONE after Trigger approval and required validation. Commit is author
 ## Next Action
 
 Commit the approved RIC-005 documentation slice, then verify repository status. Do not push without Trigger authorization.
+
+## 2026-04-29 - RIC-005A Execution
+
+Actor: Execution Agent
+
+Task: RIC-005A - Define MVP Scope Rules
+
+Status: DONE by Trigger approval
+
+## Work Performed
+
+- Confirmed the initial working tree was clean.
+- Recorded Trigger approval to promote RIC-005A to READY and execute it.
+- Moved RIC-005A to IN_PROGRESS in operational status.
+- Created `docs/product/mvp-scope-rules.md`.
+- Defined MVP in RIC Framework as the smallest coherent product slice that can prove value.
+- Distinguished MVP, future version, nice-to-have, and forbidden scope.
+- Documented minimum MVP questions.
+- Documented signs of inflated scope.
+- Documented rules against agents adding features outside the approved scope.
+- Documented MVP blockers that prevent execution.
+- Recorded product-to-execution gate as a future recommended task, not READY.
+- Closed RIC-005A as DONE by Trigger approval.
+
+## Commands Executed
+
+- `git status --short`
+- `if (Test-Path docs/product/mvp-scope-rules.md) { Get-Content -Raw docs/product/mvp-scope-rules.md } else { Write-Output '__MISSING__ docs/product/mvp-scope-rules.md' }`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+
+## Validation Evidence
+
+- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and the new authorized `docs/product/mvp-scope-rules.md` path modified or untracked.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final pre-commit validation for RIC-005A closure passed: `git status --short` showed only RIC-005A scoped files modified or untracked, and `git diff --check` passed with no whitespace errors.
+
+## Closure Decision
+
+RIC-005A is DONE after Trigger approval and required validation. Commit is authorized with message `docs: define MVP scope rules`.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- No push has been performed.
+
+## Next Action
+
+Commit the approved RIC-005A documentation slice, then verify repository status. Do not push without Trigger authorization.

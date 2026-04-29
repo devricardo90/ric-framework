@@ -18,11 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-005
+ID: RIC-005A
 
-Title: Product Discipline Core
+Title: Define MVP Scope Rules
 
-Evidence: Core product discipline recorded in `docs/product/product-discipline.md`; product defined as problem, user, value, scope, and acceptance criteria; execution blockers and future product discipline topics documented; validation passed with `git diff --check`.
+Evidence: MVP scope rules recorded in `docs/product/mvp-scope-rules.md`; MVP, future version, nice-to-have, and forbidden scope separated; inflated-scope signals and MVP blockers documented; validation passed with `git diff --check`.
 
 ## Repository State
 
@@ -44,7 +44,7 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Remain Idle after completing RIC-005.
+Remain Idle after completing RIC-005A.
 
 ## Next Recommended Action
 
