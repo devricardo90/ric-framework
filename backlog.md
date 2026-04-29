@@ -27,6 +27,7 @@
 | RIC-005 | Product Discipline Core | Core product discipline recorded in `docs/product/product-discipline.md`; product defined as problem, user, value, scope, and acceptance criteria; blockers and future product discipline topics documented; validation passed with `git diff --check` |
 | RIC-005A | Define MVP Scope Rules | MVP scope rules recorded in `docs/product/mvp-scope-rules.md`; MVP, future version, nice-to-have, and forbidden scope separated; inflated-scope signals and MVP blockers documented; validation passed with `git diff --check` |
 | RIC-006 | Define Product-to-Execution Gate | Commit `b8000d9 docs: define product-to-execution gate`; product-to-execution gate recorded in `docs/product/product-to-execution-gate.md`; READY criteria, blockers, lightweight checklist, and minimum evidence before Execution / Sprint Mode documented; validation passed with `git diff --check`; pushed to `origin/main` |
+| RIC-007A | Define Operational Source of Truth Rules | Operational source-of-truth rules recorded in `docs/ops/source-of-truth-rules.md`; `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md` roles documented; Local DONE and Remote DONE clarified; validation passed with `git diff --check`; local commit authorized with message `docs: define operational source of truth rules` |
 
 ## Blocked Items
 
@@ -38,8 +39,8 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| None | None | None | Future templates or examples for product-to-execution handoff remain unpromoted and require separate Trigger approval |
+| None | None | None | No future task is recommended or READY |
 
 ## Next Process Step
 
-RIC-006 is Remote DONE by Trigger confirmation. The next session must begin with a Discussion Gate to evaluate the next smallest logical advance for RIC Framework. RIC-007 or any future task must remain unpromoted until explicit Trigger approval.
+RIC-007A is Local DONE by Trigger approval. Do not open RIC-007, RIC-008, RIC-009, or any other task as READY without explicit Trigger approval.

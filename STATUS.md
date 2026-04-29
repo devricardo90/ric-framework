@@ -18,23 +18,23 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-006
+ID: RIC-007A
 
-Title: Define Product-to-Execution Gate
+Title: Define Operational Source of Truth Rules
 
-Evidence: Product-to-execution gate recorded in `docs/product/product-to-execution-gate.md`; READY criteria, blockers, lightweight checklist, and minimum evidence before Execution / Sprint Mode documented; validation passed with `git diff --check`; commit `b8000d9 docs: define product-to-execution gate` pushed to `origin/main`.
+Evidence: Operational source-of-truth rules recorded in `docs/ops/source-of-truth-rules.md`; `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md` roles documented; Local DONE and Remote DONE clarified; validation passed with `git diff --check`; local commit authorized with message `docs: define operational source of truth rules`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean
+Working Tree at Verification: Clean after local commit
 
-Local HEAD: `b8000d9 docs: define product-to-execution gate`
+Local HEAD: RIC-007A local commit with message `docs: define operational source of truth rules`
 
-Local `origin/main` Reference: Aligned with `HEAD`
+Local `origin/main` Reference: Behind local `HEAD` by the RIC-007A Local DONE commit
 
-Pending Local Commits by Local Git Reference: None
+Pending Local Commits by Local Git Reference: RIC-007A Local DONE commit pending push
 
 Pending Remote Commits by Local Git Reference: None
 
@@ -44,8 +44,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Remain Idle after RIC-006 Remote DONE.
+Remain Idle after RIC-007A Local DONE.
 
 ## Next Recommended Action
 
-Use a Discussion Gate to evaluate the next smallest logical advance for RIC Framework. Do not open RIC-007 or any future task as READY without Trigger approval.
+Request Trigger authorization before pushing RIC-007A or opening any future task as READY.

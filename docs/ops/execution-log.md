@@ -705,3 +705,66 @@ RIC-006 is Remote DONE by Trigger confirmation.
 ## Next Action
 
 Begin the next session with a Discussion Gate to evaluate the next smallest logical advance for RIC Framework. Do not open RIC-007 or any future task as READY without Trigger approval.
+
+## 2026-04-29 - RIC-007A Execution
+
+Actor: Execution Agent
+
+Task: RIC-007A - Define Operational Source of Truth Rules
+
+Status: Local DONE by Trigger approval
+
+## Work Performed
+
+- Read required startup files in order.
+- Confirmed the working tree was clean before RIC-007A execution.
+- Confirmed `main` was synchronized with `origin/main`.
+- Recorded Trigger approval to promote RIC-007A to READY and execute it.
+- Created `docs/ops/source-of-truth-rules.md`.
+- Defined `backlog.md` as the primary source of truth for tasks, READY/DONE status, and task history.
+- Defined `STATUS.md` as an executive summary, not the primary source of truth.
+- Defined `docs/ops/session-handoff.md` as continuity between sessions and agents.
+- Defined `docs/ops/execution-log.md` as chronological evidence history.
+- Clarified Local DONE and Remote DONE.
+- Recorded the READY Gate, clean working tree rule, and separation between permanent documentation and operational records.
+- Updated operational records for RIC-007A execution state.
+- Closed RIC-007A as Local DONE by Trigger approval.
+- Prepared local commit with message `docs: define operational source of truth rules`.
+
+## Commands Executed
+
+- `Get-Content -Raw README.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/decisions.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `git status --short`
+- `git status -sb`
+- `if (Test-Path docs/ops/source-of-truth-rules.md) { Get-Content -Raw docs/ops/source-of-truth-rules.md } else { Write-Output '__MISSING__ docs/ops/source-of-truth-rules.md' }`
+- `git log --oneline -3`
+- `git status --short`
+- `git diff --check`
+- `git diff --stat`
+- `git status --short`
+- `git diff --check`
+
+## Validation Evidence
+
+- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/ops/source-of-truth-rules.md`.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final Local DONE validation passed: `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/ops/source-of-truth-rules.md`.
+- Final `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+
+## Closure Decision
+
+RIC-007A is Local DONE after Trigger approval and required validation. Remote DONE is not claimed because push is not authorized in this step.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Create the authorized local commit, then wait for Trigger authorization before pushing.

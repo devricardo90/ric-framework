@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Remain Idle after RIC-006 Remote DONE.
+Remain Idle after RIC-007A Local DONE.
 
 ## Active Task
 
@@ -14,11 +14,11 @@ Status: None
 
 ## Last Completed Action
 
-Pushed RIC-006 commit `b8000d9 docs: define product-to-execution gate` to `origin/main` after Trigger authorization and confirmed `main` is synchronized with `origin/main`.
+Closed RIC-007A as Local DONE by Trigger approval and prepared the authorized local commit.
 
 ## Current State
 
-RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-005, RIC-005A, and RIC-006 are closed as DONE. RIC-006 is Remote DONE with commit `b8000d9 docs: define product-to-execution gate` pushed to `origin/main`. The project is Idle. No task is active. No task is READY.
+RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-005, RIC-005A, and RIC-006 are closed as DONE. RIC-006 is Remote DONE with commit `b8000d9 docs: define product-to-execution gate` and operational commit `edd3d1a docs: reconcile post RIC-006 operational state` pushed to `origin/main`. RIC-007A is Local DONE. No task is active. No other task is READY.
 
 ## Files Changed
 
@@ -26,7 +26,7 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 - `backlog.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
-- `docs/product/product-to-execution-gate.md`
+- `docs/ops/source-of-truth-rules.md`
 
 ## Commands Executed
 
@@ -47,6 +47,23 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 - `git status -sb`
 - `git status --short`
 - `git log --oneline -3`
+- Trigger approval to promote RIC-007A to READY and execute it.
+- `Get-Content -Raw README.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/decisions.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `git status --short`
+- `git status -sb`
+- `if (Test-Path docs/ops/source-of-truth-rules.md) { Get-Content -Raw docs/ops/source-of-truth-rules.md } else { Write-Output '__MISSING__ docs/ops/source-of-truth-rules.md' }`
+- `git log --oneline -3`
+- `git status --short`
+- `git diff --check`
+- `git diff --stat`
+- Trigger approval to close RIC-007A as Local DONE and create the local commit.
+- `git status --short`
+- `git diff --check`
 
 ## Validation Result
 
@@ -57,10 +74,14 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 - Pre-push local-ahead check showed only `b8000d9 docs: define product-to-execution gate`.
 - Push succeeded: `0ab6f68..b8000d9 main -> main`.
 - Post-push validation showed `git status -sb` as `## main...origin/main`, `git status --short` clean, and the last three commits beginning with `b8000d9 docs: define product-to-execution gate`.
+- RIC-007A validation passed: `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/ops/source-of-truth-rules.md`.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final RIC-007A Local DONE validation passed: `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and untracked `docs/ops/source-of-truth-rules.md`.
+- Final `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
 
 ## Pending Decisions for the Trigger
 
-- What the next smallest logical advance for RIC Framework should be after Discussion Gate.
+- Whether to authorize push of the RIC-007A Local DONE commit.
 
 ## Blockers
 
@@ -68,14 +89,14 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, RIC-004, RIC-004A, RIC-
 
 ## Next 3 Steps
 
-1. Begin the next session by reading the required startup files.
-2. Use Discussion Gate to evaluate the next smallest logical advance for RIC Framework.
-3. Request explicit Trigger approval before promoting RIC-007 or any future task to READY.
+1. Verify the RIC-007A local commit and clean working tree.
+2. Request Trigger authorization before pushing RIC-007A.
+3. Use a Discussion Gate before promoting any future task to READY.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, workflows, templates, examples, playbooks, or files outside an approved future scope. Do not open RIC-007 or any future task as READY without Trigger approval. Do not execute the next task automatically.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, workflows, templates, examples, playbooks, or files outside a future approved scope. Do not alter `AGENTS.md` or `README.md`. Do not open RIC-007, RIC-008, RIC-009, or any future task as READY. Do not push without Trigger approval.
 
 ## Resume Instruction for Next Agent
 
-Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then use Discussion Gate to evaluate the next smallest logical advance. Do not promote RIC-007 or any future task to READY without Trigger approval.
+Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then wait for Trigger authorization before pushing or promoting any future task to READY.
