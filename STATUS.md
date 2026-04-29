@@ -18,13 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-003
+ID: RIC-004
 
-Title: Add Discussion and Execution Sprint Model
+Title: Define Product-First Documentation Architecture
 
-Evidence: Discussion / Decision Mode and Execution / Sprint Mode added to `AGENTS.md`, `README.md`, and `docs/ops/boot-rules.md`; transition rules and blocked decision handling recorded; validation passed with `git diff --check`.
-
-Commit: `cdab8bf docs: add discussion and execution sprint modes`
+Evidence: Product-first documentation architecture recorded in `docs/architecture/documentation-architecture.md`; root `docs/` separated from project templates, examples, baselines, playbooks, and agents; reserved areas and risks documented; validation passed with `git diff --check`.
 
 ## Repository State
 
@@ -46,8 +44,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Remain Idle after reconciling the recorded state for RIC-002 and RIC-003.
+Remain Idle after completing RIC-004.
 
 ## Next Recommended Action
 
-Open a Discussion Gate before any new task is promoted to READY. Do not open a new READY task yet.
+Request Trigger authorization before opening RIC-005 as READY. Do not open a new READY task yet.

@@ -22,6 +22,7 @@
 | RIC-001C | Add Git push discipline to agent governance | Git Push Discipline added to `AGENTS.md` and `docs/ops/boot-rules.md`; rule reviewed as complete and commit authorized by Trigger |
 | RIC-002 | Choose and publish repository license | Commit `b598a10 docs: add MIT license`; MIT License published in `LICENSE` with `Copyright (c) 2026 Ricardo Souza`; operational documents record the Trigger license decision; validation passed with `git diff --check` |
 | RIC-003 | Add Discussion and Execution Sprint Model | Commit `cdab8bf docs: add discussion and execution sprint modes`; Discussion / Decision Mode and Execution / Sprint Mode added to `AGENTS.md`, `README.md`, and `docs/ops/boot-rules.md`; validation passed with `git diff --check` |
+| RIC-004 | Define Product-First Documentation Architecture | Product-first documentation architecture recorded in `docs/architecture/documentation-architecture.md`; root `docs/` separated from templates, examples, baselines, playbooks, and agents; reserved areas and risks documented; validation passed with `git diff --check` |
 
 ## Blocked Items
 
@@ -33,8 +34,8 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| None | None | None | None |
+| RIC-005 | Product Discipline Core | Recommended | Candidate only; define the first `docs/product/` product discipline core document after Trigger approval |
 
 ## Next Process Step
 
-Open a Discussion Gate before promoting any new task to READY. No task is currently READY.
+RIC-004 is DONE by Trigger approval. RIC-005 is recommended only and is not READY.

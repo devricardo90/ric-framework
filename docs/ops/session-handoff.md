@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Keep the repository Idle after reconciling the recorded local Git state for RIC-002 and RIC-003.
+Remain Idle after completing RIC-004.
 
 ## Active Task
 
@@ -14,11 +14,11 @@ Status: None
 
 ## Last Completed Action
 
-Reconciled operational documentation to show RIC-002 committed in `b598a10 docs: add MIT license` and RIC-003 committed in `cdab8bf docs: add discussion and execution sprint modes`.
+Closed RIC-004 as DONE by Trigger approval after validation.
 
 ## Current State
 
-RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, and RIC-003 are closed as DONE. RIC-002 is committed locally in `b598a10 docs: add MIT license`. RIC-003 is committed locally in `cdab8bf docs: add discussion and execution sprint modes`. The project is Idle. No task is active. No task is READY. The verified branch was `main`; the working tree was clean before this reconciliation; local `origin/main` was aligned with `HEAD`; no local push was pending by the local Git reference.
+RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, RIC-003, and RIC-004 are closed as DONE. RIC-004 documents the official product-first documentation architecture. The project is Idle. No task is active. No task is READY. RIC-005 - Product Discipline Core is recommended only and must not be opened without Trigger approval.
 
 ## Files Changed
 
@@ -26,6 +26,7 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, and RIC-003 are closed as DONE. 
 - `STATUS.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
+- `docs/architecture/documentation-architecture.md`
 
 ## Commands Executed
 
@@ -38,24 +39,20 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, and RIC-003 are closed as DONE. 
 - `Get-Content -Raw STATUS.md`
 - `Get-Content -Raw docs/ops/session-handoff.md`
 - `Get-Content -Raw docs/ops/execution-log.md`
-- `Get-Content -Raw docs/ops/boot-rules.md`
-- `Get-Content -Raw README.md`
-- `Get-Content -Raw LICENSE`
+- `if (Test-Path docs/architecture/documentation-architecture.md) { Get-Content -Raw docs/architecture/documentation-architecture.md } else { Write-Output '__MISSING__ docs/architecture/documentation-architecture.md' }`
+- Trigger review adjustment: clarify that `docs/ops/` does not precede `docs/product/` and name `RIC-005 - Product Discipline Core` as the next recommended task.
+- Trigger approval to close RIC-004 as DONE.
 
 ## Validation Result
 
-- Verification before this reconciliation showed `git status --short` was clean.
-- `git status -sb` showed `main...origin/main`.
-- `git log --oneline -5` showed `cdab8bf docs: add discussion and execution sprint modes` and `b598a10 docs: add MIT license`.
-- `git log --oneline origin/main..HEAD` returned no local commits pending push by the local Git reference.
-- `git log --oneline HEAD..origin/main` returned no remote commits pending download by the local Git reference.
-- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited files.
-- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md` modified.
-- `git diff -- STATUS.md backlog.md docs/ops/session-handoff.md docs/ops/execution-log.md` showed changes limited to the authorized operational reconciliation files.
+- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and the new authorized `docs/architecture/` path modified or untracked.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final validation after Trigger review adjustments passed with `git status --short` showing only the RIC-004 scoped files modified or untracked and `git diff --check` passing with no whitespace errors.
+- Final pre-commit validation for RIC-004 closure passed: `git status --short` showed only RIC-004 scoped files modified or untracked, and `git diff --check` passed with no whitespace errors.
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize a commit for this operational documentation reconciliation after validation.
+- Whether to authorize push after the RIC-004 commit is created.
 
 ## Blockers
 
@@ -63,14 +60,14 @@ RIC-001, RIC-001A, RIC-001B, RIC-001C, RIC-002, and RIC-003 are closed as DONE. 
 
 ## Next 3 Steps
 
-1. Review the reconciliation diff for the four authorized files.
-2. If accepted, authorize a commit for this operational documentation reconciliation.
-3. Open a Discussion Gate before any future task is promoted to READY.
+1. Commit the approved RIC-004 documentation slice.
+2. After commit, verify `git status --short`, `git status -sb`, and `git log --oneline -5`.
+3. Request Trigger authorization before any push or before promoting RIC-005 to READY.
 
 ## Do Not Do Next
 
-Do not create backend, frontend, CLI, package files, dependencies, automation scripts, or additional operational files. Do not open a new READY task. Do not create RIC-004. Do not alter architecture or protocol rules. Do not push without Trigger authorization.
+Do not create backend, frontend, CLI, package files, dependencies, automation scripts, workflows, full templates, or files outside the RIC-004 scope. Do not open another READY task. Do not push without Trigger authorization.
 
 ## Resume Instruction for Next Agent
 
-Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then open a Discussion Gate before any new task is promoted to READY.
+Read `README.md`, `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/decisions.md`, and `docs/ops/execution-log.md`, then wait for Trigger approval before push or before promoting RIC-005 to READY.
