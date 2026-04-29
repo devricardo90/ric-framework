@@ -602,3 +602,54 @@ RIC-005A is DONE after Trigger approval and required validation. Commit is autho
 ## Next Action
 
 Commit the approved RIC-005A documentation slice, then verify repository status. Do not push without Trigger authorization.
+
+## 2026-04-29 - RIC-006 Execution
+
+Actor: Execution Agent
+
+Task: RIC-006 - Define Product-to-Execution Gate
+
+Status: DONE by Trigger approval
+
+## Work Performed
+
+- Confirmed the initial working tree was clean.
+- Recorded Trigger approval to promote RIC-006 to READY and execute it.
+- Moved RIC-006 to IN_PROGRESS in operational status.
+- Created `docs/product/product-to-execution-gate.md`.
+- Defined the Product-to-Execution Gate as the decision point between product clarification and controlled execution.
+- Documented minimum criteria before moving a task to READY.
+- Documented the relationship between product, MVP, architecture, stack, agents, and validation.
+- Added a lightweight gate checklist.
+- Documented READY blockers and the rule that execution does not fix product gaps.
+- Documented minimum evidence required before Execution / Sprint Mode.
+- Recorded future templates or examples as possible future work requiring separate Trigger approval.
+- Closed RIC-006 as DONE by Trigger approval.
+
+## Commands Executed
+
+- `git status --short`
+- `if (Test-Path docs/product/product-to-execution-gate.md) { Get-Content -Raw docs/product/product-to-execution-gate.md } else { Write-Output '__MISSING__ docs/product/product-to-execution-gate.md' }`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+
+## Validation Evidence
+
+- `git status --short` showed only `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`, and the new authorized `docs/product/product-to-execution-gate.md` path modified or untracked.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the four edited existing files.
+- Final pre-commit validation for RIC-006 closure passed: `git status --short` showed only RIC-006 scoped files modified or untracked, and `git diff --check` passed with no whitespace errors.
+
+## Closure Decision
+
+RIC-006 is DONE after Trigger approval and required validation. Commit is authorized with message `docs: define product-to-execution gate`.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- No push has been performed.
+
+## Next Action
+
+Commit the approved RIC-006 documentation slice, then verify repository status. Do not push without Trigger authorization.

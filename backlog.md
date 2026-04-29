@@ -26,6 +26,7 @@
 | RIC-004A | Define Repository Language Standard | Repository-facing language standard recorded in `AGENTS.md` and referenced in `docs/architecture/documentation-architecture.md`; Trigger-facing communication may use Portuguese; RIC-005 remained Recommended only; validation passed with `git diff --check` |
 | RIC-005 | Product Discipline Core | Core product discipline recorded in `docs/product/product-discipline.md`; product defined as problem, user, value, scope, and acceptance criteria; blockers and future product discipline topics documented; validation passed with `git diff --check` |
 | RIC-005A | Define MVP Scope Rules | MVP scope rules recorded in `docs/product/mvp-scope-rules.md`; MVP, future version, nice-to-have, and forbidden scope separated; inflated-scope signals and MVP blockers documented; validation passed with `git diff --check` |
+| RIC-006 | Define Product-to-Execution Gate | Product-to-execution gate recorded in `docs/product/product-to-execution-gate.md`; READY criteria, blockers, lightweight checklist, and minimum evidence before Execution / Sprint Mode documented; validation passed with `git diff --check` |
 
 ## Blocked Items
 
@@ -37,8 +38,8 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| RIC-006 | Product-to-Execution Gate | Recommended | Candidate only; define the gate from product context into architecture, agents, and execution after Trigger approval |
+| None | None | None | Future templates or examples for product-to-execution handoff remain unpromoted and require separate Trigger approval |
 
 ## Next Process Step
 
-RIC-005A is DONE by Trigger approval. Future product discipline tasks are recommended only and are not READY.
+RIC-006 is DONE by Trigger approval. Future tasks are recommended only and are not READY.

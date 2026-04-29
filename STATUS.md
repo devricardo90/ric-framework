@@ -18,11 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-005A
+ID: RIC-006
 
-Title: Define MVP Scope Rules
+Title: Define Product-to-Execution Gate
 
-Evidence: MVP scope rules recorded in `docs/product/mvp-scope-rules.md`; MVP, future version, nice-to-have, and forbidden scope separated; inflated-scope signals and MVP blockers documented; validation passed with `git diff --check`.
+Evidence: Product-to-execution gate recorded in `docs/product/product-to-execution-gate.md`; READY criteria, blockers, lightweight checklist, and minimum evidence before Execution / Sprint Mode documented; validation passed with `git diff --check`.
 
 ## Repository State
 
@@ -44,8 +44,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Remain Idle after completing RIC-005A.
+Remain Idle after completing RIC-006.
 
 ## Next Recommended Action
 
-Request Trigger authorization before opening any future product discipline task as READY.
+Request Trigger authorization before opening any future task as READY.
