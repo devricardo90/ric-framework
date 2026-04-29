@@ -1,4 +1,57 @@
-# Execution Log
+## 2026-04-29 - RIC-010A Execution
+
+Actor: Execution Agent
+
+Task: RIC-010A - Define Examples and Automation Boundaries
+
+Status: Local DONE by Trigger approval
+
+## Work Performed
+
+- Read required startup files in order.
+- Confirmed the working tree was clean before RIC-010A execution.
+- Confirmed `main` was synchronized with `origin/main` after RIC-009A push.
+- Recorded Trigger approval to promote RIC-010A to READY and execute it.
+- Created `docs/architecture/examples-and-automation-boundaries.md`.
+- Defined Manual-First policy, example isolation, dependency separation, and official example criteria.
+- Established automation triggers and directory boundaries for `examples/`, `scripts/`, and `.github/`.
+- Documented agent authority boundaries over reserved folders and automation.
+- Updated operational records for RIC-010A execution state.
+- Closed RIC-010A as Local DONE by Trigger approval.
+- Prepared local commit with message `docs: define examples and automation boundaries`.
+
+## Commands Executed
+
+- `git status -sb`
+- `git status --short`
+- `git log --oneline -3`
+- Trigger approval to promote RIC-010A to READY and execute it.
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+- `git status --short`
+- `git diff --check`
+- Trigger approval to close RIC-010A as Local DONE and create the local commit.
+
+## Validation Evidence
+
+- Pre-commit `git status --short` showed modified operational files and untracked `docs/architecture/examples-and-automation-boundaries.md`.
+- `git diff --check` passed with no whitespace errors.
+- Final Local DONE validation passed with clean working tree after commit.
+
+## Closure Decision
+
+RIC-010A is Local DONE after Trigger approval and required validation. Remote DONE is not claimed because push is not authorized in this step.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Create the authorized local commit, then wait for Trigger authorization before pushing.
 
 Chronological execution records for RIC Framework repository work.
 

@@ -10,7 +10,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-009A | Define Agent Role and Responsibility Boundaries | IN_PROGRESS - awaiting Trigger review | Define agent roles, responsibilities, authority limits, execution boundaries, stop conditions, and handoff expectations. | `git status --short`; `git diff --check` | Commit only after Trigger review and approval; one commit for the RIC-009A documentation slice. |
+| None | None | None | None | None | None |
 
 ## Completed Items
 
@@ -29,6 +29,8 @@
 | RIC-006 | Define Product-to-Execution Gate | Commit `b8000d9 docs: define product-to-execution gate`; product-to-execution gate recorded in `docs/product/product-to-execution-gate.md`; READY criteria, blockers, lightweight checklist, and minimum evidence before Execution / Sprint Mode documented; validation passed with `git diff --check`; pushed to `origin/main` |
 | RIC-007A | Define Operational Source of Truth Rules | Commit `7f2ff99 docs: define operational source of truth rules`; operational source-of-truth rules recorded in `docs/ops/source-of-truth-rules.md`; `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md` roles documented; Local DONE and Remote DONE clarified; validation passed with `git diff --check`; pushed to `origin/main` |
 | RIC-008A | Define Architecture Decision Rules | Commit `caaf09c docs: define architecture decision rules`; architecture decision rules recorded in `docs/architecture/architecture-decision-rules.md`; Discussion Gate triggers, stack/version/provider boundaries, no silent technology swap rule, decision-vs-execution separation, technical clarity blockers, and agent authority boundaries documented; validation passed with `git diff --check`; pushed to `origin/main` |
+| RIC-009A | Define Agent Role and Responsibility Boundaries | Commit `fad9c07 docs: define agent role boundaries`; agent role and responsibility boundaries recorded in `docs/agents/agent-role-boundaries.md`; Trigger, Orchestrator, Executor, Consultant/Auditor, and specialist agent role boundaries defined; single-repository execution rule, recommendation vs approval boundaries, stop conditions, and handoff expectations documented; validation passed with `git diff --check`; pushed to `origin/main` |
+| RIC-010A | Define Examples and Automation Boundaries | Examples and automation boundaries recorded in `docs/architecture/examples-and-automation-boundaries.md`; Manual-First policy defined; example isolation, dependency separation, and official example criteria documented; automation triggers and authority boundaries established; validation passed with `git diff --check`; local commit authorized with message `docs: define examples and automation boundaries` |
 
 ## Blocked Items
 
@@ -40,13 +42,8 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| None | None | None | No future task is recommended or READY while RIC-009A awaits Trigger review |
+| None | None | None | Use Discussion Gate before promoting any future task |
 
 ## Next Process Step
 
-RIC-009A is Local DONE and awaits Trigger authorization to push. No other task is READY. Use Discussion Gate before promoting any future task.
-er review |
-
-## Next Process Step
-
-RIC-009A was promoted to READY and executed by Trigger approval. It is not DONE and awaits Trigger review. Do not open RIC-009B, RIC-010, or any other task as READY.
+RIC-010A is Local DONE and awaits Trigger authorization to push. No other task is READY. Use Discussion Gate before promoting any future task.
