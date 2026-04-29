@@ -10,7 +10,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| None | None | None | None | None | None |
+| RIC-009A | Define Agent Role and Responsibility Boundaries | IN_PROGRESS - awaiting Trigger review | Define agent roles, responsibilities, authority limits, execution boundaries, stop conditions, and handoff expectations. | `git status --short`; `git diff --check` | Commit only after Trigger review and approval; one commit for the RIC-009A documentation slice. |
 
 ## Completed Items
 
@@ -28,7 +28,7 @@
 | RIC-005A | Define MVP Scope Rules | MVP scope rules recorded in `docs/product/mvp-scope-rules.md`; MVP, future version, nice-to-have, and forbidden scope separated; inflated-scope signals and MVP blockers documented; validation passed with `git diff --check` |
 | RIC-006 | Define Product-to-Execution Gate | Commit `b8000d9 docs: define product-to-execution gate`; product-to-execution gate recorded in `docs/product/product-to-execution-gate.md`; READY criteria, blockers, lightweight checklist, and minimum evidence before Execution / Sprint Mode documented; validation passed with `git diff --check`; pushed to `origin/main` |
 | RIC-007A | Define Operational Source of Truth Rules | Commit `7f2ff99 docs: define operational source of truth rules`; operational source-of-truth rules recorded in `docs/ops/source-of-truth-rules.md`; `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md` roles documented; Local DONE and Remote DONE clarified; validation passed with `git diff --check`; pushed to `origin/main` |
-| RIC-008A | Define Architecture Decision Rules | Architecture decision rules recorded in `docs/architecture/architecture-decision-rules.md`; Discussion Gate triggers, stack/version/provider boundaries, no silent technology swap rule, decision-vs-execution separation, technical clarity blockers, and agent authority boundaries documented; validation passed with `git diff --check`; local commit authorized with message `docs: define architecture decision rules` |
+| RIC-008A | Define Architecture Decision Rules | Commit `caaf09c docs: define architecture decision rules`; architecture decision rules recorded in `docs/architecture/architecture-decision-rules.md`; Discussion Gate triggers, stack/version/provider boundaries, no silent technology swap rule, decision-vs-execution separation, technical clarity blockers, and agent authority boundaries documented; validation passed with `git diff --check`; pushed to `origin/main` |
 
 ## Blocked Items
 
@@ -40,8 +40,13 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| None | None | None | No future task is recommended or READY |
+| None | None | None | No future task is recommended or READY while RIC-009A awaits Trigger review |
 
 ## Next Process Step
 
-RIC-008A is Local DONE by Trigger approval. Do not open RIC-008B, RIC-009, or any other task as READY without explicit Trigger approval.
+RIC-009A is Local DONE and awaits Trigger authorization to push. No other task is READY. Use Discussion Gate before promoting any future task.
+er review |
+
+## Next Process Step
+
+RIC-009A was promoted to READY and executed by Trigger approval. It is not DONE and awaits Trigger review. Do not open RIC-009B, RIC-010, or any other task as READY.
