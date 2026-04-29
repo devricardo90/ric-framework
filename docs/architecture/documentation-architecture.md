@@ -48,6 +48,8 @@ Root-level `docs/` is for canonical RIC Framework documentation.
 
 It defines the framework's disciplines, rules, and reusable operating model. It must not become a filled project dossier for an application that uses RIC Framework.
 
+Repository-facing framework content must use professional English. Trigger-facing communication may use Portuguese. This language standard applies to documentation, task titles, commit messages, templates, examples, agents, playbooks, baselines, code comments, and filenames when applicable.
+
 Canonical framework areas:
 
 - `docs/product/`: product discipline and product-first handoff rules.

@@ -221,9 +221,14 @@ Forbidden:
 - "I also created..."
 - "I marked it DONE because it looks complete..."
 
-Required language:
-Repository content should use English unless the Trigger explicitly asks otherwise.
-Operational explanations to the Trigger may be in Portuguese.
+Repository language standard:
+Repository-facing content must use professional English.
+
+This includes documentation files, task titles, commit messages, templates, examples, agents, playbooks, baselines, code comments, and filenames when applicable.
+
+Trigger-facing communication may use Portuguese.
+
+Do not translate proper names unless the Trigger explicitly approves it.
 
 Current task format:
 Every task must have:

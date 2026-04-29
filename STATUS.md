@@ -18,11 +18,11 @@ Status: None
 
 ## Last Completed Task
 
-ID: RIC-004
+ID: RIC-004A
 
-Title: Define Product-First Documentation Architecture
+Title: Define Repository Language Standard
 
-Evidence: Product-first documentation architecture recorded in `docs/architecture/documentation-architecture.md`; root `docs/` separated from project templates, examples, baselines, playbooks, and agents; reserved areas and risks documented; validation passed with `git diff --check`.
+Evidence: Repository-facing language standard recorded in `AGENTS.md` and referenced in `docs/architecture/documentation-architecture.md`; RIC-005 remained Recommended only; validation passed with `git diff --check`.
 
 ## Repository State
 
@@ -44,7 +44,7 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Remain Idle after completing RIC-004.
+Remain Idle after completing RIC-004A.
 
 ## Next Recommended Action
 

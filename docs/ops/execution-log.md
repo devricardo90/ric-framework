@@ -453,3 +453,51 @@ RIC-004 is DONE after Trigger approval and required validation. Commit is author
 ## Next Action
 
 Commit the approved RIC-004 documentation slice, then verify repository status. Do not push without Trigger authorization.
+
+## 2026-04-29 - RIC-004A Execution
+
+Actor: Execution Agent
+
+Task: RIC-004A - Define Repository Language Standard
+
+Status: DONE by Trigger approval
+
+## Work Performed
+
+- Confirmed the initial state: branch `main`, working tree clean, and `main` synchronized with `origin/main`.
+- Recorded Trigger approval to open and execute RIC-004A.
+- Added the repository language standard to `AGENTS.md`.
+- Referenced the language standard in `docs/architecture/documentation-architecture.md`.
+- Recorded that repository-facing content must use professional English.
+- Recorded that Trigger-facing communication may use Portuguese.
+- Kept RIC-005 - Product Discipline Core as Recommended only, not READY.
+- Closed RIC-004A as DONE by Trigger approval.
+
+## Commands Executed
+
+- `git status -sb`
+- `git status --short`
+- `Get-Content -Raw AGENTS.md`
+- `Get-Content -Raw docs/architecture/documentation-architecture.md`
+- `Get-Content -Raw STATUS.md`
+- `Get-Content -Raw backlog.md`
+- `Get-Content -Raw docs/ops/session-handoff.md`
+- `Get-Content -Raw docs/ops/execution-log.md`
+
+## Validation Evidence
+
+- `git status --short` showed only `AGENTS.md`, `STATUS.md`, `backlog.md`, `docs/architecture/documentation-architecture.md`, `docs/ops/execution-log.md`, and `docs/ops/session-handoff.md` modified.
+- `git diff --check` passed with no whitespace errors; Git emitted LF/CRLF normalization warnings for the six edited files.
+
+## Closure Decision
+
+RIC-004A is DONE after Trigger approval and required validation. Commit is authorized with message `docs: define repository language standard`.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- No push has been performed.
+
+## Next Action
+
+Commit the approved RIC-004A documentation slice, then verify repository status. Do not push without Trigger authorization.
