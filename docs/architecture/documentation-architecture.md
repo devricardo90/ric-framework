@@ -70,47 +70,31 @@ Product comes before execution. `docs/ops/` controls status, backlog, handoff, a
 
 ## Templates
 
-`templates/` is for reusable project documents that can be copied into projects using RIC Framework.
-
-Project-specific product files belong under template paths such as:
-
-```text
-templates/*/docs/product/
-```
-
-Those files are fillable project documents. They capture the real product problem, users, MVP scope, requirements, flows, domain, and acceptance criteria for a specific project.
-
-The root `docs/product/` defines the discipline. `templates/*/docs/product/` provides the project-facing forms of that discipline.
+`templates/` is for reusable project documents and skeleton structures that can be copied into projects using RIC Framework. These are helper tools and do not authorize changes to the framework core.
 
 ## Examples
 
 `examples/` is for demonstrations of the framework in use.
-
-Examples may show completed or partial project structures, but they must remain clearly marked as examples. They are not canonical framework rules and must not be mistaken for active project state.
-
-## Baselines
-
-`baselines/` is for reference baselines.
-
-Baselines may describe recommended starting points, such as a fullstack MVP baseline, but they must not lock the framework to a stack unless the Trigger approves that baseline as an explicit scope.
+- **Reserved Area:** The directory is a reserved area. Pre-existing content (like `examples/sample-project/`) is classified as a Skeleton Example and does not imply permission for further modification or creation without explicit task approval.
 
 ## Playbooks and Agents
 
-`playbooks/` is for reusable procedures.
+`playbooks/` is for reusable procedures and "how-to" guides for agents and human operators.
 
-`agents/` is for agent roles, contracts, and operating briefs.
+`agents/` (Root) is for operational agent profiles, personas, and specialized roles.
 
-These areas support assisted execution, but they do not define product direction. They must follow the product-first order and respect governance rules.
+`docs/agents/` (Documentation) is for the formal rules of authority, responsibility, boundaries, and governance governing agent behavior.
 
 ## Reserved Areas
 
 The following areas are reserved until separately approved:
 
+- `examples/`: reserved for official demonstrations.
 - `scripts/`: reserved for future tooling or automation.
 - `.github/`: reserved for future repository automation, workflows, or issue templates.
 - `projects/`: reserved for future project references, project registry, or consumer-project coordination.
 
-These directories must not be created or populated without a task that explicitly authorizes them.
+These directories must not be created or populated without a task that explicitly authorizes them. Existing folders do not grant write permission outside the approved task scope.
 
 ## Risks
 

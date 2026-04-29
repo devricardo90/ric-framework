@@ -14,8 +14,10 @@ Examples serve as educational evidence. They must never contaminate the framewor
 
 ### Directory Boundary
 - All examples must reside within the `examples/` directory.
+- **Pre-existing Content:** The `examples/sample-project/` directory is classified as a **Skeleton Example**. It is a pre-existing conceptual placeholder and is not automatically considered an "Official Example".
+- **Access Rule:** The presence of `examples/sample-project/` does **not** grant permission to create new files or directories within `examples/` without a dedicated READY task.
 - No example files (e.g., `package.json`, `tsconfig.json`, source code) are allowed in the repository root or `docs/` core.
-- The `examples/` folder remains a reserved area and requires explicit Trigger approval for any content creation.
+- The `examples/` folder remains a **reserved area** and requires explicit Trigger approval for any content creation.
 
 ### Dependency Separation
 - Examples must maintain their own dependency manifests (e.g., local `package.json`).

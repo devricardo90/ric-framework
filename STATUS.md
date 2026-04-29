@@ -18,11 +18,11 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-010A
+ID: RIC-011A
 
-Title: Define Examples and Automation Boundaries
+Title: Reconcile Current Repository Tree and Directory Semantics
 
-Evidence: Examples and automation boundaries recorded in `docs/architecture/examples-and-automation-boundaries.md`; Manual-First policy defined; example isolation, dependency separation, and official example criteria documented; automation triggers and authority boundaries established; validation passed with `git diff --check`; local commit authorized with message `docs: define examples and automation boundaries`.
+Evidence: Physical repository tree reconciled with logical governance; `examples/sample-project/` classified as Skeleton Example; semantics of `agents/`, `playbooks/`, and `templates/` clarified; reserved area rules reinforced; validation passed with `git diff --check`; local commit authorized with message `docs: reconcile repository tree semantics`.
 Remote Evidence: Pending push to `origin/main`.
 
 ## Repository State
@@ -31,11 +31,11 @@ Branch: `main`
 
 Working Tree at Verification: Clean after local commit
 
-Local HEAD: `ec2e9b9` docs: define examples and automation boundaries
+Local HEAD: `1a8cafd` docs: reconcile repository tree semantics
 
-Local `origin/main` Reference: `fad9c07` (Local HEAD will be ahead by 1 commit)
+Local `origin/main` Reference: `7ba869e` (Local HEAD will be ahead by 1 commit)
 
-Pending Local Commits by Local Git Reference: 1 commit (`docs: define examples and automation boundaries`)
+Pending Local Commits by Local Git Reference: 1 commit (`docs: reconcile repository tree semantics`)
 
 Pending Remote Commits by Local Git Reference: None
 
@@ -45,7 +45,7 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Maintain repository idle state and wait for Trigger authorization to push RIC-010A to `origin/main`.
+Maintain repository idle state and wait for Trigger authorization to push RIC-011A to `origin/main`.
 
 ## Next Recommended Action
 
