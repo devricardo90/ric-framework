@@ -8,7 +8,7 @@
 
 ## Current Objective
 
-Maintain the Service Request Mini Product Instance as a documentation-only official example pending Trigger review of RIC-016A.
+Maintain Product Instance after SRM-001 DONE. No implementation task is READY.
 
 ---
 
@@ -24,26 +24,23 @@ Status: Idle
 
 ## Last Completed Action
 
-Initialized the Service Request Mini Product Instance documentation under framework task RIC-016A.
+Trigger approved SRM-001 as DONE. Updated stack decision, decision log, validation gates, version matrix, backlog, status, and handoff.
 
 ---
 
 ## Current State
 
-The Product Instance has boot-required documentation filled and lifecycle files initialized as controlled stubs. No internal Product Instance task is READY. `SRM-001` is Recommended only.
+SRM-001 is DONE. The approved minimum stack is plain HTML/CSS/JS with browser `localStorage`, no build step, no package manager, no dependencies, no backend, no external database, no authentication, and no deploy. `SRM-002` is Recommended only.
 
 ---
 
 ## Files Changed
 
-- `examples/service-request-mini/prd.md`
-- `examples/service-request-mini/mvp-scope.md`
 - `examples/service-request-mini/backlog.md`
 - `examples/service-request-mini/status.md`
 - `examples/service-request-mini/session-handoff.md`
 - `examples/service-request-mini/stack-decision.md`
 - `examples/service-request-mini/decision-log.md`
-- `examples/service-request-mini/execution-log.md`
 - `examples/service-request-mini/validation-gates.md`
 - `examples/service-request-mini/version-matrix.md`
 
@@ -51,41 +48,50 @@ The Product Instance has boot-required documentation filled and lifecycle files 
 
 ## Commands Executed
 
-- No Product Instance execution commands have been run.
+- `git status --short`
+- Read Service Request Mini PRD, MVP scope, backlog, and stack stub.
+- Updated approved SRM-001 documentation files.
+- `git diff --check`
+- `git status --short`
+- Protected-path check for `templates/project/`, `templates/prompts/`, `examples/sample-project/`, `AGENTS.md`, and `README.md`
+- Trigger approved SRM-001 as DONE and approved the stack direction.
 
 ---
 
 ## Validation Result
 
-No Product Instance validation has been executed. Framework-level validation for RIC-016A is recorded in the framework operational files.
+- `git diff --check` PASS (LF/CRLF warnings only).
+- `git status --short` shows only authorized Product Instance files and framework operational files modified.
+- Protected-path check shows no changes in `templates/project/`, `templates/prompts/`, `examples/sample-project/`, `AGENTS.md`, or `README.md`.
+- No code, scripts, `package.json`, `.github`, workflow, automation, backend, external database, authentication, deploy, executable frontend, or dependency was created.
+- Final pre-commit validation for SRM-001 closure passed: `git diff --check` PASS and `git status --short` showed only authorized files.
 
 ---
 
 ## Pending Decisions for the Trigger
 
-- Whether to approve RIC-016A after review.
-- Whether to open a future Discussion Gate for `SRM-001`.
-- Which stack and validation plan should be evaluated later, if implementation becomes approved scope.
+- Whether to push the SRM-001 local commit after it is created.
+- Whether to open future implementation task `SRM-002`.
 
 ---
 
 ## Blockers
 
-- Future implementation is blocked until the Trigger approves a stack and validation plan.
+- Future implementation is blocked until the Trigger separately opens an implementation task.
 
 ---
 
 ## Next 3 Steps
 
-1. Wait for Trigger review of RIC-016A.
-2. If approved later, use a Discussion Gate to evaluate `SRM-001`.
-3. Do not implement, select stack, or promote any internal task without Trigger approval.
+1. Create authorized local commit for SRM-001.
+2. Report post-commit state to Trigger.
+3. Use a separate Discussion Gate before opening `SRM-002`.
 
 ---
 
 ## Do Not Do Next
 
-- Do not mark `SRM-001` READY without Trigger approval.
+- Do not mark `SRM-002` READY without Trigger approval.
 - Do not create code, scripts, package files, workflows, `.github`, automation, frontend, backend, database, authentication, or deployment.
 - Do not declare execution, validation, decision, version, or DONE without evidence.
 
@@ -93,4 +99,4 @@ No Product Instance validation has been executed. Framework-level validation for
 
 ## Resume Instruction for Next Agent
 
-Read this Product Instance handoff, then read `prd.md`, `mvp-scope.md`, `backlog.md`, and `status.md`. The instance is documentation-only. No internal task is READY. Use a future Discussion Gate before any execution.
+Read this Product Instance handoff, then read `stack-decision.md`, `decision-log.md`, `validation-gates.md`, `version-matrix.md`, `backlog.md`, and `status.md`. SRM-001 is DONE by Trigger approval. Commit is authorized if not already created. Do not push or open `SRM-002` without Trigger approval.

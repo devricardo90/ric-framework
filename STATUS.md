@@ -18,26 +18,26 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-016A
+ID: SRM-001
 
-Title: Create First Official Sample Product Documentation
+Title: Define Stack and Validation Plan for Service Request Mini
 
-Evidence: Trigger approved RIC-016A as Local DONE. Created `examples/service-request-mini/` with exactly the 10 approved documentation files. Five boot-required files are filled; five lifecycle files are controlled stubs. `SRM-001` appears only as Recommended, not READY. Scope respected; `git diff --check` PASS; protected paths untouched; no code, scripts, package files, workflows, `.github`, automation, implementation, stack, validation, version, or deployment created.
+Evidence: Trigger approved SRM-001 as DONE. Compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined no-build future validation plan; `SRM-002` remains Recommended only; no code, scripts, package files, workflows, `.github`, automation, implementation, backend, database, authentication, deploy, or dependencies created.
 Remote Evidence: Pending push.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Modified only in approved RIC-016A files before local commit.
+Working Tree at Verification: Modified only in approved SRM-001 files before local commit.
 
-Local HEAD: `3f5286f` docs: define product instance boot rules
+Local HEAD: `c545e2c` docs: create first official governed example
 
-Local `origin/main` Reference: `3f5286f` docs: define product instance boot rules
+Local `origin/main` Reference: `c545e2c` docs: create first official governed example
 
-Pending Local Commits by Local Git Reference: RIC-016A commit to be created
+Pending Local Commits by Local Git Reference: None
 
-Pending Remote Commits by Local Git Reference: RIC-016A pending push after commit
+Pending Remote Commits by Local Git Reference: None
 
 ## Blocked Items
 
@@ -45,8 +45,8 @@ Pending Remote Commits by Local Git Reference: RIC-016A pending push after commi
 
 ## Current Objective
 
-Maintain repository after RIC-016A Local DONE. Push is not authorized yet.
+Maintain repository after SRM-001 Local DONE. Push is not authorized yet.
 
 ## Next Recommended Action
 
-Create the authorized local commit `docs: create first official governed example`, then report post-commit state. Do not push without Trigger authorization.
+Create authorized local commit `docs: define service request mini stack decision`, then report post-commit state. Do not push without Trigger authorization.

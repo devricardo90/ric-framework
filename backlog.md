@@ -16,7 +16,8 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
-| RIC-016A | Create First Official Sample Product Documentation | Trigger approved Local DONE; created `examples/service-request-mini/` with exactly 10 approved documentation files; boot-required files filled; lifecycle files controlled stubs; `SRM-001` Recommended only, not READY; no code, stack, automation, workflow, implementation, validation, version, deployment, or protected-path changes created; `git diff --check` PASS |
+| SRM-001 | Define Stack and Validation Plan for Service Request Mini | Trigger approved DONE; compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined no-build future validation plan; `SRM-002` remains Recommended only; no code, dependencies, backend, database, auth, deploy, workflow, automation, or protected-path changes created; `git diff --check` PASS |
+| RIC-016A | Create First Official Sample Product Documentation | Remote DONE at commit `c545e2c`; created `examples/service-request-mini/` with exactly 10 approved documentation files; boot-required files filled; lifecycle files controlled stubs; `SRM-001` Recommended only, not READY; no code, stack, automation, workflow, implementation, validation, version, deployment, or protected-path changes created; `git diff --check` PASS |
 | RIC-015B | Define Product Instance Boot Rules | Remote DONE at commit `3f5286f`; created `docs/ops/product-instance-boot-rules.md`; defined Product Instance location, template-copy rules, boot-required files, lifecycle stub rules, first READY criteria, boot prohibitions, and Trigger approval requirements; scope respected; `git diff --check` PASS; no product or example created; protected paths untouched |
 | RIC-015A | Reconcile Product Onboarding and Example Semantics | Trigger approved DONE; updated `playbooks/start-new-project.md` and `docs/architecture/examples-and-automation-boundaries.md`; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-014A | Define Project Instance Template Pack | Trigger approved DONE; created `templates/project/` with README.md and 10 project instance templates; scope respected; `git diff --check` PASS; no additional READY task opened |
@@ -57,4 +58,4 @@
 
 ## Next Process Step
 
-RIC-016A is Local DONE after Trigger approval. No task is active. No task is READY. Create authorized local commit `docs: create first official governed example`; push is not authorized yet.
+SRM-001 is DONE after Trigger approval. No task is active. No task is READY. Create authorized local commit `docs: define service request mini stack decision`; push is not authorized yet.

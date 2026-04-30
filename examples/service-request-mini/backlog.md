@@ -28,7 +28,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
-| None | None | None |
+| SRM-001 | Define Stack and Validation Plan for Service Request Mini | Trigger approved DONE; compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined validation plan for a future no-build implementation; no code, dependencies, backend, database, authentication, deploy, workflow, or automation created; `git diff --check` PASS |
 
 ---
 
@@ -46,7 +46,7 @@ Items that have been identified but are not READY. Trigger must approve before p
 
 | ID | Title | Status | Goal | Notes |
 | --- | --- | --- | --- | --- |
-| SRM-001 | Define Stack and Validation Plan for Service Request Mini | Recommended | Decide, through a future Discussion Gate, which minimal stack and validation plan would be appropriate for a later MVP implementation. | Not READY. No stack is approved. No implementation is authorized. |
+| SRM-002 | Implement Local Browser MVP for Service Request Mini | Recommended | Create the first local browser-only implementation of the request creation, list, status update, and reload persistence flow. | Not READY. Depends on Trigger approval of SRM-001 and a separate implementation scope. |
 
 ---
 
@@ -75,4 +75,4 @@ Commit Rule:
 
 ## Next Process Step
 
-No task is active. No task is READY. Use a Discussion Gate before promoting `SRM-001` or any other Product Instance task.
+SRM-001 is DONE after Trigger approval. No task is active. No task is READY. `SRM-002` is Recommended only.
