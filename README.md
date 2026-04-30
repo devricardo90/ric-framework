@@ -1,6 +1,6 @@
 # RIC Framework
 
-RIC Framework, also referred to as Protocolo RIC, is a documentation-first execution framework for AI-assisted projects. It defines how a project is planned, executed, validated, handed off, and resumed without depending on any specific technology stack.
+RIC Framework, is a documentation-first execution framework for AI-assisted projects. It defines how a project is planned, executed, validated, handed off, and resumed without depending on any specific technology stack.
 
 The framework is built for disciplined delivery: clear context before work starts, visible status while work is in progress, evidence before claiming completion, and controlled use of agents when work is delegated.
 
