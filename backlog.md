@@ -32,7 +32,8 @@
 | RIC-009A | Define Agent Role and Responsibility Boundaries | Commit `fad9c07 docs: define agent role boundaries`; agent role and responsibility boundaries recorded in `docs/agents/agent-role-boundaries.md`; Trigger, Orchestrator, Executor, Consultant/Auditor, and specialist agent role boundaries defined; single-repository execution rule, recommendation vs approval boundaries, stop conditions, and handoff expectations documented; validation passed with `git diff --check`; pushed to `origin/main` |
 | RIC-010A | Define Examples and Automation Boundaries | Commit `7ba869e docs: define examples and automation boundaries`; examples and automation boundaries recorded in `docs/architecture/examples-and-automation-boundaries.md`; Manual-First policy defined; example isolation, dependency separation, and official example criteria documented; automation triggers and authority boundaries established; validation passed with `git diff --check`; pushed to `origin/main` |
 | RIC-011A | Reconcile Current Repository Tree and Directory Semantics | Commit `a91db43 docs: reconcile repository tree semantics`; physical repository tree reconciled with logical governance; `examples/sample-project/` classified as Skeleton Example; semantics of `agents/`, `playbooks/`, and `templates/` clarified; reserved area rules reinforced; validation passed with `git diff --check`; pushed to `origin/main`; Remote DONE confirmed by local `HEAD`, local `origin/main`, and online `origin/main` at `a91db43` |
-| RIC-011B | Reconcile Post-Push Operational State | Trigger approved DONE; operational records reconciled after confirmed RIC-011A push; RIC-011A remains Remote DONE at `a91db43 docs: reconcile repository tree semantics`; validation passed with `git diff --check` and `git status --short`; local commit authorized with message `docs: reconcile post RIC-011A operational state` |
+| RIC-011B | Reconcile Post-Push Operational State | Commit `8fbf0a6 docs: reconcile post RIC-011A operational state`; operational records reconciled after confirmed RIC-011A push; RIC-011A remains Remote DONE at `a91db43 docs: reconcile repository tree semantics`; validation passed with `git diff --check` and `git status --short`; pushed to `origin/main`; Remote DONE confirmed |
+| RIC-012A | Define RIC Framework Functional Map | Trigger approved DONE; `docs/architecture/framework-functional-map.md` created; functional areas mapped against current repository structure; future/reserved areas, duplication risks, maturation order, and function-before-folder rule documented; no new folders created; no additional READY task opened; validation passed with `git status --short` and `git diff --check`; local commit authorized with message `docs: define RIC Framework functional map` |
 
 ## Blocked Items
 
@@ -48,4 +49,4 @@
 
 ## Next Process Step
 
-RIC-011A is Remote DONE. RIC-011B is Local DONE after Trigger approval and local commit. No task is active. No task is READY. Use Discussion Gate before promoting any future task.
+RIC-012A is Local DONE after Trigger approval and local commit. No task is active. No task is READY. Use Discussion Gate before promoting any future task.

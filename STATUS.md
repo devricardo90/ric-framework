@@ -18,26 +18,26 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-011B
+ID: RIC-012A
 
-Title: Reconcile Post-Push Operational State
+Title: Define RIC Framework Functional Map
 
-Evidence: Trigger approved RIC-011B as DONE. Operational records were reconciled after the confirmed RIC-011A push; RIC-011A remains Remote DONE at `a91db43 docs: reconcile repository tree semantics`; validation passed with `git diff --check` and `git status --short`; local commit authorized with message `docs: reconcile post RIC-011A operational state`.
+Evidence: Trigger approved RIC-012A as DONE. Functional map created in `docs/architecture/framework-functional-map.md`; product, architecture, ops, execution-harness, quality, deploy, recruiter, maintenance, and risks mapped against the current repository structure; future/reserved areas, duplication risks, maturation order, and function-before-folder rule documented; no new folders created; no additional READY task opened; validation passed with `git status --short` and `git diff --check`; local commit authorized with message `docs: define RIC Framework functional map`.
 Remote Evidence: Pending push to `origin/main`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-011B operational correction; modified only in approved operational files before local commit
+Working Tree at Verification: Clean before RIC-012A execution; modified only in approved files before local commit
+
+Local HEAD: `8fbf0a6` docs: reconcile post RIC-011A operational state
+
+Local `origin/main` Reference: `8fbf0a6` docs: reconcile post RIC-011A operational state
 
 RIC-011A Remote DONE Reference: `a91db43` docs: reconcile repository tree semantics
 
-Local `origin/main` Reference: `a91db43` docs: reconcile repository tree semantics
-
-Online `origin/main` Reference: `a91db43` docs: reconcile repository tree semantics
-
-Pending Local Commits by Local Git Reference: RIC-011B local operational correction commit after Local DONE commit
+Pending Local Commits by Local Git Reference: None
 
 Pending Remote Commits by Local Git Reference: None
 
@@ -47,8 +47,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Maintain repository idle state after RIC-011B Local DONE. RIC-011B is an operational post-push correction only, with no architecture or product change.
+Maintain repository idle state after RIC-012A Local DONE. RIC-012A created the functional map without creating folders, reorganizing the tree, or opening additional READY tasks.
 
 ## Next Recommended Action
 
-Use Discussion Gate before promoting any future task to READY. No task is active and no task is READY.
+Use Discussion Gate before promoting any future task to READY. Do not open RIC-012B, RIC-013, or any additional READY task without Trigger approval.
