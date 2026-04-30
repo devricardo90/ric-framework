@@ -18,24 +18,22 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-012C
+ID: RIC-012D
 
-Title: Define Human-Agent Operating Model
+Title: Define Two-Agent Execution Playbook
 
-Evidence: Trigger approved RIC-012C as DONE. Created `docs/agents/human-agent-operating-model.md` formalizing the operational flow between Trigger, Auditor, and Executor. Scope respected; validation `git diff --check` PASS; no additional READY task opened.
+Evidence: Trigger approved RIC-012D as READY and execution completed. Created `playbooks/two-agent-execution-flow.md` with PREPARE, EXECUTE, AUDIT, CLOSE phases, pre/post checkpoints, stop rules, and anti-patterns. Scope respected; validation `git diff --check` PASS; no additional READY task opened.
 Remote Evidence: Pending push to `origin/main`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-012C execution; modified only in approved files for Local DONE state.
+Working Tree at Verification: Clean before RIC-012D execution; modified only in approved files for Local DONE state.
 
-Local HEAD: `3934815` docs: define RIC Framework functional map
+Local HEAD: `743d77a` docs: define human-agent operating model
 
-Local `origin/main` Reference: `3934815` docs: define RIC Framework functional map
-
-RIC-011A Remote DONE Reference: `a91db43` docs: reconcile repository tree semantics
+Local `origin/main` Reference: `743d77a` docs: define human-agent operating model
 
 Pending Local Commits by Local Git Reference: None
 
@@ -47,8 +45,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Maintain repository idle state after RIC-012C Local DONE.
+Maintain repository idle state after RIC-012D Local DONE.
 
 ## Next Recommended Action
 
-Use Discussion Gate to evaluate the next advance (e.g., Two-Agent Execution Playbook or Operational Prompt Templates). Do not open a new READY task yet.
+Use Discussion Gate to evaluate the next advance. Do not open a new READY task yet.

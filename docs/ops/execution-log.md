@@ -1,3 +1,56 @@
+## 2026-04-30 - RIC-012D Execution
+
+Actor: Execution Agent
+
+Task: RIC-012D - Define Two-Agent Execution Playbook
+
+Status: Local DONE by Trigger approval
+
+## Work Performed
+
+- Confirmed pre-execution state: working tree clean, `main` synchronized with `origin/main`, latest commit `743d77a docs: define human-agent operating model`.
+- Confirmed existing playbooks to avoid duplication: `agent-execution.md` covers high-level agent briefing; no playbook detailed the procedural two-agent execution flow.
+- Recorded Trigger approval to open RIC-012D as READY and execute within strict scope.
+- Created `playbooks/two-agent-execution-flow.md`.
+- Defined Phase 1 PREPARAR: entry condition, checklist actions, exit condition, expected output.
+- Defined Phase 2 EXECUTAR: pre-execute checkpoint, actions, post-execute checkpoint, exit condition, expected output.
+- Defined Phase 3 AUDITAR: entry condition, review actions, exit condition, expected output.
+- Defined Phase 4 FECHAR: pre-commit checkpoint, commit actions, pre-push checkpoint, push actions, post-push checkpoint.
+- Documented 7 Stop Rules covering architecture decisions, new dependencies, out-of-scope errors, correction failures, dirty working tree, unverified handoff, and ambiguous scope.
+- Documented 7 Anti-Patterns covering infinite relay, executor scope decisions, combined commit/push, silent DONE, out-of-scope bug fixes, aesthetic folder creation, and unclean executor handoff.
+- Included a Quick Reference Checklist covering all 10 key checkpoints.
+- Updated operational records: `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`.
+
+## Commands Executed
+
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+- Read `playbooks/agent-execution.md` and listed all existing playbooks to check for duplication.
+- Read `docs/agents/human-agent-operating-model.md` to align content.
+- `git diff --check`
+- `git status --short`
+
+## Validation Evidence
+
+- Pre-execution `git status --short` was clean.
+- `playbooks/two-agent-execution-flow.md` created with all required phases, checkpoints, stop rules, and anti-patterns.
+- Final validation `git diff --check` passed.
+- `git status --short` shows only approved files modified or untracked.
+
+## Closure Decision
+
+RIC-012D is Local DONE after Trigger approval. Commit authorized with message `docs: define two-agent execution playbook`. Remote DONE is pending push.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Create the authorized local commit, then use Discussion Gate to evaluate the next advance. Do not open a new READY task without Trigger approval.
+
 ## 2026-04-30 - RIC-012C Execution
 
 Actor: Execution Agent
