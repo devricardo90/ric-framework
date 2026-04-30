@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Maintain repository after SRM-002 Local DONE. Push is not authorized yet.
+Maintain repository after SRM-002 Remote DONE. No task is active. No task is READY.
 
 ## Active Task
 
@@ -14,11 +14,11 @@ Status: Idle
 
 ## Last Completed Action
 
-Trigger approved SRM-002 as Local DONE and authorized commit `feat: implement minimal browser-native request flow`. Commit created. Push is not authorized.
+Trigger approved SRM-002 as Remote DONE and authorized push. Push confirmed: `f415b4f..777cc94 main -> main`. `main` synchronized with `origin/main`. Working tree clean.
 
 ## Current State
 
-SRM-002 is Local DONE. Commit created. Working tree clean after commit. No task is active. No task is READY.
+SRM-002 is Remote DONE. Push confirmed. `main` synchronized with `origin/main` at `777cc94`. Working tree clean. No task is active. No task is READY.
 
 ## Files Committed in SRM-002
 
@@ -45,7 +45,6 @@ SRM-002 is Local DONE. Commit created. Working tree clean after commit. No task 
 
 ## Pending Decisions for the Trigger
 
-- Whether to push the SRM-002 local commit.
 - Whether to open a future task.
 
 ## Blockers
@@ -54,9 +53,9 @@ SRM-002 is Local DONE. Commit created. Working tree clean after commit. No task 
 
 ## Next 3 Steps
 
-1. Trigger decides whether to push.
-2. If push authorized: `git push origin main`, confirm Remote DONE.
-3. Use Discussion Gate before opening any future task.
+1. Trigger uses Discussion Gate to evaluate next task.
+2. If new task approved: Trigger promotes to READY and authorizes execution.
+3. Agent reads operational files and executes within approved scope.
 
 ## Do Not Do Next
 
@@ -66,4 +65,4 @@ SRM-002 is Local DONE. Commit created. Working tree clean after commit. No task 
 
 ## Resume Instruction for Next Agent
 
-Read this handoff, then read `STATUS.md` and `backlog.md`. SRM-002 is Local DONE. Commit was created. Do not push or open a new task without Trigger authorization.
+Read this handoff, then read `STATUS.md` and `backlog.md`. SRM-002 is Remote DONE at `777cc94`. `main` is synchronized with `origin/main`. Working tree is clean. Do not open a new task without Trigger authorization.

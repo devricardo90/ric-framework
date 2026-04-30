@@ -8,7 +8,7 @@
 
 ## Current Canonical Status
 
-Status: Local DONE - awaiting push
+Status: Remote DONE
 
 Current Task: None
 
@@ -32,7 +32,7 @@ Title: Implement Minimal Browser-Native Request Flow
 
 Evidence: Trigger approved Local DONE. Created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; commit `feat: implement minimal browser-native request flow`.
 
-Remote Evidence: Pending push authorization.
+Remote Evidence: Remote DONE at commit `777cc94 docs: record SRM-002 post-commit evidence in execution log` (push `f415b4f..777cc94 main -> main`).
 
 ---
 
@@ -40,13 +40,13 @@ Remote Evidence: Pending push authorization.
 
 Branch: `main`
 
-Working Tree at Verification: Clean before SRM-002 execution started.
+Working Tree at Verification: Clean after Remote DONE push.
 
-Local HEAD: `f415b4f docs: define security and clean code baseline`
+Local HEAD: `777cc94 docs: record SRM-002 post-commit evidence in execution log`
 
-Local `origin/main` Reference: `f415b4f docs: define security and clean code baseline`
+Local `origin/main` Reference: `777cc94 docs: record SRM-002 post-commit evidence in execution log`
 
-Pending Local Commits: None after authorized commit.
+Pending Local Commits: None. `main` synchronized with `origin/main`.
 
 ---
 

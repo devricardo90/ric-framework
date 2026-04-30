@@ -28,7 +28,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
-| SRM-002 | Implement Minimal Browser-Native Request Flow | Trigger approved Local DONE; created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; only authorized files in `git status --short`; commit `feat: implement minimal browser-native request flow` |
+| SRM-002 | Implement Minimal Browser-Native Request Flow | Trigger approved Remote DONE; created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; push `f415b4f..777cc94 main -> main`; `main` synchronized with `origin/main` |
 | SRM-001 | Define Stack and Validation Plan for Service Request Mini | Trigger approved DONE; compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined validation plan for a future no-build implementation; no code, dependencies, backend, database, authentication, deploy, workflow, or automation created; `git diff --check` PASS |
 
 ---
@@ -76,4 +76,4 @@ Commit Rule:
 
 ## Next Process Step
 
-SRM-002 is Local DONE by Trigger approval. Commit authorized: `feat: implement minimal browser-native request flow`. Push is not authorized. No task is active. No task is READY.
+SRM-002 is Remote DONE by Trigger approval. Push confirmed at `f415b4f..777cc94`. No task is active. No task is READY. Use Discussion Gate before opening any future task.

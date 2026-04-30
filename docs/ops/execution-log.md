@@ -96,9 +96,19 @@ SRM-002 is Local DONE by Trigger approval. Commit authorized: `feat: implement m
 - `git status -sb`: `## main...origin/main [ahead 1]`
 - `git log --oneline -3`: `8b6383b feat: implement minimal browser-native request flow` / `f415b4f docs: define security and clean code baseline` / `3833269 docs: define service request mini stack decision`
 
-## Next Action
+## Remote DONE Confirmation (2026-04-30)
 
-Report post-commit state to Trigger. Do not push without authorization. Use Discussion Gate before opening any future task.
+- Pre-push `git status --short`: clean.
+- Pre-push `git status -sb`: `## main...origin/main [ahead 2]`.
+- Pre-push `git log --oneline -3`: `777cc94` / `8b6383b` / `f415b4f` — only the two authorized commits ahead.
+- `git push origin main`: `f415b4f..777cc94 main -> main` — success.
+- Post-push `git status --short`: clean.
+- Post-push `git status -sb`: `## main...origin/main`.
+- Post-push `git log --oneline -3`: `777cc94 docs: record SRM-002 post-commit evidence in execution log` / `8b6383b feat: implement minimal browser-native request flow` / `f415b4f docs: define security and clean code baseline`.
+- Governance exception documented: commit `777cc94` accepted by Trigger as exception; no history rewrite.
+- Rule registered: do not create extra post-commit evidence commit without explicit Trigger authorization.
+
+SRM-002 is Remote DONE by Trigger confirmation.
 
 ---
 
