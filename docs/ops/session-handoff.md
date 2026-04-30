@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Maintain repository idle state after RIC-013A Local DONE.
+Maintain repository idle state after RIC-014A Local DONE.
 
 ## Active Task
 
@@ -14,22 +14,25 @@ Status: Idle
 
 ## Last Completed Action
 
-Closed RIC-013A as Local DONE after Trigger approval. Created `templates/prompts/` with README.md and 7 operational prompt templates. Created authorized local commit `docs: add operational prompt templates pack`.
+Closed RIC-014A as Local DONE after Trigger approval. Created `templates/project/` with README.md and 10 project instance templates. Created authorized local commit `docs: add project instance templates pack`.
 
 ## Current State
 
-RIC-013A is Local DONE. Created `templates/prompts/` pack. Operational records updated. No task is active. No task is READY.
+RIC-014A is Local DONE. Created `templates/project/` pack. Operational records updated. No task is active. No task is READY.
 
 ## Files Changed
 
-- `templates/prompts/README.md`
-- `templates/prompts/prepare-task-prompt.md`
-- `templates/prompts/executor-sprint-prompt.md`
-- `templates/prompts/consultant-auditor-prompt.md`
-- `templates/prompts/executor-fix-prompt.md`
-- `templates/prompts/close-task-prompt.md`
-- `templates/prompts/close-session-prompt.md`
-- `templates/prompts/handoff-to-new-agent-prompt.md`
+- `templates/project/README.md`
+- `templates/project/prd-template.md`
+- `templates/project/mvp-scope-template.md`
+- `templates/project/stack-decision-template.md`
+- `templates/project/version-matrix-template.md`
+- `templates/project/backlog-template.md`
+- `templates/project/status-template.md`
+- `templates/project/decision-log-template.md`
+- `templates/project/execution-log-template.md`
+- `templates/project/validation-gates-template.md`
+- `templates/project/session-handoff-template.md`
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md`
@@ -42,7 +45,7 @@ RIC-013A is Local DONE. Created `templates/prompts/` pack. Operational records u
 - `git log --oneline -3`
 - `git diff --check`
 - `git status --short`
-- Trigger approval to close RIC-013A as Local DONE and create local commit `docs: add operational prompt templates pack`.
+- Trigger approval to close RIC-014A as Local DONE and create local commit `docs: add project instance templates pack`.
 
 ## Validation Result
 
@@ -52,7 +55,7 @@ RIC-013A is Local DONE. Created `templates/prompts/` pack. Operational records u
 
 ## Pending Decisions for the Trigger
 
-- Whether to push RIC-013A local commit to `origin/main`.
+- Whether to push RIC-014A local commit to `origin/main`.
 - Selection of the next advance via Discussion Gate.
 
 ## Blockers
@@ -71,4 +74,4 @@ Do not push without Trigger authorization. Do not open a new READY task without 
 
 ## Resume Instruction for Next Agent
 
-Read operational files and verify RIC-013A is Local DONE. Repository is Idle. `templates/prompts/` pack has been created and committed locally.
+Read operational files and verify RIC-014A is Local DONE. Repository is Idle. `templates/project/` pack has been created and committed locally.

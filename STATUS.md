@@ -18,22 +18,22 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-013A
+ID: RIC-014A
 
-Title: Define Operational Prompt Templates Pack
+Title: Define Project Instance Template Pack
 
-Evidence: Trigger approved RIC-013A as DONE. Created `templates/prompts/` with README.md and 7 operational prompt templates. Scope respected; `git diff --check` PASS; no additional READY task opened.
+Evidence: Trigger approved RIC-014A as DONE. Created `templates/project/` with README.md and 10 project instance templates. Scope respected; `git diff --check` PASS; no additional READY task opened.
 Remote Evidence: Pending push to `origin/main`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-013A execution; modified only in approved files for Local DONE state.
+Working Tree at Verification: Clean before RIC-014A execution; modified only in approved files for Local DONE state.
 
-Local HEAD: `464325a` docs: define two-agent execution playbook
+Local HEAD: `6112429` docs: add operational prompt templates pack
 
-Local `origin/main` Reference: `464325a` docs: define two-agent execution playbook
+Local `origin/main` Reference: `6112429` docs: add operational prompt templates pack
 
 Pending Local Commits by Local Git Reference: None
 
@@ -45,7 +45,7 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Maintain repository idle state after RIC-013A Local DONE.
+Maintain repository idle state after RIC-014A Local DONE.
 
 ## Next Recommended Action
 
