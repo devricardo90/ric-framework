@@ -10,7 +10,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| None | None | None | None | None | None |
+| RIC-017A | Define Security and Clean Code Baseline | IN_PROGRESS | Create framework-level security and quality standards for product implementation. | git diff --check; verify file existence; no code created | docs: define security and clean code baseline |
 
 ## Completed Items
 

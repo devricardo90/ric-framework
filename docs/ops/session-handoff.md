@@ -2,15 +2,15 @@
 
 ## Current Objective
 
-Maintain repository after SRM-001 Local DONE. Push is not authorized yet.
+Execute RIC-017A to define the Security and Clean Code baseline before implementation starts.
 
 ## Active Task
 
-ID: None
+ID: RIC-017A
 
-Title: None
+Title: Define Security and Clean Code Baseline
 
-Status: Idle
+Status: DOING
 
 ## Last Completed Action
 

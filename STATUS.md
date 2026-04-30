@@ -10,11 +10,11 @@ Last Updated: 2026-04-30
 
 ## Active Task
 
-ID: None
+ID: RIC-017A
 
-Title: None
+Title: Define Security and Clean Code Baseline
 
-Status: Idle
+Status: DOING
 
 ## Last Completed Task
 
