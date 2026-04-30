@@ -16,6 +16,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-013A | Define Operational Prompt Templates Pack | Trigger approved DONE; created `templates/prompts/` with README.md and 7 prompt templates; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-012D | Define Two-Agent Execution Playbook | Trigger approved DONE; created `playbooks/two-agent-execution-flow.md`; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-012C | Define Human-Agent Operating Model | Trigger approved DONE; created `docs/agents/human-agent-operating-model.md`; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-001 | Repository Foundation and Documentation Skeleton | Commit `f0be24e docs: initialize ric framework structure`; `git status` was clean after commit |
@@ -52,4 +53,4 @@
 
 ## Next Process Step
 
-RIC-012D is Local DONE after Trigger approval. No task is active. No task is READY. Next substantive step should be Discussion Gate before promoting any future task.
+RIC-013A is Local DONE after Trigger approval. No task is active. No task is READY. Next substantive step should be Discussion Gate before promoting any future task.

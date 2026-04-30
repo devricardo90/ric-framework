@@ -1,3 +1,81 @@
+## 2026-04-30 - RIC-013A Closure
+
+Actor: Execution Agent
+
+Task: RIC-013A - Define Operational Prompt Templates Pack
+
+Status: Local DONE by Trigger approval
+
+## Closure Decision
+
+RIC-013A is Local DONE after Trigger approval and required validation. Commit authorized with message `docs: add operational prompt templates pack`. Remote DONE is pending push.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Report post-commit state to Trigger. Use Discussion Gate to evaluate the next advance. Do not open a new READY task without Trigger approval.
+
+## 2026-04-30 - RIC-013A Execution
+
+Actor: Execution Agent
+
+Task: RIC-013A - Define Operational Prompt Templates Pack
+
+Status: Local DONE pending Trigger review
+
+## Work Performed
+
+- Confirmed pre-execution state: working tree clean, `main` synchronized with `origin/main`, latest commit `464325a docs: define two-agent execution playbook`.
+- Confirmed `templates/prompts/` did not exist. No duplication risk with existing templates.
+- Read reference documents: `AGENTS.md`, `docs/agents/agent-role-boundaries.md`, `docs/agents/human-agent-operating-model.md`, `playbooks/two-agent-execution-flow.md`, `templates/agent-brief.md`.
+- Created `templates/prompts/README.md`: template index, governance references, 7 non-negotiable rules enforced by all prompts.
+- Created `templates/prompts/prepare-task-prompt.md`: Consultant/Auditor template for preparing a task definition before READY promotion.
+- Created `templates/prompts/executor-sprint-prompt.md`: Terminal Executor template for starting execution of a READY task with pre-execution checklist and required report format.
+- Created `templates/prompts/consultant-auditor-prompt.md`: Consultant/Auditor audit checklist for reviewing executor output before Trigger closure.
+- Created `templates/prompts/executor-fix-prompt.md`: Terminal Executor template for applying a targeted correction within an active task scope.
+- Created `templates/prompts/close-task-prompt.md`: Terminal Executor template for closing a task after Trigger DONE approval, including pre-commit, commit, post-commit, and push procedures.
+- Created `templates/prompts/close-session-prompt.md`: Any-agent template for ending a session cleanly with full continuity record update.
+- Created `templates/prompts/handoff-to-new-agent-prompt.md`: Transfer template for outgoing and incoming agent, enforcing single write-access rule and clean handoff.
+- All prompts reinforce: one executor, one auditor, one Trigger, one READY task, one real evidence set, no simultaneous Codex + Claude Code execution, clean handoff requirement.
+- Updated operational records: `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`.
+
+## Commands Executed
+
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+- Read `AGENTS.md`, `docs/agents/agent-role-boundaries.md`, `docs/agents/human-agent-operating-model.md`, `playbooks/two-agent-execution-flow.md`, `templates/agent-brief.md`.
+- Listed `templates/` to confirm no `templates/prompts/` existed.
+- `git diff --check`
+- `git status --short`
+
+## Validation Evidence
+
+- Pre-execution `git status --short` was clean.
+- `git diff --check` PASS (LF/CRLF normalization warnings only).
+- `git status --short` shows 4 operational files modified and 8 new untracked files under `templates/prompts/` only.
+- No file outside the approved scope was created or modified.
+- No `docs/templates/`, `docs/governance/`, `scripts/`, `.github/`, or `examples/` files were created.
+- No additional READY task was opened.
+
+## Closure Decision
+
+RIC-013A execution complete. Pending Trigger review. Commit not yet created.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Prompts are operational templates — they do not override governance documents. README states this explicitly.
+- Commit and push are not authorized in this step.
+
+## Next Action
+
+Trigger reviews `templates/prompts/` content. If approved, authorizes commit: `docs: define operational prompt templates pack`.
+
 ## 2026-04-30 - RIC-012D Execution
 
 Actor: Execution Agent
