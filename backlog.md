@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| SRM-003 | Document Service Request Mini Demo and Validation Pack | IN_PROGRESS pending Trigger review | Create documentation that lets another person open, understand, run, demo, and manually validate Service Request Mini without extra explanation. | `git status --short`; `git status -sb`; `git diff --stat`; `git diff --check`; `git diff -- examples/service-request-mini/app/`; review documentation excerpts. | Do not commit without Trigger authorization. If approved, one documentation-only SRM-003 commit. |
+| RIC-019A | Define Official Example Review and Portfolio Presentation Rule | Local DONE pending local commit | Define the minimum review, validation, documentation, and portfolio-readiness rules for official RIC Framework examples. | `git status --short`; `git diff --stat`; `git diff --check`; confirm only authorized files changed; confirm no changes under `examples/service-request-mini/`; confirm no SRM-004 or other READY task opened. | Trigger authorized local commit. One documentation-rule commit only for RIC-019A. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| SRM-003 | Document Service Request Mini Demo and Validation Pack | Trigger confirmed Remote DONE; commit `2388ca7 docs: add service request mini demo validation pack` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `2388ca7`, `5c79ef3`, and `3449b22`; no SRM-004 or new READY task opened |
 | RIC-018C | Define Mandatory Diff Evidence Before Commit | Trigger confirmed Remote DONE; commit `5c79ef3 docs: require mandatory diff evidence before commit` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `5c79ef3`, `3449b22`, and `408140a`; SRM-003 remained Recommended only, not READY |
 | RIC-018B | Reconcile RIC-018A Remote DONE Operational State | Trigger confirmed Remote DONE; commit `3449b22 docs: reconcile RIC-018A remote done state` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `3449b22`, `408140a`, and `0e040fd`; SRM-003 remained Recommended only, not READY |
 | RIC-018A | Define Post-Commit and Remote DONE Closure Rules | Trigger confirmed Remote DONE; commit `408140a docs: define post-commit and remote done closure rules` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `408140a`, `0e040fd`, and `777cc94` |
@@ -58,8 +59,8 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| None | None | None | The previous SRM-003 UX and validation improvement candidate was replaced by the approved documentation-only SRM-003 task |
+| None | None | None | Use Discussion Gate before promoting any future task |
 
 ## Next Process Step
 
-SRM-003 is the only active task and is pending Trigger review. RIC-018C is recorded as Remote DONE at `5c79ef3`. The previous SRM-003 UX and validation improvement candidate was replaced by this documentation-only task. No SRM-004 READY task is open. Do not commit or push without Trigger authorization.
+RIC-019A is the only active task and is Local DONE pending local commit. SRM-003 is recorded as Remote DONE at `2388ca7`. No SRM-004 READY task is open. No example is promoted to portfolio-ready, reusable-reference, or feature-evolution status by this task. Do not push without Trigger authorization.
