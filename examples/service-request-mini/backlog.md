@@ -2,7 +2,7 @@
 
 **Project**: Service Request Mini
 
-**Last Updated**: 2026-04-30 (SRM-003 in progress)
+**Last Updated**: 2026-04-30 (RIC-020A review in progress)
 
 ---
 
@@ -20,7 +20,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| SRM-003 | Document Service Request Mini Demo and Validation Pack | IN_PROGRESS pending Trigger review | Create documentation that lets another person understand, run, demo, and manually validate Service Request Mini without extra explanation. | `git diff --check`; `git status --short`; `git status -sb`; `git diff --stat`; `git diff -- examples/service-request-mini/app/`; review documentation excerpts. | Do not commit without Trigger authorization. If approved, one documentation-only SRM-003 commit. |
+| RIC-020A | Review Service Request Mini Against Official Example Rule | Local DONE pending local commit | Apply the RIC-019A official example review rule to Service Request Mini and classify its current role using evidence only. | `git status --short`; `git status -sb`; `git diff --stat`; `git diff --check`; `git diff -- examples/service-request-mini/app/`; confirm no app code changed. | Trigger authorized one local review/classification commit only for RIC-020A. |
 
 ---
 
@@ -28,6 +28,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| SRM-003 | Document Service Request Mini Demo and Validation Pack | Trigger confirmed Remote DONE; commit `2388ca7 docs: add service request mini demo validation pack` pushed to `origin/main`; documentation package added; working tree clean after push; no SRM-004 or new READY task opened |
 | SRM-002 | Implement Minimal Browser-Native Request Flow | Trigger approved Remote DONE; created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; push `f415b4f..777cc94 main -> main`; `main` synchronized with `origin/main` |
 | SRM-001 | Define Stack and Validation Plan for Service Request Mini | Trigger approved DONE; compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined validation plan for a future no-build implementation; no code, dependencies, backend, database, authentication, deploy, workflow, or automation created; `git diff --check` PASS |
 
@@ -47,7 +48,7 @@ Items that have been identified but are not READY. Trigger must approve before p
 
 | ID | Title | Status | Goal | Notes |
 | --- | --- | --- | --- | --- |
-| None | None | None | None | The previous SRM-003 UX and validation improvement candidate was replaced by the approved documentation-only SRM-003 task. |
+| SRM-004 | To be defined by future Discussion Gate | Future only, not READY | No approved goal yet. | Do not open without explicit Trigger approval. |
 
 ---
 
@@ -76,4 +77,4 @@ Commit Rule:
 
 ## Next Process Step
 
-SRM-003 is the only active task and is pending Trigger review. SRM-002 remains Remote DONE. The previous SRM-003 UX and validation improvement candidate was replaced by this documentation-only task. No SRM-004 READY task is open.
+RIC-020A is the active review task and is Local DONE pending local commit. SRM-003 remains Remote DONE at `2388ca7`. SRM-004 is future only, not READY. No feature evolution task is open.

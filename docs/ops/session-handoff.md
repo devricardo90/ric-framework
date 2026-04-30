@@ -2,83 +2,87 @@
 
 ## Current Objective
 
-Execute RIC-019A - Define Official Example Review and Portfolio Presentation Rule within approved documentation-rule scope and report mandatory diff evidence for Trigger review.
+Execute RIC-020A - Review Service Request Mini Against Official Example Rule as a review-only classification task and report mandatory evidence for Trigger review.
 
 ## Active Task
 
-ID: RIC-019A
+ID: RIC-020A
 
-Title: Define Official Example Review and Portfolio Presentation Rule
+Title: Review Service Request Mini Against Official Example Rule
 
 Status: Local DONE pending local commit
 
 ## Last Completed Action
 
-Created `docs/architecture/official-example-review-and-portfolio-rule.md`, updated framework operational records, and recorded Trigger approval of RIC-019A as Local DONE pending local commit. SRM-003 is recorded as Remote DONE at `2388ca7 docs: add service request mini demo validation pack`.
+Created `docs/architecture/service-request-mini-official-example-review.md`, updated authorized operational files to record RIC-020A review evidence, and recorded Trigger approval of RIC-020A as Local DONE pending local commit. RIC-019A is recorded as Remote DONE at `b75f7a1 docs: define official example portfolio review rule`. SRM-003 is recorded as Remote DONE at `2388ca7 docs: add service request mini demo validation pack`.
 
 ## Current State
 
-RIC-019A is the only active task and is Local DONE pending local commit. It defines a rule only. It does not promote Service Request Mini or any other example to portfolio-ready, reusable-reference, or feature-evolution status. No files under `examples/service-request-mini/` are authorized for this task.
+RIC-020A is the only active task and is Local DONE pending local commit. It applies the RIC-019A official example rule to Service Request Mini and classifies the current evidence only. It does not fix gaps, change app code, create screenshots, deploy, open SRM-004, promote feature evolution, or claim portfolio-ready status.
+
+Review result pending Trigger review:
+
+- Primary classification: Official reference example.
+- Portfolio readiness assessment: Portfolio candidate, not ready.
 
 ## Files Changed
 
-- `docs/architecture/official-example-review-and-portfolio-rule.md`
+- `docs/architecture/service-request-mini-official-example-review.md`
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
+- `examples/service-request-mini/status.md`
+- `examples/service-request-mini/backlog.md`
+- `examples/service-request-mini/session-handoff.md`
+- `examples/service-request-mini/validation-gates.md`
 
 ## Commands Executed
 
 - `git status --short`
 - `git status -sb`
-- `git log --oneline -3 origin/main`
-- `Get-Content -Path STATUS.md`
-- `Get-Content -Path backlog.md`
-- Read related architecture and operational files.
-- `git status --short`
-- `git diff --stat`
-- `git diff --check`
-- `git diff --name-status -- examples/service-request-mini/`
-- `git diff -- examples/service-request-mini/app/`
+- `git log --oneline -5 origin/main`
+- Read RIC-019A rule documentation.
+- Read Service Request Mini README, demo script, manual validation, validation gates, and operational files.
+- Read-only inspection of `examples/service-request-mini/app/index.html`, `app.js`, and `styles.css`.
 
 ## Validation Result
 
-- `git status --short`: only authorized RIC-019A files are modified or untracked.
-- `git diff --stat`: 4 tracked operational files changed; the new architecture rule appears as untracked in `git status --short`.
+- `git status --short`: only authorized RIC-020A files are modified or untracked.
+- `git status -sb`: `## main...origin/main` with authorized RIC-020A changes.
+- `git diff --stat`: 8 tracked operational files changed; the new review document appears as untracked in `git status --short`.
 - `git diff --check`: PASS. Git emitted LF/CRLF normalization warnings only.
-- `git diff --name-status -- examples/service-request-mini/`: no output.
 - `git diff -- examples/service-request-mini/app/`: no output.
 - Only authorized files changed.
-- No changes under `examples/service-request-mini/`.
-- No Service Request Mini app code changed.
+- No app code changed.
+- No package, dependency, backend, API, authentication, database, deploy, screenshots, scripts, workflows, or presentation assets were introduced.
 - No SRM-004 or other READY task was opened.
 - No commit or push was performed.
 
 ## Blockers
 
-- Commit is not authorized.
 - Push is not authorized.
 
 ## Pending Decisions for the Trigger
 
-- Local commit is authorized for RIC-019A.
 - Whether to authorize a push later.
+- Whether to use a future Discussion Gate for SRM-004, portfolio presentation, or public assets.
 
 ## Next 3 Steps
 
-1. Run required pre-commit validation.
-2. Create the authorized local commit.
-3. Report post-commit state and wait for Trigger decision before push, SRM-004, or any new READY task.
+1. Create the authorized local commit for RIC-020A.
+2. Report post-commit state and commit hash.
+3. Wait for Trigger decision before push, SRM-004, or any new READY task.
 
 ## Do Not Do Next
 
-- Do not modify `examples/service-request-mini/`.
-- Do not open SRM-004 or any new READY task.
+- Do not edit files under `examples/service-request-mini/app/`.
+- Do not fix gaps found by the review.
+- Do not claim Service Request Mini is portfolio-ready.
 - Do not create screenshots, demo links, scripts, workflows, dependencies, or presentation assets.
-- Do not commit without Trigger authorization.
+- Do not open SRM-004 or any new READY task.
 - Do not push.
 
 ## Resume Instruction for Next Agent
 
-Continue from RIC-019A pending Trigger review. Validate the documentation-rule scope and report evidence before any commit authorization request.
+Continue from RIC-020A Local DONE pending local commit. Create the authorized local commit, then report post-commit state. Do not push without Trigger authorization.

@@ -8,31 +8,31 @@
 
 ## Current Canonical Status
 
-Status: IN_PROGRESS pending Trigger review
+Status: Local DONE pending local commit
 
-Current Task: SRM-003 - Document Service Request Mini Demo and Validation Pack
+Current Task: RIC-020A - Review Service Request Mini Against Official Example Rule
 
 ---
 
 ## Active Task
 
-ID: SRM-003
+ID: RIC-020A
 
-Title: Document Service Request Mini Demo and Validation Pack
+Title: Review Service Request Mini Against Official Example Rule
 
-Status: IN_PROGRESS pending Trigger review
+Status: Local DONE pending local commit
 
 ---
 
 ## Last Completed Task
 
-ID: SRM-002
+ID: SRM-003
 
-Title: Implement Minimal Browser-Native Request Flow
+Title: Document Service Request Mini Demo and Validation Pack
 
-Evidence: Trigger approved Remote DONE. Created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; push `f415b4f..777cc94 main -> main`; `main` synchronized with `origin/main`.
+Evidence: Trigger confirmed Remote DONE; commit `2388ca7 docs: add service request mini demo validation pack` pushed to `origin/main`; post-push `git status --short` was clean; `git status -sb` showed `## main...origin/main`; no SRM-004 or new READY task was opened.
 
-Remote Evidence: Remote DONE at commit `777cc94 docs: record SRM-002 post-commit evidence in execution log`.
+Remote Evidence: Remote DONE at commit `2388ca7 docs: add service request mini demo validation pack`.
 
 ---
 
@@ -40,13 +40,13 @@ Remote Evidence: Remote DONE at commit `777cc94 docs: record SRM-002 post-commit
 
 Branch: `main`
 
-Working Tree at Verification: Clean before SRM-003 execution; dirty only by approved SRM-003 documentation and operational changes pending Trigger review.
+Working Tree at Verification: Clean before RIC-020A execution; dirty only by approved RIC-020A review and operational changes pending local commit.
 
-Local HEAD: `5c79ef3 docs: require mandatory diff evidence before commit`
+Local HEAD: `b75f7a1 docs: define official example portfolio review rule`
 
-Local `origin/main` Reference: `5c79ef3 docs: require mandatory diff evidence before commit`
+Local `origin/main` Reference: `b75f7a1 docs: define official example portfolio review rule`
 
-Pending Local Commits: None before SRM-003 execution. `main` synchronized with `origin/main`.
+Pending Local Commits: None before RIC-020A execution. `main` synchronized with `origin/main`.
 
 ---
 
@@ -58,10 +58,10 @@ Pending Local Commits: None before SRM-003 execution. `main` synchronized with `
 
 ## Current Objective
 
-Create the documentation package that makes Service Request Mini understandable, manually validatable, and reusable as the first official Product Instance example under the RIC Framework.
+Apply the RIC-019A official example review rule to Service Request Mini and classify its current role using repository evidence only.
 
 ---
 
 ## Next Recommended Action
 
-Complete SRM-003 validation and report mandatory diff evidence for Trigger review. Do not commit, push, open SRM-004, or change app code without Trigger authorization.
+RIC-020A is approved as Local DONE and pending the authorized local commit. Do not push, open SRM-004, change app code, create screenshots, deploy, or fix review gaps without Trigger authorization.

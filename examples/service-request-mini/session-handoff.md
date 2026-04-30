@@ -8,74 +8,69 @@
 
 ## Current Objective
 
-Execute SRM-003 - Document Service Request Mini Demo and Validation Pack within documentation-only scope and report mandatory diff evidence for Trigger review.
+Execute RIC-020A - Review Service Request Mini Against Official Example Rule as a review-only classification task and report mandatory evidence for Trigger review.
 
 ---
 
 ## Active Task
 
-ID: SRM-003
+ID: RIC-020A
 
-Title: Document Service Request Mini Demo and Validation Pack
+Title: Review Service Request Mini Against Official Example Rule
 
-Status: IN_PROGRESS pending Trigger review
+Status: Local DONE pending local commit
 
 ---
 
 ## Last Completed Action
 
-Created the SRM-003 documentation package draft:
-
-- `README.md`
-- `demo-script.md`
-- `manual-validation.md`
-- Updated `validation-gates.md`
-
-Operational records were updated to show SRM-003 as the only active Product Instance task.
+Reviewed Service Request Mini against the RIC-019A official example rule, recorded the current evidence-based classification, and recorded Trigger approval of RIC-020A as Local DONE pending local commit.
 
 ---
 
 ## Current State
 
-SRM-003 is documentation-only. App files under `examples/service-request-mini/app/` are protected and must remain unchanged. SRM-002 remains Remote DONE. RIC-018C is Remote DONE at `5c79ef3`. The previous SRM-003 UX and validation improvement candidate was replaced by this documentation-only task.
+RIC-020A is review-only and Local DONE pending local commit. App files under `examples/service-request-mini/app/` are protected and must remain unchanged. SRM-003 is Remote DONE at `2388ca7`. RIC-019A is Remote DONE at `b75f7a1` and provides the rule applied by this review.
+
+Current review result pending Trigger review:
+
+- Primary classification: Official reference example.
+- Portfolio readiness assessment: Portfolio candidate, not ready.
+- Feature evolution status: Not open; SRM-004 remains future only, not READY.
 
 ---
 
-## Files Changed In SRM-003
+## Files Changed In RIC-020A
 
-- `examples/service-request-mini/README.md`
-- `examples/service-request-mini/demo-script.md`
-- `examples/service-request-mini/manual-validation.md`
-- `examples/service-request-mini/status.md`
-- `examples/service-request-mini/backlog.md`
-- `examples/service-request-mini/session-handoff.md`
-- `examples/service-request-mini/validation-gates.md`
+- `docs/architecture/service-request-mini-official-example-review.md`
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md`
 - `docs/ops/execution-log.md`
+- `examples/service-request-mini/status.md`
+- `examples/service-request-mini/backlog.md`
+- `examples/service-request-mini/session-handoff.md`
+- `examples/service-request-mini/validation-gates.md`
 
 ---
 
 ## Validation Result
 
-- `git status --short`: only authorized SRM-003 files are modified or untracked.
-- `git status -sb`: `## main...origin/main` with authorized SRM-003 changes.
-- `git diff --stat`: operational and existing Product Instance file changes only; new documentation files appear as untracked in `git status --short`.
+- `git status --short`: only authorized RIC-020A files are modified or untracked.
+- `git status -sb`: `## main...origin/main` with authorized RIC-020A changes.
+- `git diff --stat`: 8 tracked operational files changed; the new review document appears as untracked in `git status --short`.
 - `git diff --check`: PASS. Git emitted LF/CRLF normalization warnings only.
 - `git diff -- examples/service-request-mini/app/`: no output.
 - No app code changed.
-- No package, dependency, backend, API, auth, deploy, or test framework was introduced.
+- No package, dependency, backend, API, authentication, database, deploy, screenshots, scripts, workflows, or presentation assets were introduced.
 - No commit was performed.
 - No push was performed.
-- No new READY task was opened beyond SRM-003.
+- No SRM-004 or other READY task was opened.
 
 ---
 
 ## Pending Decisions for the Trigger
 
-- Whether SRM-003 documentation is eligible for Local DONE.
-- Whether to authorize a local commit later.
 - Whether to authorize a push later.
 
 ---
@@ -89,9 +84,9 @@ SRM-003 is documentation-only. App files under `examples/service-request-mini/ap
 
 ## Next 3 Steps
 
-1. Run required SRM-003 validation.
-2. Report mandatory diff evidence for Trigger review.
-3. Wait for Trigger decision before commit, push, SRM-004, or any new READY task.
+1. Create the authorized local commit for RIC-020A.
+2. Report post-commit state and commit hash.
+3. Wait for Trigger decision before push, SRM-004, or any new READY task.
 
 ---
 
@@ -99,7 +94,8 @@ SRM-003 is documentation-only. App files under `examples/service-request-mini/ap
 
 - Do not edit files under `examples/service-request-mini/app/`.
 - Do not change product code.
-- Do not commit without Trigger authorization.
+- Do not fix review gaps.
+- Do not claim portfolio-ready status.
 - Do not push.
 - Do not open SRM-004 or any new READY task.
 
@@ -107,4 +103,4 @@ SRM-003 is documentation-only. App files under `examples/service-request-mini/ap
 
 ## Resume Instruction for Next Agent
 
-Continue from SRM-003 pending Trigger review. Validate that app files are unchanged, then report evidence before any commit authorization request.
+Continue from RIC-020A Local DONE pending local commit. Create the authorized local commit, then report post-commit state. Do not push without Trigger authorization.

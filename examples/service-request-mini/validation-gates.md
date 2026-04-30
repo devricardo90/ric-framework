@@ -2,9 +2,61 @@
 
 **Project**: Service Request Mini
 
-**Current Task**: SRM-003 - Document Service Request Mini Demo and Validation Pack
+**Current Task**: RIC-020A - Review Service Request Mini Against Official Example Rule
 
 **Date**: 2026-04-30
+
+---
+
+## RIC-020A Gate 1 - Official Example Review Gate
+
+RIC-020A applies the RIC-019A official example review and portfolio presentation rule to Service Request Mini using repository evidence only.
+
+Required review evidence:
+
+- RIC-019A rule documentation.
+- Service Request Mini README, demo script, manual validation, and validation gates.
+- Service Request Mini Product Instance operational files.
+- Read-only inspection of `examples/service-request-mini/app/`.
+- Current framework operational records.
+
+**Result**: PASS for Local DONE. Trigger approved the RIC-020A review classification.
+
+---
+
+## RIC-020A Gate 2 - Classification Gate
+
+Approved classification:
+
+- Primary classification: Official reference example.
+- Portfolio readiness assessment: Portfolio candidate, not ready.
+- Feature evolution status: Not open; SRM-004 remains future only, not READY.
+
+This gate does not mark Service Request Mini as portfolio-ready and does not authorize feature evolution.
+
+**Result**: PASS for Local DONE. Portfolio-ready status is not claimed.
+
+---
+
+## RIC-020A Gate 3 - Scope Freeze Gate
+
+RIC-020A must not change app code or fix review gaps.
+
+Protected app files:
+
+- `examples/service-request-mini/app/index.html`
+- `examples/service-request-mini/app/app.js`
+- `examples/service-request-mini/app/styles.css`
+
+Validation command:
+
+```bash
+git diff -- examples/service-request-mini/app/
+```
+
+Expected result: no output.
+
+**Result**: PASS for Trigger review. `git diff -- examples/service-request-mini/app/` returned no output.
 
 ---
 
