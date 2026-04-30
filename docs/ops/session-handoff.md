@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Maintain repository after RIC-015B Local DONE. Push is not authorized yet.
+Maintain repository after RIC-016A Local DONE. Push is not authorized yet.
 
 ## Active Task
 
@@ -14,15 +14,24 @@ Status: Idle
 
 ## Last Completed Action
 
-Trigger approved RIC-015B as Local DONE. Created `docs/ops/product-instance-boot-rules.md` defining what a Product Instance is, where it lives, five boot-required files, lifecycle files, product-to-execution sequence, first READY criteria, boot prohibitions, and Trigger approval requirements. Updated operational records.
+Trigger approved RIC-016A as Local DONE. Created `examples/service-request-mini/` with the 10 approved documentation files. The five boot-required files are filled. The five lifecycle files are controlled stubs. `SRM-001` appears only as Recommended.
 
 ## Current State
 
-RIC-015B is Local DONE by Trigger approval. Commit is authorized with message `docs: define product instance boot rules`. Push is not authorized yet.
+RIC-016A is Local DONE by Trigger approval. Commit is authorized with message `docs: create first official governed example`. Push is not authorized yet.
 
 ## Files Changed
 
-- `docs/ops/product-instance-boot-rules.md` (new)
+- `examples/service-request-mini/prd.md`
+- `examples/service-request-mini/mvp-scope.md`
+- `examples/service-request-mini/backlog.md`
+- `examples/service-request-mini/status.md`
+- `examples/service-request-mini/session-handoff.md`
+- `examples/service-request-mini/stack-decision.md`
+- `examples/service-request-mini/decision-log.md`
+- `examples/service-request-mini/execution-log.md`
+- `examples/service-request-mini/validation-gates.md`
+- `examples/service-request-mini/version-matrix.md`
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md`
@@ -33,29 +42,29 @@ RIC-015B is Local DONE by Trigger approval. Commit is authorized with message `d
 - `git status --short`
 - `git status -sb`
 - `git log --oneline -3`
-- Read `docs/ops/boot-rules.md` to confirm no overlap with new document.
+- Read `docs/ops/product-instance-boot-rules.md`.
+- Read `templates/project/` files as structural and content reference.
+- Created the 10 approved Service Request Mini documentation files.
+- Updated framework operational records.
 - `git diff --check`
 - `git status --short`
-- Current session read required startup files.
-- Current session re-read `docs/ops/product-instance-boot-rules.md` and `docs/ops/boot-rules.md`.
-- Current session corrected non-ASCII arrows/dashes in the new document and aligned the RIC-015B state wording with the repository Local DONE rule.
-- Current session ran `git diff --check`, `git status --short`, and scope checks for protected paths.
-- Trigger approved RIC-015B as Local DONE and authorized local commit `docs: define product instance boot rules`.
+- Protected-path check for `templates/project/`, `templates/prompts/`, `examples/sample-project/`, `AGENTS.md`, and `README.md`
+- Listed `examples/service-request-mini/` contents
+- Trigger approved RIC-016A as Local DONE and authorized local commit `docs: create first official governed example`.
 
 ## Validation Result
 
 - Pre-execution `git status --short` was clean.
 - `git diff --check` PASS (LF/CRLF warnings only).
-- `git status --short` shows only authorized files modified or untracked.
-- Current session `git diff --check` PASS (LF/CRLF warnings only).
-- Current session `git status --short` shows only authorized files modified or untracked.
-- Current session protected-path check shows no changes in `templates/project/`, `templates/prompts/`, `examples/sample-project/`, `AGENTS.md`, or `README.md`.
-- Final pre-commit validation for RIC-015B closure required: `git diff --check` and `git status --short`.
+- `git status --short` shows only the four approved framework operational files modified and the approved `examples/service-request-mini/` directory untracked.
+- Protected-path check shows no changes in `templates/project/`, `templates/prompts/`, `examples/sample-project/`, `AGENTS.md`, or `README.md`.
+- `examples/service-request-mini/` contains exactly the 10 approved files.
+- Final pre-commit validation for RIC-016A closure required: `git diff --check` and `git status --short`.
 
 ## Pending Decisions for the Trigger
 
-- Whether to push RIC-015B local commit to `origin/main`.
-- Whether to open any future example task via Discussion Gate.
+- Whether to push RIC-016A local commit to `origin/main`.
+- Whether to open a future Discussion Gate for `SRM-001`.
 
 ## Blockers
 
@@ -63,14 +72,14 @@ RIC-015B is Local DONE by Trigger approval. Commit is authorized with message `d
 
 ## Next 3 Steps
 
-1. Create authorized local commit: `docs: define product instance boot rules`.
+1. Create authorized local commit: `docs: create first official governed example`.
 2. Report commit hash and post-commit git state to Trigger.
 3. Wait for Trigger direction before any push or new task.
 
 ## Do Not Do Next
 
-Do not push without Trigger authorization. Do not create `examples/<product-slug>/` or any product. Do not open RIC-016A without Trigger approval.
+Do not push or mark Remote DONE. Do not create code, scripts, package files, workflows, `.github`, automation, frontend, backend, database, authentication, or deployment. Do not open `SRM-001` as READY.
 
 ## Resume Instruction for Next Agent
 
-Read operational files. RIC-015B is Local DONE by Trigger approval. Commit is authorized if not already created. Push is not authorized. Do not create product/example scope or open RIC-016A.
+Read operational files. RIC-016A is Local DONE by Trigger approval. Commit is authorized if not already created. Push is not authorized. Do not open `SRM-001` as READY or create implementation scope.
