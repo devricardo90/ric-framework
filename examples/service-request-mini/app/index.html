@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Request Mini</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Service Request Mini</h1>
+
+    <section class="form-section">
+      <h2>New Request</h2>
+      <form id="request-form" novalidate>
+        <div class="field">
+          <label for="title">Title <span class="required">*</span></label>
+          <input type="text" id="title" name="title" maxlength="120" autocomplete="off">
+          <span class="error" id="title-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="description">Description <span class="required">*</span></label>
+          <textarea id="description" name="description" rows="3" maxlength="1000"></textarea>
+          <span class="error" id="description-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="category">Category <span class="required">*</span></label>
+          <select id="category" name="category">
+            <option value="">-- Select --</option>
+          </select>
+          <span class="error" id="category-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="priority">Priority</label>
+          <select id="priority" name="priority">
+            <option value="">-- Optional --</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Submit Request</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <div class="list-header">
+        <h2>Requests</h2>
+        <button id="clear-btn" class="clear-btn" title="Remove all requests from local storage">Clear All Data</button>
+      </div>
+
+      <div id="empty-state" class="empty-state" hidden>
+        <p>No requests yet. Use the form above to submit one.</p>
+      </div>
+
+      <ul id="request-list" class="request-list"></ul>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

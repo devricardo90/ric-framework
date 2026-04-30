@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-017A | Define Security and Clean Code Baseline | IN_PROGRESS | Create framework-level security and quality standards for product implementation. | git diff --check; verify file existence; no code created | docs: define security and clean code baseline |
+| None | None | None | None | None | None |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| SRM-002 | Implement Minimal Browser-Native Request Flow | Trigger approved Local DONE; created `examples/service-request-mini/app/` with `index.html`, `styles.css`, `app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; commit `feat: implement minimal browser-native request flow` |
 | SRM-001 | Define Stack and Validation Plan for Service Request Mini | Trigger approved DONE; compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined no-build future validation plan; `SRM-002` remains Recommended only; no code, dependencies, backend, database, auth, deploy, workflow, automation, or protected-path changes created; `git diff --check` PASS |
 | RIC-016A | Create First Official Sample Product Documentation | Remote DONE at commit `c545e2c`; created `examples/service-request-mini/` with exactly 10 approved documentation files; boot-required files filled; lifecycle files controlled stubs; `SRM-001` Recommended only, not READY; no code, stack, automation, workflow, implementation, validation, version, deployment, or protected-path changes created; `git diff --check` PASS |
 | RIC-015B | Define Product Instance Boot Rules | Remote DONE at commit `3f5286f`; created `docs/ops/product-instance-boot-rules.md`; defined Product Instance location, template-copy rules, boot-required files, lifecycle stub rules, first READY criteria, boot prohibitions, and Trigger approval requirements; scope respected; `git diff --check` PASS; no product or example created; protected paths untouched |
@@ -58,4 +59,4 @@
 
 ## Next Process Step
 
-SRM-001 is DONE after Trigger approval. No task is active. No task is READY. Create authorized local commit `docs: define service request mini stack decision`; push is not authorized yet.
+SRM-002 is Local DONE by Trigger approval. Commit `feat: implement minimal browser-native request flow` authorized and created. Push is not authorized. Use Discussion Gate before opening any future task.

@@ -2,7 +2,7 @@
 
 **Project**: Service Request Mini
 
-**Last Updated**: 2026-04-30
+**Last Updated**: 2026-04-30 (SRM-002 Local DONE)
 
 ---
 
@@ -28,6 +28,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| SRM-002 | Implement Minimal Browser-Native Request Flow | Trigger approved Local DONE; created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; only authorized files in `git status --short`; commit `feat: implement minimal browser-native request flow` |
 | SRM-001 | Define Stack and Validation Plan for Service Request Mini | Trigger approved DONE; compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined validation plan for a future no-build implementation; no code, dependencies, backend, database, authentication, deploy, workflow, or automation created; `git diff --check` PASS |
 
 ---
@@ -46,7 +47,7 @@ Items that have been identified but are not READY. Trigger must approve before p
 
 | ID | Title | Status | Goal | Notes |
 | --- | --- | --- | --- | --- |
-| SRM-002 | Implement Local Browser MVP for Service Request Mini | Recommended | Create the first local browser-only implementation of the request creation, list, status update, and reload persistence flow. | Not READY. Depends on Trigger approval of SRM-001 and a separate implementation scope. |
+| None | None | None | None | None |
 
 ---
 
@@ -75,4 +76,4 @@ Commit Rule:
 
 ## Next Process Step
 
-SRM-001 is DONE after Trigger approval. No task is active. No task is READY. `SRM-002` is Recommended only.
+SRM-002 is Local DONE by Trigger approval. Commit authorized: `feat: implement minimal browser-native request flow`. Push is not authorized. No task is active. No task is READY.
