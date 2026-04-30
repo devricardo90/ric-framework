@@ -1,3 +1,72 @@
+## 2026-04-30 - RIC-018C Execution
+
+Actor: Execution Agent
+
+Task: RIC-018C - Define Mandatory Diff Evidence Before Commit
+
+Status: Trigger review approved - pending local commit authorization
+
+## Work Performed
+
+- Recorded Trigger approval to promote RIC-018C to READY and execute only the approved documentation and operational scope.
+- Confirmed pre-execution Git state:
+  - `git status --short`: clean.
+  - `git status -sb`: `## main...origin/main`.
+  - `git log --oneline -3 origin/main` showed `3449b22 docs: reconcile RIC-018A remote done state` at the top.
+- Updated `docs/ops/post-commit-and-remote-done-rules.md` with a mandatory diff evidence rule before local commit authorization.
+- Updated the closure sequence so the agent reports mandatory diff evidence before waiting for commit authorization.
+- Updated the quick reference to include mandatory diff evidence before commit.
+- Updated `STATUS.md` to record RIC-018B as Remote DONE at `3449b22` and RIC-018C as the only active task pending Trigger review.
+- Updated `backlog.md` to move RIC-018B into completed items and RIC-018C into active items.
+- Updated `docs/ops/session-handoff.md` for RIC-018C recovery context.
+- Confirmed SRM-003 remains Recommended only, not READY, and no additional READY task was opened.
+- Recorded Trigger review approval for RIC-018C scope and direction; local commit still requires final Trigger authorization.
+
+## Commands Executed
+
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3 origin/main`
+- `Get-Content -Path STATUS.md`
+- `Get-Content -Path backlog.md`
+- `Get-Content -Path docs/ops/post-commit-and-remote-done-rules.md`
+- `Get-Content -Path docs/ops/session-handoff.md`
+- `Get-Content -Path docs/ops/execution-log.md -TotalCount 90`
+- `git diff --check`
+- `git status --short`
+- `git status -sb`
+- `git diff --stat`
+- `git diff --name-only`
+
+## Validation Evidence
+
+- `git diff --check`: PASS. Git emitted LF/CRLF normalization warnings only.
+- `git status --short`: only authorized RIC-018C files are modified.
+- `git status -sb`: `## main...origin/main` with the five authorized modified files.
+- `git diff --stat`: 5 files changed.
+- Authorized files confirmed:
+  - `STATUS.md`
+  - `backlog.md`
+  - `docs/ops/execution-log.md`
+  - `docs/ops/post-commit-and-remote-done-rules.md`
+  - `docs/ops/session-handoff.md`
+- No out-of-scope files were created, modified, deleted, or renamed.
+- RIC-018C is not marked DONE before Trigger review.
+
+## Closure Decision
+
+RIC-018C Trigger review is approved. Commit is not authorized. Push is not authorized. Remote DONE is not claimed for RIC-018C.
+
+## Risks or Gaps
+
+- No blocker recorded after validation.
+
+## Next Action
+
+Report final mandatory pre-commit evidence. Do not commit or push without Trigger authorization. SRM-003 remains Recommended only, not READY.
+
+---
+
 ## 2026-04-30 - RIC-018B Execution
 
 Actor: Execution Agent

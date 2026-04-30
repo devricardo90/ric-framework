@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-018B | Reconcile RIC-018A Remote DONE Operational State | IN_PROGRESS pending Trigger review | Update operational files to record RIC-018A Remote DONE at commit `408140a`, with working tree clean and `main` synchronized with `origin/main`. | `git diff --check`; `git status --short`; `git status -sb`; confirm only authorized operational files changed. | Do not commit without Trigger authorization. If approved, one operational reconciliation commit only for RIC-018B. |
+| RIC-018C | Define Mandatory Diff Evidence Before Commit | Trigger review approved - pending local commit authorization | Document that commit authorization requires reviewable diff evidence, status evidence, and scope confirmation before any local commit. | `git diff --check`; `git status --short`; `git status -sb`; `git diff --stat`; confirm only authorized files changed. | Do not commit without Trigger authorization. If approved, one documentation and operational commit only for RIC-018C. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-018B | Reconcile RIC-018A Remote DONE Operational State | Trigger confirmed Remote DONE; commit `3449b22 docs: reconcile RIC-018A remote done state` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `3449b22`, `408140a`, and `0e040fd`; SRM-003 remained Recommended only, not READY |
 | RIC-018A | Define Post-Commit and Remote DONE Closure Rules | Trigger confirmed Remote DONE; commit `408140a docs: define post-commit and remote done closure rules` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `408140a`, `0e040fd`, and `777cc94` |
 | SRM-002 | Implement Minimal Browser-Native Request Flow | Trigger approved Remote DONE; created `examples/service-request-mini/app/` with `index.html`, `styles.css`, `app.js`; browser validation confirmed by Trigger; push `f415b4f..777cc94 main -> main`; `main` synchronized with `origin/main` |
 | SRM-001 | Define Stack and Validation Plan for Service Request Mini | Trigger approved DONE; compared four stack options; approved plain HTML/CSS/JS with browser `localStorage`; defined no-build future validation plan; `SRM-002` remains Recommended only; no code, dependencies, backend, database, auth, deploy, workflow, automation, or protected-path changes created; `git diff --check` PASS |
@@ -60,4 +61,4 @@
 
 ## Next Process Step
 
-RIC-018B is the only active task and is pending Trigger review. RIC-018A is recorded as Remote DONE at `408140a`. SRM-003 is Recommended only, not READY. No additional READY task is open. Do not commit or push without Trigger authorization.
+RIC-018C is the only active task and Trigger review is approved pending local commit authorization. RIC-018B is recorded as Remote DONE at `3449b22`. SRM-003 is Recommended only, not READY. No additional READY task is open. Do not commit or push without Trigger authorization.

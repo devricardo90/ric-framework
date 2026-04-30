@@ -51,7 +51,7 @@ The authorized sequence for closing any task is:
    - Do NOT include: post-commit hash, git log after commit, Remote DONE state.
 4. Run git diff --check. Confirm PASS.
 5. Run git status --short. Confirm the working tree contains only authorized modified, added, deleted, or untracked files.
-6. Report to Trigger. Wait for commit authorization.
+6. Report mandatory diff evidence to Trigger. Wait for commit authorization.
 7. On Trigger authorization: create the commit with the approved message.
 8. Run git status --short. Confirm working tree is clean.
 9. Report: commit hash, files committed, git status, git log --oneline -3.
@@ -66,7 +66,27 @@ The authorized sequence for closing any task is:
 
 ---
 
-## 3. What Goes Into the Task Commit
+## 3. Mandatory Diff Evidence Before Commit Authorization
+
+No local commit may be authorized from a narrative report alone.
+
+Before asking for or receiving local commit authorization, the agent must provide reviewable evidence that lets the Trigger inspect what changed, not only what the agent claims changed.
+
+The required evidence is:
+
+- `git status --short`.
+- `git status -sb`.
+- `git diff --stat`.
+- Relevant `git diff` excerpts or the full diff, depending on task size and review risk.
+- Confirmation that only authorized files changed.
+- Confirmation that no out-of-scope files were created, modified, deleted, or renamed.
+- Confirmation that the task is not being marked DONE before Trigger review.
+
+If this evidence is missing, the task is not ready for local commit authorization. The agent must provide the evidence first and wait for Trigger review.
+
+---
+
+## 4. What Goes Into the Task Commit
 
 The task commit contains:
 
@@ -87,7 +107,7 @@ The task commit does NOT contain:
 
 ---
 
-## 4. The Post-Commit Hash Problem
+## 5. The Post-Commit Hash Problem
 
 After a commit is created, its hash is known. Recording that hash in operational records requires editing a file and creating another commit. This pattern must not be used without explicit Trigger authorization.
 
@@ -110,7 +130,7 @@ The report to the Trigger is sufficient evidence. A commit is a durable record; 
 
 ---
 
-## 5. What Must Not Be Edited After the Commit Without Authorization
+## 6. What Must Not Be Edited After the Commit Without Authorization
 
 After the task commit is created and before the push:
 
@@ -133,7 +153,7 @@ Any edit to any file after the task commit - including operational records - con
 
 ---
 
-## 6. Remote DONE State in Operational Records
+## 7. Remote DONE State in Operational Records
 
 Remote DONE is a repository state confirmed by observation, not by writing to a file.
 
@@ -149,7 +169,7 @@ If the Trigger decides that operational records must reflect Remote DONE in a co
 
 ---
 
-## 7. When a Separate Operational Closure Commit Is Necessary
+## 8. When a Separate Operational Closure Commit Is Necessary
 
 A separate operational closure commit is necessary when:
 
@@ -160,7 +180,7 @@ A separate operational closure commit is NOT automatically required after every 
 
 ---
 
-## 8. Working Tree Clean After Push
+## 9. Working Tree Clean After Push
 
 "Working tree clean after push" is a required condition for Remote DONE confirmation.
 
@@ -175,7 +195,7 @@ A dirty working tree after push is not an error that the agent resolves unilater
 
 ---
 
-## 9. Difference Between Repository Evidence and Trigger Report Evidence
+## 10. Difference Between Repository Evidence and Trigger Report Evidence
 
 There are two ways evidence is recorded in this framework:
 
@@ -190,18 +210,18 @@ This separation prevents the loop where an agent creates a commit to record evid
 
 ---
 
-## 10. Quick Reference
+## 11. Quick Reference
 
 | Moment | Allowed | Not Allowed Without Authorization |
 | --- | --- | --- |
-| Before commit | Edit operational records, run validation | Stage files outside approved scope |
+| Before commit | Edit operational records, run validation, report mandatory diff evidence | Stage files outside approved scope |
 | After commit, before push | Report state to Trigger | Edit any file, create any commit |
 | After push | Report Remote DONE state to Trigger | Edit any file, create any commit |
 | After Trigger authorizes closure commit | Edit only authorized operational files, commit, push | Edit files outside authorized list |
 
 ---
 
-## 11. Authority
+## 12. Authority
 
 - Only the Trigger may authorize a commit.
 - Only the Trigger may authorize a push.
