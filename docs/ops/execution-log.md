@@ -88,9 +88,17 @@ SRM-002 is Local DONE by Trigger approval. Commit authorized: `feat: implement m
 
 - Push is not authorized.
 
+## Post-Commit Evidence
+
+- Commit hash: `8b6383b feat: implement minimal browser-native request flow`
+- Files committed: 11 (3 created: `app/app.js`, `app/index.html`, `app/styles.css`; 8 modified: operational records)
+- `git status --short`: clean
+- `git status -sb`: `## main...origin/main [ahead 1]`
+- `git log --oneline -3`: `8b6383b feat: implement minimal browser-native request flow` / `f415b4f docs: define security and clean code baseline` / `3833269 docs: define service request mini stack decision`
+
 ## Next Action
 
-Create authorized commit, report post-commit state to Trigger. Do not push without authorization.
+Report post-commit state to Trigger. Do not push without authorization. Use Discussion Gate before opening any future task.
 
 ---
 
