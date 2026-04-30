@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-018C | Define Mandatory Diff Evidence Before Commit | Trigger review approved - pending local commit authorization | Document that commit authorization requires reviewable diff evidence, status evidence, and scope confirmation before any local commit. | `git diff --check`; `git status --short`; `git status -sb`; `git diff --stat`; confirm only authorized files changed. | Do not commit without Trigger authorization. If approved, one documentation and operational commit only for RIC-018C. |
+| SRM-003 | Document Service Request Mini Demo and Validation Pack | IN_PROGRESS pending Trigger review | Create documentation that lets another person open, understand, run, demo, and manually validate Service Request Mini without extra explanation. | `git status --short`; `git status -sb`; `git diff --stat`; `git diff --check`; `git diff -- examples/service-request-mini/app/`; review documentation excerpts. | Do not commit without Trigger authorization. If approved, one documentation-only SRM-003 commit. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-018C | Define Mandatory Diff Evidence Before Commit | Trigger confirmed Remote DONE; commit `5c79ef3 docs: require mandatory diff evidence before commit` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `5c79ef3`, `3449b22`, and `408140a`; SRM-003 remained Recommended only, not READY |
 | RIC-018B | Reconcile RIC-018A Remote DONE Operational State | Trigger confirmed Remote DONE; commit `3449b22 docs: reconcile RIC-018A remote done state` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `3449b22`, `408140a`, and `0e040fd`; SRM-003 remained Recommended only, not READY |
 | RIC-018A | Define Post-Commit and Remote DONE Closure Rules | Trigger confirmed Remote DONE; commit `408140a docs: define post-commit and remote done closure rules` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `408140a`, `0e040fd`, and `777cc94` |
 | SRM-002 | Implement Minimal Browser-Native Request Flow | Trigger approved Remote DONE; created `examples/service-request-mini/app/` with `index.html`, `styles.css`, `app.js`; browser validation confirmed by Trigger; push `f415b4f..777cc94 main -> main`; `main` synchronized with `origin/main` |
@@ -57,8 +58,8 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| SRM-003 | Improve Service Request Mini UX and Validation | Recommended only, not READY | Use Discussion Gate before promoting this future task |
+| None | None | None | The previous SRM-003 UX and validation improvement candidate was replaced by the approved documentation-only SRM-003 task |
 
 ## Next Process Step
 
-RIC-018C is the only active task and Trigger review is approved pending local commit authorization. RIC-018B is recorded as Remote DONE at `3449b22`. SRM-003 is Recommended only, not READY. No additional READY task is open. Do not commit or push without Trigger authorization.
+SRM-003 is the only active task and is pending Trigger review. RIC-018C is recorded as Remote DONE at `5c79ef3`. The previous SRM-003 UX and validation improvement candidate was replaced by this documentation-only task. No SRM-004 READY task is open. Do not commit or push without Trigger authorization.

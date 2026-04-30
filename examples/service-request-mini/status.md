@@ -8,19 +8,19 @@
 
 ## Current Canonical Status
 
-Status: Remote DONE
+Status: IN_PROGRESS pending Trigger review
 
-Current Task: None
+Current Task: SRM-003 - Document Service Request Mini Demo and Validation Pack
 
 ---
 
 ## Active Task
 
-ID: None
+ID: SRM-003
 
-Title: None
+Title: Document Service Request Mini Demo and Validation Pack
 
-Status: Idle
+Status: IN_PROGRESS pending Trigger review
 
 ---
 
@@ -30,9 +30,9 @@ ID: SRM-002
 
 Title: Implement Minimal Browser-Native Request Flow
 
-Evidence: Trigger approved Local DONE. Created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; commit `feat: implement minimal browser-native request flow`.
+Evidence: Trigger approved Remote DONE. Created `app/index.html`, `app/styles.css`, `app/app.js`; browser validation confirmed by Trigger; `git diff --check` PASS; push `f415b4f..777cc94 main -> main`; `main` synchronized with `origin/main`.
 
-Remote Evidence: Remote DONE at commit `777cc94 docs: record SRM-002 post-commit evidence in execution log` (push `f415b4f..777cc94 main -> main`).
+Remote Evidence: Remote DONE at commit `777cc94 docs: record SRM-002 post-commit evidence in execution log`.
 
 ---
 
@@ -40,13 +40,13 @@ Remote Evidence: Remote DONE at commit `777cc94 docs: record SRM-002 post-commit
 
 Branch: `main`
 
-Working Tree at Verification: Clean after Remote DONE push.
+Working Tree at Verification: Clean before SRM-003 execution; dirty only by approved SRM-003 documentation and operational changes pending Trigger review.
 
-Local HEAD: `777cc94 docs: record SRM-002 post-commit evidence in execution log`
+Local HEAD: `5c79ef3 docs: require mandatory diff evidence before commit`
 
-Local `origin/main` Reference: `777cc94 docs: record SRM-002 post-commit evidence in execution log`
+Local `origin/main` Reference: `5c79ef3 docs: require mandatory diff evidence before commit`
 
-Pending Local Commits: None. `main` synchronized with `origin/main`.
+Pending Local Commits: None before SRM-003 execution. `main` synchronized with `origin/main`.
 
 ---
 
@@ -58,10 +58,10 @@ Pending Local Commits: None. `main` synchronized with `origin/main`.
 
 ## Current Objective
 
-Maintain Product Instance after SRM-002 Local DONE. Push is not authorized yet.
+Create the documentation package that makes Service Request Mini understandable, manually validatable, and reusable as the first official Product Instance example under the RIC Framework.
 
 ---
 
 ## Next Recommended Action
 
-Use a Discussion Gate before opening any future task. Do not push without Trigger authorization.
+Complete SRM-003 validation and report mandatory diff evidence for Trigger review. Do not commit, push, open SRM-004, or change app code without Trigger authorization.

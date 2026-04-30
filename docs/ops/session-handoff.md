@@ -2,27 +2,33 @@
 
 ## Current Objective
 
-Execute RIC-018C - Define Mandatory Diff Evidence Before Commit within approved documentation and operational scope and report mandatory diff evidence for Trigger review. Commit and push are not authorized.
+Execute SRM-003 - Document Service Request Mini Demo and Validation Pack within approved documentation-only scope and report mandatory diff evidence for Trigger review.
 
 ## Active Task
 
-ID: RIC-018C
+ID: SRM-003
 
-Title: Define Mandatory Diff Evidence Before Commit
+Title: Document Service Request Mini Demo and Validation Pack
 
-Status: Trigger review approved - pending local commit authorization
+Status: IN_PROGRESS pending Trigger review
 
 ## Last Completed Action
 
-Updated `docs/ops/post-commit-and-remote-done-rules.md` to require mandatory diff evidence before local commit authorization. Reconciled operational records to show RIC-018B as Remote DONE at commit `3449b22 docs: reconcile RIC-018A remote done state`.
+Created the Service Request Mini documentation pack draft and updated Product Instance and framework operational records. RIC-018C is recorded as Remote DONE at `5c79ef3 docs: require mandatory diff evidence before commit`.
 
 ## Current State
 
-RIC-018C is the only active task. Trigger review is approved and local commit is pending final Trigger authorization. RIC-018B is recorded as Remote DONE. SRM-003 is Recommended only, not READY. No additional READY task is open. Working tree is expected to be dirty with only RIC-018C authorized files until final commit authorization.
+SRM-003 is the only active task. It is documentation-only. The existing app files under `examples/service-request-mini/app/` are protected and must remain unchanged. The previous SRM-003 UX and validation improvement candidate was replaced by this documentation-only task. SRM-004 is not READY.
 
 ## Files Changed
 
-- `docs/ops/post-commit-and-remote-done-rules.md`
+- `examples/service-request-mini/README.md`
+- `examples/service-request-mini/demo-script.md`
+- `examples/service-request-mini/manual-validation.md`
+- `examples/service-request-mini/status.md`
+- `examples/service-request-mini/backlog.md`
+- `examples/service-request-mini/session-handoff.md`
+- `examples/service-request-mini/validation-gates.md`
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md`
@@ -33,31 +39,22 @@ RIC-018C is the only active task. Trigger review is approved and local commit is
 - `git status --short`
 - `git status -sb`
 - `git log --oneline -3 origin/main`
-- `Get-Content -Path STATUS.md`
-- `Get-Content -Path backlog.md`
-- `Get-Content -Path docs/ops/post-commit-and-remote-done-rules.md`
-- `Get-Content -Path docs/ops/session-handoff.md`
-- `Get-Content -Path docs/ops/execution-log.md -TotalCount 90`
-- `git diff --check`
-- `git status --short`
-- `git status -sb`
-- `git diff --stat`
-- `git diff --name-only`
+- `Select-String -Path backlog.md,examples/service-request-mini/backlog.md -Pattern "SRM-003|Active Items" -Context 0,4`
+- `Get-ChildItem -Path examples/service-request-mini/app -File | Select-Object -ExpandProperty Name`
+- Read current Product Instance files and framework operational files.
 
 ## Validation Result
 
+- `git status --short`: only authorized SRM-003 files are modified or untracked.
+- `git status -sb`: `## main...origin/main` with authorized SRM-003 changes.
+- `git diff --stat`: operational and existing Product Instance file changes only; new documentation files appear as untracked in `git status --short`.
 - `git diff --check`: PASS. Git emitted LF/CRLF normalization warnings only.
-- `git status --short`: only authorized RIC-018C files are modified.
-- `git status -sb`: `## main...origin/main` with the five authorized modified files.
-- `git diff --stat`: 5 files changed.
-- Authorized files confirmed:
-  - `STATUS.md`
-  - `backlog.md`
-  - `docs/ops/execution-log.md`
-  - `docs/ops/post-commit-and-remote-done-rules.md`
-  - `docs/ops/session-handoff.md`
-- No out-of-scope files were created, modified, deleted, or renamed.
-- RIC-018C is not marked DONE before Trigger review.
+- `git diff -- examples/service-request-mini/app/`: no output.
+- No app code changed.
+- No package, dependency, backend, API, auth, deploy, or test framework was introduced.
+- No commit was performed.
+- No push was performed.
+- No new READY task was opened beyond SRM-003.
 
 ## Blockers
 
@@ -66,22 +63,24 @@ RIC-018C is the only active task. Trigger review is approved and local commit is
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize a local commit for RIC-018C.
-- Whether to authorize a later push after any approved commit.
+- Whether SRM-003 is eligible for Local DONE.
+- Whether to authorize a local commit later.
+- Whether to authorize a push later.
 
 ## Next 3 Steps
 
-1. Report final mandatory pre-commit evidence.
-2. Wait for Trigger decision before local commit.
-3. Do not push, promote SRM-003, or open any new READY task.
+1. Run required SRM-003 validation.
+2. Report mandatory diff evidence and documentation excerpts for Trigger review.
+3. Wait for Trigger decision before commit, push, SRM-004, or any new READY task.
 
 ## Do Not Do Next
 
+- Do not edit files under `examples/service-request-mini/app/`.
+- Do not change app code.
 - Do not commit without Trigger authorization.
 - Do not push.
-- Do not open SRM-003 as READY.
-- Do not alter files outside the approved RIC-018C scope.
+- Do not open SRM-004 or any new READY task.
 
 ## Resume Instruction for Next Agent
 
-Continue from RIC-018C pending Trigger review. Validate the allowed-file scope and wait for Trigger authorization before any commit or push.
+Continue from SRM-003 pending Trigger review. Validate the documentation-only scope and report evidence before any commit authorization request.

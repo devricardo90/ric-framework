@@ -2,6 +2,85 @@
 
 **Project**: Service Request Mini
 
+**Current Task**: SRM-003 - Document Service Request Mini Demo and Validation Pack
+
+**Date**: 2026-04-30
+
+---
+
+## SRM-003 Gate 1 - Manual Validation Gate
+
+The Product Instance now provides `manual-validation.md` as the objective checklist for another person to validate the browser-native MVP.
+
+Required manual checks:
+
+- Required fields block invalid submission.
+- Valid request appears in the list.
+- Status can change.
+- Reload preserves data through browser `localStorage`.
+- Clear All Data resets the app state.
+- No external network dependency is expected.
+- No backend, authentication, API, or deploy is expected.
+
+**Result**: Pending Trigger review for SRM-003 documentation.
+
+---
+
+## SRM-003 Gate 2 - Security And localStorage Limitation Gate
+
+The documentation must state that:
+
+- `localStorage` is local browser storage only.
+- `localStorage` is not production persistence.
+- `localStorage` is not secure storage for sensitive data.
+- There is no backend, database, authentication, authorization, deploy, or multi-user behavior.
+- No secrets, credentials, package manager, dependency, or external service are required.
+
+**Result**: Pending Trigger review for SRM-003 documentation.
+
+---
+
+## SRM-003 Gate 3 - Clean Code And Readability Gate
+
+SRM-003 is documentation-only. The documentation must let another person open, understand, run, and manually validate the existing app without needing chat history.
+
+Required documents:
+
+- `README.md`
+- `demo-script.md`
+- `manual-validation.md`
+- Updated `validation-gates.md`
+
+**Result**: Pending Trigger review for SRM-003 documentation.
+
+---
+
+## SRM-003 Gate 4 - Scope Freeze Gate
+
+SRM-003 must not change app code.
+
+Protected app files:
+
+- `examples/service-request-mini/app/index.html`
+- `examples/service-request-mini/app/app.js`
+- `examples/service-request-mini/app/styles.css`
+
+Validation command:
+
+```bash
+git diff -- examples/service-request-mini/app/
+```
+
+Expected result: no output.
+
+**Result**: Pending final validation before Trigger review.
+
+---
+
+## Historical SRM-002 Validation Evidence
+
+**Project**: Service Request Mini
+
 **Task**: SRM-002 - Implement Minimal Browser-Native Request Flow
 
 **Date**: 2026-04-30

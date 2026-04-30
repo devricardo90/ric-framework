@@ -2,43 +2,43 @@
 
 ## Current Canonical Status
 
-Status: Trigger review approved - pending local commit authorization
+Status: IN_PROGRESS pending Trigger review
 
-Current Task: RIC-018C - Define Mandatory Diff Evidence Before Commit
+Current Task: SRM-003 - Document Service Request Mini Demo and Validation Pack
 
 Last Updated: 2026-04-30
 
 ## Active Task
 
+ID: SRM-003
+
+Title: Document Service Request Mini Demo and Validation Pack
+
+Status: IN_PROGRESS pending Trigger review
+
+## Last Completed Task
+
 ID: RIC-018C
 
 Title: Define Mandatory Diff Evidence Before Commit
 
-Status: Trigger review approved - pending local commit authorization
+Evidence: Trigger confirmed RIC-018C as Remote DONE. Commit `5c79ef3 docs: require mandatory diff evidence before commit` was pushed to `origin/main`; post-push `git status --short` was clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` showed `5c79ef3`, `3449b22`, and `408140a`.
 
-## Last Completed Task
-
-ID: RIC-018B
-
-Title: Reconcile RIC-018A Remote DONE Operational State
-
-Evidence: Trigger confirmed RIC-018B as Remote DONE. Commit `3449b22 docs: reconcile RIC-018A remote done state` was pushed to `origin/main`; post-push `git status --short` was clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` showed `3449b22`, `408140a`, and `0e040fd`.
-
-Remote Evidence: Remote DONE at `3449b22`.
+Remote Evidence: Remote DONE at `5c79ef3`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-018C execution; dirty only by approved RIC-018C documentation and operational changes pending Trigger review.
+Working Tree at Verification: Clean before SRM-003 execution; dirty only by approved SRM-003 documentation and operational changes pending Trigger review.
 
-Local HEAD: `3449b22 docs: reconcile RIC-018A remote done state`
+Local HEAD: `5c79ef3 docs: require mandatory diff evidence before commit`
 
-Local `origin/main` Reference: `3449b22 docs: reconcile RIC-018A remote done state`
+Local `origin/main` Reference: `5c79ef3 docs: require mandatory diff evidence before commit`
 
-Pending Local Commits by Local Git Reference: None before RIC-018C execution. `main` synchronized with `origin/main`.
+Pending Local Commits by Local Git Reference: None before SRM-003 execution. `main` synchronized with `origin/main`.
 
-Pending Remote Commits by Local Git Reference: None before RIC-018C execution.
+Pending Remote Commits by Local Git Reference: None before SRM-003 execution.
 
 ## Blocked Items
 
@@ -46,8 +46,8 @@ Pending Remote Commits by Local Git Reference: None before RIC-018C execution.
 
 ## Current Objective
 
-Execute RIC-018C to define mandatory diff evidence before local commit authorization. Commit and push are not authorized.
+Execute SRM-003 as a documentation-only task that makes Service Request Mini understandable, manually validatable, and reusable as the first official Product Instance example.
 
 ## Next Recommended Action
 
-RIC-018C Trigger review is approved and the task is pending final local commit authorization. SRM-003 remains Recommended only, not READY. Do not commit, push, open SRM-003, or open any additional READY task without Trigger authorization.
+Complete SRM-003 validation and report mandatory diff evidence for Trigger review. Do not commit, push, open SRM-004, change app code, or open any new READY task without Trigger authorization.

@@ -2,7 +2,7 @@
 
 **Project**: Service Request Mini
 
-**Last Updated**: 2026-04-30 (SRM-002 Local DONE)
+**Last Updated**: 2026-04-30 (SRM-003 in progress)
 
 ---
 
@@ -20,7 +20,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| None | None | None | None | None | None |
+| SRM-003 | Document Service Request Mini Demo and Validation Pack | IN_PROGRESS pending Trigger review | Create documentation that lets another person understand, run, demo, and manually validate Service Request Mini without extra explanation. | `git diff --check`; `git status --short`; `git status -sb`; `git diff --stat`; `git diff -- examples/service-request-mini/app/`; review documentation excerpts. | Do not commit without Trigger authorization. If approved, one documentation-only SRM-003 commit. |
 
 ---
 
@@ -47,7 +47,7 @@ Items that have been identified but are not READY. Trigger must approve before p
 
 | ID | Title | Status | Goal | Notes |
 | --- | --- | --- | --- | --- |
-| None | None | None | None | None |
+| None | None | None | None | The previous SRM-003 UX and validation improvement candidate was replaced by the approved documentation-only SRM-003 task. |
 
 ---
 
@@ -76,4 +76,4 @@ Commit Rule:
 
 ## Next Process Step
 
-SRM-002 is Remote DONE by Trigger approval. Push confirmed at `f415b4f..777cc94`. No task is active. No task is READY. Use Discussion Gate before opening any future task.
+SRM-003 is the only active task and is pending Trigger review. SRM-002 remains Remote DONE. The previous SRM-003 UX and validation improvement candidate was replaced by this documentation-only task. No SRM-004 READY task is open.
