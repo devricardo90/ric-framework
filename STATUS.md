@@ -4,40 +4,41 @@
 
 Status: IN_PROGRESS pending Trigger review
 
-Current Task: RIC-018A - Define Post-Commit and Remote DONE Closure Rules
+Current Task: RIC-018B - Reconcile RIC-018A Remote DONE Operational State
 
 Last Updated: 2026-04-30
 
 ## Active Task
 
-ID: RIC-018A
+ID: RIC-018B
 
-Title: Define Post-Commit and Remote DONE Closure Rules
+Title: Reconcile RIC-018A Remote DONE Operational State
 
 Status: IN_PROGRESS pending Trigger review
 
 ## Last Completed Task
 
-ID: SRM-002
+ID: RIC-018A
 
-Title: Implement Minimal Browser-Native Request Flow
+Title: Define Post-Commit and Remote DONE Closure Rules
 
-Evidence: Trigger approved Remote DONE. Created `examples/service-request-mini/app/` with `index.html`, `styles.css`, `app.js`; browser validation confirmed by Trigger; push `f415b4f..777cc94 main -> main`; `main` synchronized with `origin/main`.
-Remote Evidence: Remote DONE at `777cc94`.
+Evidence: Trigger confirmed RIC-018A as Remote DONE. Commit `408140a docs: define post-commit and remote done closure rules` was pushed to `origin/main`; post-push `git status --short` was clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` showed `408140a`, `0e040fd`, and `777cc94`.
+
+Remote Evidence: Remote DONE at `408140a`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Dirty by approved RIC-018A scope pending Trigger review.
+Working Tree at Verification: Clean before RIC-018B execution; dirty only by approved RIC-018B operational reconciliation changes pending Trigger review.
 
-Local HEAD: `0e040fd docs: record SRM-002 remote done state`
+Local HEAD: `408140a docs: define post-commit and remote done closure rules`
 
-Local `origin/main` Reference: synchronized with local `main` at verification.
+Local `origin/main` Reference: `408140a docs: define post-commit and remote done closure rules`
 
-Pending Local Commits by Local Git Reference: None. `main` synchronized with `origin/main`.
+Pending Local Commits by Local Git Reference: None before RIC-018B execution. `main` synchronized with `origin/main`.
 
-Pending Remote Commits by Local Git Reference: None.
+Pending Remote Commits by Local Git Reference: None before RIC-018B execution.
 
 ## Blocked Items
 
@@ -45,8 +46,8 @@ Pending Remote Commits by Local Git Reference: None.
 
 ## Current Objective
 
-Execute RIC-018A within approved documentation-only scope and report for Trigger Review. Commit and push are not authorized.
+Execute RIC-018B to reconcile operational files after RIC-018A Remote DONE. Commit and push are not authorized.
 
 ## Next Recommended Action
 
-Complete RIC-018A validation, report for Trigger Review, and wait for Trigger decision. Do not commit, push, open SRM-003, or open any additional READY task without Trigger authorization.
+Complete RIC-018B validation, report for Trigger review, and wait for Trigger decision. SRM-003 remains Recommended only, not READY. Do not commit, push, open SRM-003, or open any additional READY task without Trigger authorization.
