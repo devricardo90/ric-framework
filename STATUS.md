@@ -18,26 +18,25 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-015A
+ID: RIC-015B
 
-Title: Reconcile Product Onboarding and Example Semantics
+Title: Define Product Instance Boot Rules
 
-Evidence: Trigger approved RIC-015A as DONE. Updated `playbooks/start-new-project.md` to reference `templates/project/` as canonical source. Updated `docs/architecture/examples-and-automation-boundaries.md` with three-category example semantics and legacy schema declaration for `examples/sample-project/`. Scope respected; `git diff --check` PASS; no additional READY task opened.
-Remote Evidence: Pending push to `origin/main`.
+Evidence: Trigger approved RIC-015B as Local DONE. Created `docs/ops/product-instance-boot-rules.md` defining Product Instance boot rules. Updated operational records. Scope respected; `git diff --check` PASS; no product or example created; protected paths untouched. Commit authorized with message `docs: define product instance boot rules`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-015A execution; modified only in approved files for Local DONE state.
+Working Tree at Verification: Modified only in approved RIC-015B files before commit.
 
-Local HEAD: `b4762da` docs: add project instance templates pack
+Local HEAD: `14a2c1f` docs: align product onboarding and example semantics
 
-Local `origin/main` Reference: `b4762da` docs: add project instance templates pack
+Local `origin/main` Reference: `14a2c1f` docs: align product onboarding and example semantics
 
-Pending Local Commits by Local Git Reference: None
+Pending Local Commits by Local Git Reference: RIC-015B commit to be created
 
-Pending Remote Commits by Local Git Reference: None
+Pending Remote Commits by Local Git Reference: RIC-015B pending push after commit
 
 ## Blocked Items
 
@@ -45,8 +44,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Maintain repository idle state after RIC-015A Local DONE.
+Maintain repository after RIC-015B Local DONE. Push is not authorized yet.
 
 ## Next Recommended Action
 
-Use Discussion Gate to evaluate RIC-015B (first Official Governed Example). Do not open a new READY task yet.
+Report post-commit state to Trigger. Do not push without Trigger authorization. Do not open RIC-016A.

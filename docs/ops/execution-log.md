@@ -19,6 +19,70 @@ RIC-013A is Local DONE after Trigger approval and required validation. Commit au
 
 Report post-commit state to Trigger. Use Discussion Gate to evaluate the next advance. Do not open a new READY task without Trigger approval.
 
+## 2026-04-30 - RIC-015B Execution
+
+Actor: Execution Agent
+
+Task: RIC-015B - Define Product Instance Boot Rules
+
+Status: Local DONE by Trigger approval
+
+## Work Performed
+
+- Confirmed pre-execution state: working tree clean, `main` synchronized with `origin/main`, latest commit `14a2c1f docs: align product onboarding and example semantics`.
+- Read `docs/ops/boot-rules.md` to confirm boundary: it covers framework session boot; the new document covers product instance initialization - no overlap.
+- Created `docs/ops/product-instance-boot-rules.md` with the following sections:
+  - What Is a Product Instance - formal definition separating it from framework, templates, skeletons, and external repositories.
+  - Where a Product Instance Lives - five-context table with semantics and schema status for each.
+  - How to Copy `templates/project/` Without Altering the Originals - copy-by-value mechanism and renaming convention table (10 files).
+  - Boot-Required Files - five mandatory files (`prd.md`, `mvp-scope.md`, `backlog.md`, `status.md`, `session-handoff.md`) with required content at boot.
+  - Lifecycle Files - five files created post-boot (`stack-decision.md`, `decision-log.md`, `execution-log.md`, `validation-gates.md`, `version-matrix.md`) with empty-stub rule.
+  - Product-to-Execution Sequence - numbered sequence from prd.md to decision-log.md showing dependencies.
+  - Criteria for the First READY Task - six conditions including Trigger-approval requirement.
+  - Prohibitions During Boot - eight prohibited actions with reasons.
+  - Trigger Approval Requirements - explicit list of actions requiring Trigger authority in a Product Instance.
+- Updated operational records: `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`.
+
+## Commands Executed
+
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+- Read `docs/ops/boot-rules.md`.
+- `git diff --check`
+- `git status --short`
+- Current session read required startup files in order.
+- Current session re-read `docs/ops/product-instance-boot-rules.md` and `docs/ops/boot-rules.md`.
+- Current session corrected non-ASCII arrows/dashes in `docs/ops/product-instance-boot-rules.md`.
+- Current session aligned RIC-015B status wording with the repository Local DONE rule because commit has not been authorized.
+- Current session ran `git diff --check`, `git status --short`, and scope checks for protected paths.
+- Trigger approved RIC-015B as Local DONE and authorized local commit `docs: define product instance boot rules`.
+
+## Validation Evidence
+
+- Pre-execution `git status --short` was clean.
+- `git diff --check` PASS (LF/CRLF normalization warnings only).
+- `git status --short` shows 4 operational files modified and 1 new untracked file `docs/ops/product-instance-boot-rules.md`.
+- `templates/project/`, `templates/prompts/`, `examples/sample-project/`, `AGENTS.md`, `README.md` were not touched.
+- No product, example, script, `.github`, or automation was created.
+- No additional READY task was opened.
+- Current session `git diff --check` PASS (LF/CRLF normalization warnings only).
+- Current session `git status --short` shows 4 operational files modified and 1 new untracked file `docs/ops/product-instance-boot-rules.md`.
+- Current session protected-path check shows no changes in `templates/project/`, `templates/prompts/`, `examples/sample-project/`, `AGENTS.md`, or `README.md`.
+
+## Closure Decision
+
+RIC-015B is Local DONE after Trigger approval and required validation. Commit authorized with message `docs: define product instance boot rules`. Remote DONE is pending push.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Create the authorized local commit, report post-commit state to Trigger, and do not push without Trigger authorization.
+
 ## 2026-04-30 - RIC-015A Closure
 
 Actor: Execution Agent

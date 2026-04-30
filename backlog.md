@@ -16,6 +16,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-015B | Define Product Instance Boot Rules | Trigger approved Local DONE; created `docs/ops/product-instance-boot-rules.md`; defined Product Instance location, template-copy rules, boot-required files, lifecycle stub rules, first READY criteria, boot prohibitions, and Trigger approval requirements; scope respected; `git diff --check` PASS; no product or example created; protected paths untouched |
 | RIC-015A | Reconcile Product Onboarding and Example Semantics | Trigger approved DONE; updated `playbooks/start-new-project.md` and `docs/architecture/examples-and-automation-boundaries.md`; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-014A | Define Project Instance Template Pack | Trigger approved DONE; created `templates/project/` with README.md and 10 project instance templates; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-013A | Define Operational Prompt Templates Pack | Trigger approved DONE; created `templates/prompts/` with README.md and 7 prompt templates; scope respected; `git diff --check` PASS; no additional READY task opened |
@@ -55,4 +56,4 @@
 
 ## Next Process Step
 
-RIC-015A is Local DONE after Trigger approval. No task is active. No task is READY. Next substantive step should be Discussion Gate for RIC-015B before promoting any future task.
+RIC-015B is Local DONE after Trigger approval. No task is active. No task is READY. Commit authorized with message `docs: define product instance boot rules`; push is not authorized yet.
