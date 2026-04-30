@@ -2,19 +2,19 @@
 
 ## Current Canonical Status
 
-Status: Remote DONE
+Status: IN_PROGRESS pending Trigger review
 
-Current Task: None
+Current Task: RIC-018A - Define Post-Commit and Remote DONE Closure Rules
 
 Last Updated: 2026-04-30
 
 ## Active Task
 
-ID: None
+ID: RIC-018A
 
-Title: None
+Title: Define Post-Commit and Remote DONE Closure Rules
 
-Status: Idle
+Status: IN_PROGRESS pending Trigger review
 
 ## Last Completed Task
 
@@ -29,11 +29,11 @@ Remote Evidence: Remote DONE at `777cc94`.
 
 Branch: `main`
 
-Working Tree at Verification: Clean before SRM-002 execution started.
+Working Tree at Verification: Dirty by approved RIC-018A scope pending Trigger review.
 
-Local HEAD: `f415b4f docs: define security and clean code baseline`
+Local HEAD: `0e040fd docs: record SRM-002 remote done state`
 
-Local `origin/main` Reference: `f415b4f docs: define security and clean code baseline`
+Local `origin/main` Reference: synchronized with local `main` at verification.
 
 Pending Local Commits by Local Git Reference: None. `main` synchronized with `origin/main`.
 
@@ -45,8 +45,8 @@ Pending Remote Commits by Local Git Reference: None.
 
 ## Current Objective
 
-Maintain repository after SRM-002 Local DONE. Push is not authorized yet.
+Execute RIC-018A within approved documentation-only scope and report for Trigger Review. Commit and push are not authorized.
 
 ## Next Recommended Action
 
-Use Discussion Gate before opening any future task. Do not push without Trigger authorization.
+Complete RIC-018A validation, report for Trigger Review, and wait for Trigger decision. Do not commit, push, open SRM-003, or open any additional READY task without Trigger authorization.

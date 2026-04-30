@@ -1,3 +1,77 @@
+## 2026-04-30 - RIC-018A Execution
+
+Actor: Execution Agent
+
+Task: RIC-018A - Define Post-Commit and Remote DONE Closure Rules
+
+Status: IN_PROGRESS pending Trigger review
+
+## Work Performed
+
+- Completed session start protocol by reading required files in order.
+- Recorded Trigger approval to promote RIC-018A to READY before SRM-003.
+- Treated RIC-018A as the only active task.
+- Created/refined `docs/ops/post-commit-and-remote-done-rules.md`.
+- Defined Local DONE and Remote DONE closure rules.
+- Documented the correct closure sequence from validation through Trigger report after Remote DONE verification.
+- Documented what belongs in the task commit and what must not be edited after commit or push without Trigger authorization.
+- Documented the rule against unauthorized post-commit evidence commits and unauthorized post-push operational edits.
+- Documented how to handle post-commit hashes through Trigger report evidence instead of repository edits.
+- Documented the difference between repository evidence and Trigger report evidence.
+- Updated operational records: `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md`.
+
+## Commands Executed
+
+- `Get-Content -Path README.md`
+- `Get-Content -Path STATUS.md`
+- `Get-Content -Path backlog.md`
+- `Get-Content -Path docs/ops/session-handoff.md`
+- `Get-Content -Path docs/ops/decisions.md`
+- `Get-Content -Path docs/ops/execution-log.md`
+- `git status --short`
+- `git status -sb`
+- `Get-Content -Path docs/ops/source-of-truth-rules.md`
+- `Get-Content -Path docs/ops/boot-rules.md`
+- `Get-Content -Path docs/ops/post-commit-and-remote-done-rules.md`
+- `git log --oneline -1`
+- `git log --oneline -5`
+- `git diff --name-only`
+- `git ls-files --others --exclude-standard`
+- `git diff --check`
+- `git status --short`
+- `Select-String -Path backlog.md,STATUS.md,docs/ops/session-handoff.md,docs/ops/execution-log.md -Pattern "SRM-003"`
+- `Select-String -Path backlog.md -Pattern "READY"`
+- `Select-String -Path backlog.md -Pattern "RIC-018A" -Context 0,1`
+- `Select-String -Path docs/ops/post-commit-and-remote-done-rules.md -Pattern "Local DONE|Remote DONE|post-commit|post-push|hash|Trigger report|working tree|separate closure commit|must not"`
+
+## Validation Evidence
+
+- `git diff --check`: PASS. Git emitted LF/CRLF normalization warnings only.
+- `git status --short`: only authorized RIC-018A files are changed or untracked.
+- Authorized files confirmed:
+  - `STATUS.md`
+  - `backlog.md`
+  - `docs/ops/execution-log.md`
+  - `docs/ops/session-handoff.md`
+  - `docs/ops/post-commit-and-remote-done-rules.md`
+- No new READY beyond RIC-018A.
+- SRM-003 remains not READY.
+
+## Closure Decision
+
+RIC-018A is pending Trigger Review. Commit is not authorized. Push is not authorized.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- No blocker recorded after validation.
+
+## Next Action
+
+Report RIC-018A for Trigger Review. Do not commit or push without Trigger authorization. Do not open SRM-003 as READY.
+
+---
+
 ## 2026-04-30 - SRM-002 Execution
 
 Actor: Execution Agent

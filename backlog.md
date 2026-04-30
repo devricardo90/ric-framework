@@ -10,7 +10,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| None | None | None | None | None | None |
+| RIC-018A | Define Post-Commit and Remote DONE Closure Rules | IN_PROGRESS pending Trigger review | Formalize task closure rules for validation, pre-commit operational updates, commit, Local DONE, push, Remote DONE, and operational records. | `git diff --check`; `git status --short`; confirm only authorized files changed; confirm no new READY beyond RIC-018A; confirm SRM-003 remains not READY. | Do not commit without Trigger authorization. If approved, one documentation commit only for RIC-018A. |
 
 ## Completed Items
 
@@ -59,4 +59,4 @@
 
 ## Next Process Step
 
-SRM-002 is Remote DONE by Trigger approval. Push confirmed at `f415b4f..777cc94`. No task is active. No task is READY. Use Discussion Gate before opening any future task.
+RIC-018A is the only active task and is pending Trigger Review. SRM-003 is not READY. No additional READY task is open. Do not commit or push without Trigger authorization.
