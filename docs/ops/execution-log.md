@@ -1,3 +1,59 @@
+## 2026-04-30 - RIC-012C Execution
+
+Actor: Execution Agent
+
+Task: RIC-012C - Define Human-Agent Operating Model
+
+Status: Local DONE by Trigger approval
+
+## Work Performed
+
+- Recorded Trigger approval to open RIC-012C as READY and execute it.
+- Created `docs/agents/human-agent-operating-model.md`.
+- Formalized the Operational Triad: Trigger (Ricardo), Consultant / Auditor, and Terminal Executor.
+- Defined the operational flow: PREPARE, EXECUTE, AUDIT, CLOSE.
+- Established Central Operating Rules: one executor, one auditor, one human, one READY task, and one real evidence.
+- Distinguished between Chat (Decision/Audit) and Terminal (Execution) usage.
+- Defined Loop Prevention and Stop Rules (correction failure, strategic decisions, out-of-scope errors, operational drift).
+- Prohibited patterns: Infinite relay, silent done, and evidence fabrication.
+- Updated operational records (`STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`) to reflect the active execution.
+- Adjusted `docs/agents/human-agent-operating-model.md` following Trigger review:
+    - Refined "The Operational Triad" roles for more objective language.
+    - Clarified the "FECHAR (CLOSE)" sequence (approval -> records -> validation -> commit -> push).
+    - Detailed "Chat vs. Terminal Usage" boundaries.
+- Refined the "Chat vs. Terminal Usage" definition to remove ambiguity regarding draft decisions and file changes.
+
+## Commands Executed
+
+- `git status -sb`
+- `git status --short`
+- `git log --oneline -3`
+- `ls docs/agents`
+- `cat AGENTS.md`
+- `cat docs/agents/agent-role-boundaries.md`
+- `git diff --check`
+- `git status --short`
+
+## Validation Evidence
+
+- Pre-execution `git status --short` was clean.
+- `docs/agents/human-agent-operating-model.md` created with all required content rules and refined via Trigger review.
+- Final validation `git diff --check` passed.
+- `git status --short` shows only approved files modified or untracked.
+
+## Closure Decision
+
+RIC-012C is Local DONE after Trigger approval and required validation. Commit authorized with message `docs: define human-agent operating model`. Remote DONE is pending push.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Create the authorized local commit, then use Discussion Gate to evaluate the next advance. Do not open a new READY task without approval.
+
 ## 2026-04-30 - RIC-012B Operational Correction
 
 Actor: Execution Agent

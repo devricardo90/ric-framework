@@ -18,18 +18,18 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-012B
+ID: RIC-012C
 
-Title: Reconcile Post-RIC-012A Operational State
+Title: Define Human-Agent Operating Model
 
-Evidence: Trigger approved RIC-012B as DONE. Operational records were reconciled after the confirmed RIC-012A push; RIC-012A remains Remote DONE at `3934815 docs: define RIC Framework functional map`; `main` was synchronized with `origin/main`; working tree was clean before correction; no Human-Agent Operating Model task or additional READY task was opened; validation passed with `git diff --check` and `git status --short`; local commit authorized with message `docs: reconcile post RIC-012A operational state`.
+Evidence: Trigger approved RIC-012C as DONE. Created `docs/agents/human-agent-operating-model.md` formalizing the operational flow between Trigger, Auditor, and Executor. Scope respected; validation `git diff --check` PASS; no additional READY task opened.
 Remote Evidence: Pending push to `origin/main`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-012B operational correction; modified only in approved operational files before local commit
+Working Tree at Verification: Clean before RIC-012C execution; modified only in approved files for Local DONE state.
 
 Local HEAD: `3934815` docs: define RIC Framework functional map
 
@@ -47,8 +47,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Maintain repository idle state after RIC-012B Local DONE. RIC-012B is an operational post-push correction only.
+Maintain repository idle state after RIC-012C Local DONE.
 
 ## Next Recommended Action
 
-Use Discussion Gate before promoting Human-Agent Operating Model or any future task to READY.
+Use Discussion Gate to evaluate the next advance (e.g., Two-Agent Execution Playbook or Operational Prompt Templates). Do not open a new READY task yet.

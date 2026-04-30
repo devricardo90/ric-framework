@@ -16,6 +16,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-012C | Define Human-Agent Operating Model | Trigger approved DONE; created `docs/agents/human-agent-operating-model.md`; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-001 | Repository Foundation and Documentation Skeleton | Commit `f0be24e docs: initialize ric framework structure`; `git status` was clean after commit |
 | RIC-001A | Add Agent Governance and Recovery Control | Trigger approved formal closure; commit `b297a2e docs: add agent governance and recovery controls`; `git status` was clean after commit |
 | RIC-001B | Align README with canonical governance controls | README reviewed as coherent with canonical governance controls; commit authorized by Trigger |
