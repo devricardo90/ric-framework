@@ -2,7 +2,7 @@
 
 ## Current Objective
 
-Maintain repository idle state after RIC-014A Local DONE.
+Maintain repository idle state after RIC-015A Local DONE.
 
 ## Active Task
 
@@ -14,25 +14,16 @@ Status: Idle
 
 ## Last Completed Action
 
-Closed RIC-014A as Local DONE after Trigger approval. Created `templates/project/` with README.md and 10 project instance templates. Created authorized local commit `docs: add project instance templates pack`.
+Closed RIC-015A as Local DONE after Trigger approval. Updated `playbooks/start-new-project.md` and `docs/architecture/examples-and-automation-boundaries.md`. Created authorized local commit `docs: align product onboarding and example semantics`.
 
 ## Current State
 
-RIC-014A is Local DONE. Created `templates/project/` pack. Operational records updated. No task is active. No task is READY.
+RIC-015A is Local DONE. Two framework files updated. Operational records updated. No task is active. No task is READY.
 
 ## Files Changed
 
-- `templates/project/README.md`
-- `templates/project/prd-template.md`
-- `templates/project/mvp-scope-template.md`
-- `templates/project/stack-decision-template.md`
-- `templates/project/version-matrix-template.md`
-- `templates/project/backlog-template.md`
-- `templates/project/status-template.md`
-- `templates/project/decision-log-template.md`
-- `templates/project/execution-log-template.md`
-- `templates/project/validation-gates-template.md`
-- `templates/project/session-handoff-template.md`
+- `playbooks/start-new-project.md`
+- `docs/architecture/examples-and-automation-boundaries.md`
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md`
@@ -45,18 +36,18 @@ RIC-014A is Local DONE. Created `templates/project/` pack. Operational records u
 - `git log --oneline -3`
 - `git diff --check`
 - `git status --short`
-- Trigger approval to close RIC-014A as Local DONE and create local commit `docs: add project instance templates pack`.
+- Trigger approval to close RIC-015A as Local DONE and create local commit `docs: align product onboarding and example semantics`.
 
 ## Validation Result
 
 - Pre-execution `git status --short` was clean.
 - `git diff --check` PASS.
-- `git status --short` shows only approved files modified or untracked.
+- `git status --short` shows only the 6 approved files modified.
 
 ## Pending Decisions for the Trigger
 
-- Whether to push RIC-014A local commit to `origin/main`.
-- Selection of the next advance via Discussion Gate.
+- Whether to push RIC-015A local commit to `origin/main`.
+- Whether to open RIC-015B (first Official Governed Example) via Discussion Gate.
 
 ## Blockers
 
@@ -66,12 +57,12 @@ RIC-014A is Local DONE. Created `templates/project/` pack. Operational records u
 
 1. Trigger reviews post-commit report.
 2. If authorized, push local commit to remote.
-3. Use Discussion Gate to evaluate the next advance.
+3. Use Discussion Gate to evaluate RIC-015B.
 
 ## Do Not Do Next
 
-Do not push without Trigger authorization. Do not open a new READY task without Trigger approval. Do not alter files outside the approved Local DONE state.
+Do not push without Trigger authorization. Do not open RIC-015B without Trigger approval. Do not create `examples/governed-project/` or any product. Do not alter files outside the approved Local DONE state.
 
 ## Resume Instruction for Next Agent
 
-Read operational files and verify RIC-014A is Local DONE. Repository is Idle. `templates/project/` pack has been created and committed locally.
+Read operational files and verify RIC-015A is Local DONE. Repository is Idle. `playbooks/start-new-project.md` and `docs/architecture/examples-and-automation-boundaries.md` have been updated and committed locally.

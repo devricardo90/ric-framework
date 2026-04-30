@@ -18,22 +18,22 @@ Status: Idle
 
 ## Last Completed Task
 
-ID: RIC-014A
+ID: RIC-015A
 
-Title: Define Project Instance Template Pack
+Title: Reconcile Product Onboarding and Example Semantics
 
-Evidence: Trigger approved RIC-014A as DONE. Created `templates/project/` with README.md and 10 project instance templates. Scope respected; `git diff --check` PASS; no additional READY task opened.
+Evidence: Trigger approved RIC-015A as DONE. Updated `playbooks/start-new-project.md` to reference `templates/project/` as canonical source. Updated `docs/architecture/examples-and-automation-boundaries.md` with three-category example semantics and legacy schema declaration for `examples/sample-project/`. Scope respected; `git diff --check` PASS; no additional READY task opened.
 Remote Evidence: Pending push to `origin/main`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-014A execution; modified only in approved files for Local DONE state.
+Working Tree at Verification: Clean before RIC-015A execution; modified only in approved files for Local DONE state.
 
-Local HEAD: `6112429` docs: add operational prompt templates pack
+Local HEAD: `b4762da` docs: add project instance templates pack
 
-Local `origin/main` Reference: `6112429` docs: add operational prompt templates pack
+Local `origin/main` Reference: `b4762da` docs: add project instance templates pack
 
 Pending Local Commits by Local Git Reference: None
 
@@ -45,8 +45,8 @@ Pending Remote Commits by Local Git Reference: None
 
 ## Current Objective
 
-Maintain repository idle state after RIC-014A Local DONE.
+Maintain repository idle state after RIC-015A Local DONE.
 
 ## Next Recommended Action
 
-Use Discussion Gate to evaluate the next advance. Do not open a new READY task yet.
+Use Discussion Gate to evaluate RIC-015B (first Official Governed Example). Do not open a new READY task yet.

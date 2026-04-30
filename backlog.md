@@ -16,6 +16,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-015A | Reconcile Product Onboarding and Example Semantics | Trigger approved DONE; updated `playbooks/start-new-project.md` and `docs/architecture/examples-and-automation-boundaries.md`; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-014A | Define Project Instance Template Pack | Trigger approved DONE; created `templates/project/` with README.md and 10 project instance templates; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-013A | Define Operational Prompt Templates Pack | Trigger approved DONE; created `templates/prompts/` with README.md and 7 prompt templates; scope respected; `git diff --check` PASS; no additional READY task opened |
 | RIC-012D | Define Two-Agent Execution Playbook | Trigger approved DONE; created `playbooks/two-agent-execution-flow.md`; scope respected; `git diff --check` PASS; no additional READY task opened |
@@ -54,4 +55,4 @@
 
 ## Next Process Step
 
-RIC-014A is Local DONE after Trigger approval. No task is active. No task is READY. Next substantive step should be Discussion Gate before promoting any future task.
+RIC-015A is Local DONE after Trigger approval. No task is active. No task is READY. Next substantive step should be Discussion Gate for RIC-015B before promoting any future task.

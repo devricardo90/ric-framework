@@ -19,6 +19,89 @@ RIC-013A is Local DONE after Trigger approval and required validation. Commit au
 
 Report post-commit state to Trigger. Use Discussion Gate to evaluate the next advance. Do not open a new READY task without Trigger approval.
 
+## 2026-04-30 - RIC-015A Closure
+
+Actor: Execution Agent
+
+Task: RIC-015A - Reconcile Product Onboarding and Example Semantics
+
+Status: Local DONE by Trigger approval
+
+## Closure Decision
+
+RIC-015A is Local DONE after Trigger approval and required validation. Commit authorized with message `docs: align product onboarding and example semantics`. Remote DONE is pending push.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- Push is not authorized in this step.
+
+## Next Action
+
+Report post-commit state to Trigger. Use Discussion Gate to evaluate RIC-015B. Do not open a new READY task without Trigger approval.
+
+## 2026-04-30 - RIC-015A Execution
+
+Actor: Execution Agent
+
+Task: RIC-015A - Reconcile Product Onboarding and Example Semantics
+
+Status: Local DONE pending Trigger review
+
+## Work Performed
+
+- Confirmed pre-execution state: working tree clean, `main` synchronized with `origin/main`, latest commit `b4762da docs: add project instance templates pack`.
+- Read `playbooks/start-new-project.md`: identified that it referenced `templates/` (root) generically without distinguishing the new `templates/project/` canonical pack.
+- Read `docs/architecture/examples-and-automation-boundaries.md`: identified that `examples/sample-project/` was described as a Skeleton Example but without explicit schema-legacy declaration or three-category semantics definition.
+- Updated `playbooks/start-new-project.md`:
+  - Added canonical template source declaration: `templates/project/` is the primary source for new products.
+  - Noted that root `templates/` is auxiliary/legacy.
+  - Replaced generic step 2 with a sequenced 11-step flow referencing each `templates/project/` file by name.
+  - Replaced Minimum Ready State with a product-gate-aligned checklist.
+  - Added Product-to-Execution Flow diagram: prd → mvp-scope → stack-decision → backlog → status + session-handoff.
+  - Added Official Example Requirement section reinforcing that any product in `examples/` must use `templates/project/` and be approved under a dedicated READY task.
+- Updated `docs/architecture/examples-and-automation-boundaries.md`:
+  - Added "Example Semantics" section defining three categories:
+    1. Canonical Template Pack (`templates/project/`) — current standard for new products.
+    2. Pre-Governance Skeleton Example (`examples/sample-project/`) — legacy schema, not an Official Example.
+    3. Official Governed Example (`examples/<product-slug>/`) — future, requires dedicated READY task and filled PRD.
+  - Declared `examples/sample-project/` schema as legacy with specific per-file breakdown.
+  - Updated the Directory Boundary rule to reference "pre-governance Skeleton Example" explicitly.
+- Updated operational records: `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`.
+
+## Commands Executed
+
+- `git status --short`
+- `git status -sb`
+- `git log --oneline -3`
+- Read `playbooks/start-new-project.md`.
+- Read `docs/architecture/examples-and-automation-boundaries.md`.
+- `git diff --check`
+- `git status --short`
+
+## Validation Evidence
+
+- Pre-execution `git status --short` was clean.
+- `git diff --check` PASS (LF/CRLF normalization warnings only).
+- `git status --short` shows only `playbooks/start-new-project.md`, `docs/architecture/examples-and-automation-boundaries.md`, and 4 operational files modified.
+- No file outside the approved scope was created or modified.
+- No product, example, template/project/, templates/prompts/, AGENTS.md, README.md, scripts, or .github was touched.
+- No additional READY task was opened.
+
+## Closure Decision
+
+RIC-015A execution complete. Pending Trigger review. Commit not yet created.
+
+## Risks or Gaps
+
+- No blocker recorded.
+- The three-category example semantics section in `examples-and-automation-boundaries.md` is new content — moderate review recommended before commit.
+- Commit and push are not authorized in this step.
+
+## Next Action
+
+Trigger reviews `playbooks/start-new-project.md` and `docs/architecture/examples-and-automation-boundaries.md`. If approved, authorizes commit: `docs: reconcile product onboarding and example semantics`.
+
 ## 2026-04-30 - RIC-014A Closure
 
 Actor: Execution Agent
