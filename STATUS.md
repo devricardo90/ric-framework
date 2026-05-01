@@ -4,41 +4,41 @@
 
 Status: Local DONE pending local commit
 
-Current Task: RIC-020A - Review Service Request Mini Against Official Example Rule
+Current Task: TAM-001 - Define Tour Availability Mini Product Instance
 
-Last Updated: 2026-04-30
+Last Updated: 2026-05-01
 
 ## Active Task
 
-ID: RIC-020A
+ID: TAM-001
 
-Title: Review Service Request Mini Against Official Example Rule
+Title: Define Tour Availability Mini Product Instance
 
 Status: Local DONE pending local commit
 
 ## Last Completed Task
 
-ID: RIC-019A
+ID: RIC-020A
 
-Title: Define Official Example Review and Portfolio Presentation Rule
+Title: Review Service Request Mini Against Official Example Rule
 
-Evidence: Trigger confirmed RIC-019A as Remote DONE. Commit `b75f7a1 docs: define official example portfolio review rule` was pushed to `origin/main`; post-push `git status --short` was clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` showed `b75f7a1`, `2388ca7`, and `5c79ef3`.
+Evidence: Trigger authorized TAM-001 as the next task. RIC-020A was committed at `fa00b68 docs: review service request mini official example` and is confirmed Remote DONE at `fa00b68` on `origin/main`.
 
-Remote Evidence: Remote DONE at `b75f7a1`.
+Remote Evidence: Remote DONE at `fa00b68`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Clean before RIC-020A execution; dirty only by approved RIC-020A review and operational changes pending local commit.
+Working Tree at Verification: Dirty only by authorized TAM-001 documentation files. No code files exist. No commit has been made for TAM-001.
 
-Local HEAD: `b75f7a1 docs: define official example portfolio review rule`
+Local HEAD: `fa00b68 docs: review service request mini official example`
 
-Local `origin/main` Reference: `b75f7a1 docs: define official example portfolio review rule`
+Local `origin/main` Reference: `fa00b68 docs: review service request mini official example`
 
-Pending Local Commits by Local Git Reference: None before RIC-020A execution. `main` synchronized with `origin/main`.
+Pending Local Commits: TAM-001 documentation is complete and pending Trigger review before any commit is authorized.
 
-Pending Remote Commits by Local Git Reference: None before RIC-020A execution.
+Pending Remote Commits: None.
 
 ## Blocked Items
 
@@ -46,8 +46,8 @@ Pending Remote Commits by Local Git Reference: None before RIC-020A execution.
 
 ## Current Objective
 
-Execute RIC-020A as a review-only task that applies the RIC-019A rule to Service Request Mini and classifies its current role using evidence only.
+TAM-001 documentation is complete. Close pass passed. Awaiting Trigger commit authorization. Do not commit, push, or open TAM-002 without Trigger authorization.
 
 ## Next Recommended Action
 
-RIC-020A is approved as Local DONE and pending the authorized local commit. Do not push, open SRM-004, change app code, fix review gaps, or open any new READY task without Trigger authorization.
+Trigger authorizes the TAM-001 documentation commit. After commit, Trigger decides on push and TAM-002 Discussion Gate.
