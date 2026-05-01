@@ -2,64 +2,60 @@
 
 ## Current Objective
 
-TAM-002 - Implement Tour Availability Mini MVP. Implementation complete. Three app files created and six documentation files updated. Awaiting Trigger review before any commit is authorized.
+RIC-022A — Review TAM as Second Official Framework Example. Review and classification complete. One new review document created and four operational files updated. Awaiting Trigger review before any commit is authorized.
 
 ## Active Task
 
-ID: TAM-002
+ID: RIC-022A
 
-Title: Implement Tour Availability Mini MVP
+Title: Review TAM as Second Official Framework Example
 
-Status: IN_PROGRESS — implementation complete, awaiting commit authorization
+Status: IN_PROGRESS — review and classification complete, awaiting commit authorization
 
 ## Last Completed Action
 
-RIC-021A confirmed Remote DONE at `8d8e4f7`. TAM-002 opened by Trigger Discussion Gate. Implemented `index.html`, `styles.css`, and `app.js` under `examples/tour-availability-mini/app/`. Updated all operational and product-instance documentation.
+TAM-002 confirmed Remote DONE at `8b22644`. RIC-022A opened by Trigger authorization. Applied RIC-019A criteria to Tour Availability Mini. Produced classification record at `docs/architecture/tour-availability-mini-official-example-review.md`. Updated root `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, and `docs/ops/execution-log.md`.
 
 ## Current State
 
-TAM-002 is the only active task. Implementation is complete. No commit has been made for TAM-002.
+RIC-022A is the only active task. Review and classification are complete. No commit has been made for RIC-022A.
 
 Stopped and waiting for Trigger review before any commit is authorized.
 
 ## Files Created
 
-- `examples/tour-availability-mini/app/index.html` — tour selector, date input, party size input, check button, result area.
-- `examples/tour-availability-mini/app/styles.css` — browser-native styles, no framework, no CDN.
-- `examples/tour-availability-mini/app/app.js` — two-tour configuration, five-rule evaluation in fixed order per `business-rules.md`, DOM wiring.
+- `docs/architecture/tour-availability-mini-official-example-review.md` — RIC-022A review and classification record: RIC-019A criteria check, primary classification (Official reference example), portfolio readiness assessment (Portfolio candidate, not ready), what TAM proves that SRM did not, proportionality assessment, documentation evidence, app state evidence, limitation evidence, portfolio gaps, follow-on work register, and final classification.
 
 ## Files Changed
 
-- `examples/tour-availability-mini/status.md` — updated to TAM-002 active, implementation complete.
-- `examples/tour-availability-mini/backlog.md` — TAM-002 set as active, TAM-001 and TAM-002A in Completed.
-- `examples/tour-availability-mini/session-handoff.md` — updated to TAM-002 state.
-- `STATUS.md` — updated to TAM-002 active, RIC-021A last completed.
-- `backlog.md` — RIC-021A moved to Completed, TAM-002 set as active.
-- `docs/ops/session-handoff.md` (this file) — updated to TAM-002 state.
-- `docs/ops/execution-log.md` — TAM-002 execution record prepended.
+- `backlog.md` — TAM-002 moved to Completed with Remote DONE evidence at `8b22644`; RIC-022A added as active task; next process step updated.
+- `STATUS.md` — Current task updated to RIC-022A; TAM-002 recorded as last completed Remote DONE at `8b22644`; repository state updated to clean.
+- `docs/ops/session-handoff.md` (this file) — updated to RIC-022A state.
+- `docs/ops/execution-log.md` — RIC-022A execution record prepended.
 
 ## Commands Executed
 
-- Preflight: confirmed HEAD = origin/main = `8d8e4f7`, tree clean, TAM-002 authorized by Trigger Discussion Gate.
-- Read: `examples/tour-availability-mini/business-rules.md`, `mvp-scope.md`, `stack-decision.md`, existing `examples/service-request-mini/app/` for pattern reference.
+- Preflight: `git status --short --untracked-files=all`, `git status -sb`, `git log --oneline -3`. Confirmed HEAD = origin/main = `8b22644`, tree clean, TAM-002 Remote DONE.
+- Read: `docs/architecture/official-example-review-and-portfolio-rule.md`, `docs/architecture/service-request-mini-official-example-review.md`, `examples/tour-availability-mini/` all documentation files, `examples/tour-availability-mini/app/` all three app files, `backlog.md`, `STATUS.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md` (first 60 lines).
 
 ## Blockers
 
 - No commit is authorized until the Trigger explicitly authorizes it.
 - Push is not authorized.
 - TAM-003 is not READY and must not be opened without a new Discussion Gate.
+- No new READY task may be opened after RIC-022A without Trigger authorization.
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize the TAM-002 commit after reviewing manual browser validation.
+- Whether to authorize the RIC-022A commit after reviewing the classification record.
 - Whether to authorize a push after commit.
-- Whether to open a TAM-003 Discussion Gate.
+- Whether to open a TAM-003 Discussion Gate or other follow-on work.
 
 ## Next 3 Steps
 
-1. Report full pre-staging evidence to Trigger (git status --short --untracked-files=all, explicit file list).
-2. After Trigger authorizes: stage only the authorized files, run diff checks, report, wait for final commit authorization.
-3. Commit with message `feat: implement tour availability mini mvp`. Report post-commit state.
+1. Trigger reviews RIC-022A classification record.
+2. After Trigger authorizes: run final diff checks, report, wait for commit authorization.
+3. Commit with message `docs: review tour availability mini official example`. Report post-commit state.
 
 ## Do Not Do Next
 
@@ -67,8 +63,8 @@ Stopped and waiting for Trigger review before any commit is authorized.
 - Do not push.
 - Do not add any files not in the authorized list.
 - Do not open TAM-003 or any other READY task.
-- Do not use localStorage, backend, framework, or build step.
+- Do not create demo scripts, screenshots, portfolio assets, or validation packs inside RIC-022A.
 
 ## Resume Instruction for Next Agent
 
-TAM-002 implementation is complete. Three new app files and six updated documentation files are in the working tree. No commit has been made. Run `git status --short --untracked-files=all` and report the full file list to the Trigger. Do not commit, push, or open new tasks without explicit Trigger authorization.
+RIC-022A review and classification are complete. One new review document and four updated operational files are in the working tree. No commit has been made. Run `git status --short --untracked-files=all` and report the full file list to the Trigger. Do not commit, push, or open new tasks without explicit Trigger authorization.

@@ -4,39 +4,39 @@
 
 Status: IN_PROGRESS
 
-Current Task: TAM-002 - Implement Tour Availability Mini MVP
+Current Task: RIC-022A — Review TAM as Second Official Framework Example
 
 Last Updated: 2026-05-01
 
 ## Active Task
 
+ID: RIC-022A
+
+Title: Review TAM as Second Official Framework Example
+
+Status: IN_PROGRESS — review and classification complete, awaiting Trigger commit authorization
+
+## Last Completed Task
+
 ID: TAM-002
 
 Title: Implement Tour Availability Mini MVP
 
-Status: IN_PROGRESS — implementation complete, awaiting commit authorization
+Evidence: Trigger confirmed Remote DONE; commit `8b22644 feat: implement tour availability mini mvp` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
 
-## Last Completed Task
-
-ID: RIC-021A
-
-Title: Define Untracked Files Evidence Rule
-
-Evidence: Trigger confirmed Remote DONE; commit `8d8e4f7 docs: define untracked files evidence rule` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
-
-Remote Evidence: Remote DONE at `8d8e4f7`.
+Remote Evidence: Remote DONE at `8b22644`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Dirty by authorized TAM-002 files only. Three new app files under `examples/tour-availability-mini/app/`. Six documentation files updated. No unauthorized files exist.
+Working Tree: Dirty by authorized RIC-022A files only. One new review document created. Four operational files updated. No unauthorized files exist.
 
-Local HEAD: `8d8e4f7 docs: define untracked files evidence rule`
+Local HEAD: `8b22644 feat: implement tour availability mini mvp`
 
-Local `origin/main` Reference: `8d8e4f7 docs: define untracked files evidence rule`
+Local `origin/main` Reference: `8b22644 feat: implement tour availability mini mvp`
 
-Pending Local Commits: TAM-002 implementation is complete and pending Trigger review before any commit is authorized.
+Pending Local Commits: RIC-022A review and classification is complete and pending Trigger review before any commit is authorized.
 
 Pending Remote Commits: None.
 
@@ -46,8 +46,8 @@ Pending Remote Commits: None.
 
 ## Current Objective
 
-TAM-002 implementation is complete. Awaiting Trigger commit authorization. Do not commit or push without Trigger authorization.
+RIC-022A review is complete. TAM is classified as Official reference example, Portfolio candidate not ready. Awaiting Trigger commit authorization. Do not commit or push without Trigger authorization.
 
 ## Next Recommended Action
 
-Trigger reviews manual browser validation report and authorizes the TAM-002 commit. After commit and push, Trigger confirms Remote DONE.
+Trigger reviews RIC-022A classification record and authorizes the RIC-022A commit. After commit and push, Trigger confirms Remote DONE.
