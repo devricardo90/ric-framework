@@ -1,3 +1,53 @@
+## 2026-05-01 - RIC-021A Execution
+
+Actor: Execution Agent
+
+Task: RIC-021A - Define Untracked Files Evidence Rule
+
+Status: IN_PROGRESS — awaiting Trigger review
+
+## Work Performed
+
+- Confirmed pre-execution Git state:
+  - `git status --short --untracked-files=all`: clean.
+  - `git status -sb`: `## main...origin/main` (synchronized).
+  - `git log --oneline -1 origin/main`: `4bb5efc docs: refine tour availability business rules`.
+- Confirmed TAM-002A is Remote DONE at `4bb5efc`.
+- Confirmed TAM-002 is not READY. No other READY task is active.
+- Opened RIC-021A as the only active task per Trigger Discussion Gate.
+- Read existing `docs/ops/post-commit-and-remote-done-rules.md` (Sections 1–12).
+- Read `docs/ops/boot-rules.md` and `docs/ops/source-of-truth-rules.md` for context.
+- Added Section 13 — Untracked Files Evidence Rule — to `docs/ops/post-commit-and-remote-done-rules.md`.
+  - Documents the problem: `git diff`, `git diff --stat`, `git diff --check` do not show untracked files.
+  - Cites the observed gap: TAM-001 commit `862d848` and TAM-002A commit `4bb5efc` both required `git add -N` mid-close-pass to make new files visible.
+  - Defines the permanent rule: any untracked file is treated as explicit task scope and must be listed, authorized, made visible via `git add -N`, diff-validated, committed by name, and verified in `git show --stat`.
+  - Defines the correct pre-commit sequence (13 steps).
+  - Defines the complete evidence set the Trigger must receive before authorizing a commit with new files.
+- Updated root operational files: `STATUS.md`, `backlog.md`, `docs/ops/session-handoff.md`, `docs/ops/execution-log.md`.
+- Did not create any new file (the rule was added as a section to an existing document).
+- Did not change any product instance files.
+- Did not create any code, app, package, or deploy artifact.
+- Did not open TAM-002 or any other READY task.
+- Did not commit or push.
+- Stopped for Trigger review.
+
+## Commands Executed
+
+- `git status --short --untracked-files=all`
+- `git status -sb`
+- `git log --oneline -1 origin/main`
+- Read: `docs/ops/post-commit-and-remote-done-rules.md`, `docs/ops/boot-rules.md`, `docs/ops/source-of-truth-rules.md`
+
+## Validation Evidence (Pre-Execution Preflight)
+
+- Working tree was clean before execution began.
+- HEAD = origin/main = `4bb5efc`. Working tree clean.
+- No code, package.json, app, .github, scripts, or deploy files created.
+- No new READY task opened.
+- No commit or push performed.
+
+---
+
 ## 2026-05-01 - TAM-002A Execution
 
 Actor: Execution Agent

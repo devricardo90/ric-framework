@@ -4,39 +4,39 @@
 
 Status: IN_PROGRESS
 
-Current Task: TAM-002A - Refine Tour Availability Rules Before Implementation
+Current Task: RIC-021A - Define Untracked Files Evidence Rule
 
 Last Updated: 2026-05-01
 
 ## Active Task
 
-ID: TAM-002A
+ID: RIC-021A
 
-Title: Refine Tour Availability Rules Before Implementation
+Title: Define Untracked Files Evidence Rule
 
 Status: IN_PROGRESS — awaiting Trigger review
 
 ## Last Completed Task
 
-ID: TAM-001
+ID: TAM-002A
 
-Title: Define Tour Availability Mini Product Instance
+Title: Refine Tour Availability Rules Before Implementation
 
-Evidence: Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
+Evidence: Trigger confirmed Remote DONE; commit `4bb5efc docs: refine tour availability business rules` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
 
-Remote Evidence: Remote DONE at `862d848`.
+Remote Evidence: Remote DONE at `4bb5efc`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Dirty only by authorized TAM-002A documentation files. No code files exist. No commit has been made for TAM-002A.
+Working Tree at Verification: Dirty only by authorized RIC-021A documentation changes. No code files exist. No commit has been made for RIC-021A.
 
-Local HEAD: `862d848 docs: define tour availability mini product instance`
+Local HEAD: `4bb5efc docs: refine tour availability business rules`
 
-Local `origin/main` Reference: `862d848 docs: define tour availability mini product instance`
+Local `origin/main` Reference: `4bb5efc docs: refine tour availability business rules`
 
-Pending Local Commits: TAM-002A documentation is pending Trigger review before any commit is authorized.
+Pending Local Commits: RIC-021A documentation is pending Trigger review before any commit is authorized.
 
 Pending Remote Commits: None.
 
@@ -46,8 +46,8 @@ Pending Remote Commits: None.
 
 ## Current Objective
 
-TAM-002A documentation is complete. Awaiting Trigger review. Do not commit, push, or open TAM-002 without Trigger authorization.
+RIC-021A documentation is complete. Awaiting Trigger review. Do not commit, push, or open TAM-002 without Trigger authorization.
 
 ## Next Recommended Action
 
-Trigger reviews `business-rules.md` and authorizes the TAM-002A commit. After commit and push, Trigger decides on TAM-002 Discussion Gate.
+Trigger reviews Section 13 of `docs/ops/post-commit-and-remote-done-rules.md` and authorizes the RIC-021A commit. After commit and push, Trigger decides on TAM-002 Discussion Gate.

@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| TAM-002A | Refine Tour Availability Rules Before Implementation | IN_PROGRESS — awaiting Trigger review | Create `business-rules.md` to resolve all open rule questions before implementation begins. | `git status --short`; `git diff --check`; `git diff --stat`; confirm no app/code files created; confirm no TAM-002 or TAM-003 READY task opened. | One documentation commit authorized by Trigger after review. Do not commit without authorization. |
+| RIC-021A | Define Untracked Files Evidence Rule | IN_PROGRESS — awaiting Trigger review | Add Section 13 to `docs/ops/post-commit-and-remote-done-rules.md` defining the permanent rule for untracked file evidence handling before commit. | `git status --short --untracked-files=all`; `git diff --check`; `git diff --stat`; confirm no app/code/product files created; confirm no new READY task opened. | One documentation commit authorized by Trigger after review. Do not commit without authorization. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| TAM-002A | Refine Tour Availability Rules Before Implementation | Trigger confirmed Remote DONE; commit `4bb5efc docs: refine tour availability business rules` pushed to `origin/main`; working tree clean after push; no TAM-002 or TAM-003 READY task opened |
 | TAM-001 | Define Tour Availability Mini Product Instance | Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; no TAM-002 READY task opened |
 | RIC-020A | Review Service Request Mini Against Official Example Rule | Trigger authorized TAM-001 as next task; RIC-020A committed at `fa00b68 docs: review service request mini official example`; confirmed Remote DONE on `origin/main`; no SRM-004 or new READY task opened |
 | RIC-019A | Define Official Example Review and Portfolio Presentation Rule | Trigger confirmed Remote DONE; commit `b75f7a1 docs: define official example portfolio review rule` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `b75f7a1`, `2388ca7`, and `5c79ef3`; no SRM-004 or new READY task opened |
@@ -66,4 +67,4 @@
 
 ## Next Process Step
 
-TAM-002A is the only active task and is IN_PROGRESS awaiting Trigger review. TAM-001 is Remote DONE at `862d848`. RIC-020A is Remote DONE at `fa00b68`. TAM-002 is Future only, not READY. TAM-003 is not open. Do not commit, push, or open TAM-002 without Trigger authorization.
+RIC-021A is the only active task and is IN_PROGRESS awaiting Trigger review. TAM-002A is Remote DONE at `4bb5efc`. TAM-001 is Remote DONE at `862d848`. TAM-002 is Future only, not READY. No new READY task is open. Do not commit, push, or open TAM-002 without Trigger authorization.

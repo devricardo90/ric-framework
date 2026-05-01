@@ -227,3 +227,77 @@ This separation prevents the loop where an agent creates a commit to record evid
 - Only the Trigger may authorize a push.
 - Only the Trigger may authorize a separate operational closure commit after push.
 - The agent reports state. The Trigger decides what gets committed.
+
+---
+
+## 13. Untracked Files Evidence Rule
+
+### The Problem
+
+`git diff`, `git diff --stat`, and `git diff --check` operate only on tracked files. They do not show untracked files — files that exist on disk but have never been staged or committed.
+
+This means a new file created as part of a task will not appear in any diff output until it is staged (`git add`) or marked with intent-to-add (`git add -N`). If the agent runs `git diff --check` and `git diff --stat` and reports PASS without making new files visible first, the Trigger cannot inspect the content of those files through the diff evidence. The new files may be omitted from the final commit silently, or included without evidence.
+
+This gap was observed during TAM-001 (commit `862d848`) and TAM-002A (commit `4bb5efc`): the close-pass validation initially showed new files as `??` untracked in `git status --short`, but `git diff --stat` and `git diff --check` did not reflect them until `git add -N` was run.
+
+### The Rule
+
+**Any untracked file shown by `git status --short` or `git status --short --untracked-files=all` is treated as explicit task scope and must be handled before pre-commit evidence is considered complete.**
+
+The required agent behavior when untracked files are present:
+
+1. **Run `git status --short --untracked-files=all`** before any diff evidence step. This reveals all untracked files, including those nested in new directories.
+
+2. **List every untracked file explicitly** in the pre-commit evidence report. Each file must be identified as:
+   - Authorized: the file is part of the approved task scope.
+   - Not authorized: the file must be explained or removed before proceeding.
+
+3. **Block commit if any untracked file is unexplained.** An unexplained untracked file is a scope violation. The agent must stop, report the file to the Trigger, and wait for instruction.
+
+4. **Run `git add -N <file>` for each authorized untracked file** before running `git diff --check` and `git diff --stat`. This registers the file for tracking without staging its content, making it visible to diff output so the Trigger can inspect the full change set.
+
+5. **Use `git add` only on explicitly authorized files.** Never use `git add .` or `git add -A`. Stage each authorized file by name.
+
+6. **Report `git diff -- <new-file>` output** for every newly created file that is part of the commit. This gives the Trigger reviewable line-by-line evidence of the file content before the commit is authorized.
+
+7. **After the commit, run `git show --stat --oneline --name-only HEAD`** and verify:
+   - Every authorized new file appears in the output.
+   - No unauthorized file appears in the output.
+
+### Correct Pre-Commit Sequence When New Files Exist
+
+```
+1. Run git status --short --untracked-files=all.
+2. Identify every untracked file. Classify each as authorized or not authorized.
+3. For each authorized untracked file, run git add -N <file>.
+4. Run git diff --check. Confirm PASS.
+5. Run git diff --stat. Confirm it includes all authorized new and modified files.
+6. Run git diff -- <new-file> for each authorized new file.
+7. Report all diff evidence to the Trigger.
+8. Wait for Trigger commit authorization.
+9. On Trigger authorization: git add <authorized files by name>. git commit -m "<message>".
+10. Run git show --stat --oneline --name-only HEAD.
+11. Confirm every authorized new file is present in the commit output.
+12. Confirm no unauthorized file is present in the commit output.
+13. Report post-commit state to the Trigger.
+```
+
+### What the Trigger Receives as Complete Evidence
+
+Before authorizing a commit that includes new files, the Trigger must receive:
+
+| Evidence | Purpose |
+| --- | --- |
+| `git status --short --untracked-files=all` | Shows all new files before staging |
+| Classification of each untracked file | Confirms authorization of scope |
+| `git add -N` for each new file | Makes new files visible to diff |
+| `git diff --check` | Confirms no whitespace or conflict errors |
+| `git diff --stat` | Confirms the full set of changed and new files |
+| `git diff -- <new-file>` | Shows the actual content of each new file |
+| `git show --stat --oneline --name-only HEAD` | Confirms the commit contains the correct files |
+
+### Authority
+
+This rule applies to all tasks in the RIC Framework and to all Product Instance tasks.
+
+It does not override the Trigger's authority to authorize commits. It defines the evidence the agent must provide before the Trigger can make an informed authorization decision.

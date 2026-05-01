@@ -2,35 +2,33 @@
 
 ## Current Objective
 
-TAM-002A - Refine Tour Availability Rules Before Implementation. `business-rules.md` created. Awaiting Trigger review before any commit is authorized.
+RIC-021A - Define Untracked Files Evidence Rule. Section 13 added to `docs/ops/post-commit-and-remote-done-rules.md`. Awaiting Trigger review before any commit is authorized.
 
 ## Active Task
 
-ID: TAM-002A
+ID: RIC-021A
 
-Title: Refine Tour Availability Rules Before Implementation
+Title: Define Untracked Files Evidence Rule
 
 Status: IN_PROGRESS — awaiting Trigger review
 
 ## Last Completed Action
 
-TAM-001 confirmed Remote DONE at `862d848`. TAM-002A opened by Trigger Discussion Gate. Created `examples/tour-availability-mini/business-rules.md` with exact rule definitions, evaluation order, capacity model, user-facing messages, tour configuration shape, MVP display requirements, deferred behaviors, and all open questions resolved. Updated TAM instance files and root operational files.
+TAM-002A confirmed Remote DONE at `4bb5efc`. RIC-021A opened by Trigger Discussion Gate. Added Section 13 (Untracked Files Evidence Rule) to `docs/ops/post-commit-and-remote-done-rules.md`. Updated root operational files.
 
 ## Current State
 
-TAM-002A is the only active task. `business-rules.md` is complete. No implementation code exists. No commit has been made for TAM-002A.
+RIC-021A is the only active task. Section 13 is complete. No code or product files were created. No commit has been made for RIC-021A.
 
-The product is stopped and waiting for Trigger review before any commit is authorized.
+Stopped and waiting for Trigger review before any commit is authorized.
 
 ## Files Created
 
-- `examples/tour-availability-mini/business-rules.md`
+- None. The rule was added as a new section to an existing document.
 
 ## Files Changed
 
-- `examples/tour-availability-mini/backlog.md`
-- `examples/tour-availability-mini/status.md`
-- `examples/tour-availability-mini/session-handoff.md`
+- `docs/ops/post-commit-and-remote-done-rules.md` — Section 13 added.
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md` (this file)
@@ -38,16 +36,8 @@ The product is stopped and waiting for Trigger review before any commit is autho
 
 ## Commands Executed
 
-- Preflight: `git status --short`, `git fetch origin`, `git rev-parse HEAD`, `git rev-parse origin/main`, `git diff HEAD origin/main --stat`
-- Confirmed: HEAD = origin/main = `fa00b68`. Working tree clean. Service Request Mini untouched.
-
-## Validation Result (Pre-Creation Preflight)
-
-- Working tree was clean before TAM-001 execution began.
-- `main` was synchronized with `origin/main` at `fa00b68`.
-- No files under `examples/service-request-mini/` were changed.
-- No app code, package.json, .github, scripts, or deploy files exist in this Product Instance.
-- No extra READY task was opened.
+- Preflight: `git status --short --untracked-files=all`, `git status -sb`, `git log --oneline -1 origin/main`.
+- Confirmed: clean tree, `main` = `origin/main` = `4bb5efc`, no READY task active.
 
 ## Blockers
 
@@ -57,13 +47,13 @@ The product is stopped and waiting for Trigger review before any commit is autho
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize the TAM-002A documentation commit.
+- Whether to authorize the RIC-021A documentation commit.
 - Whether to authorize a push after commit.
 - Whether to open TAM-002 Discussion Gate for implementation.
 
 ## Next 3 Steps
 
-1. Trigger reviews `business-rules.md` and authorizes the TAM-002A commit.
+1. Trigger reviews Section 13 of `docs/ops/post-commit-and-remote-done-rules.md` and authorizes the RIC-021A commit.
 2. Create one documentation commit; report commit hash and post-commit state.
 3. Wait for Trigger decision on push and TAM-002 Discussion Gate.
 
@@ -71,11 +61,10 @@ The product is stopped and waiting for Trigger review before any commit is autho
 
 - Do not commit without Trigger authorization.
 - Do not push.
-- Do not create any files under `examples/tour-availability-mini/app/`.
-- Do not create `index.html`, `styles.css`, `app.js`, `package.json`, or any code/dependency file.
-- Do not open TAM-002, TAM-003, or any other READY task.
-- Do not modify any files under `examples/service-request-mini/`.
+- Do not create any app, code, package, or dependency file.
+- Do not open TAM-002 or any other READY task.
+- Do not modify product instance files unless explicitly authorized.
 
 ## Resume Instruction for Next Agent
 
-Continue from TAM-002A documentation complete, awaiting Trigger review. Run `git status --short`, `git diff --check`, `git diff --stat` and report the output. Do not commit, push, create code, or open new tasks without explicit Trigger authorization.
+Continue from RIC-021A documentation complete, awaiting Trigger review. Run `git status --short --untracked-files=all`, `git diff --check`, `git diff --stat` and report the output. Do not commit, push, or open new tasks without explicit Trigger authorization.
