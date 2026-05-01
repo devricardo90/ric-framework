@@ -2,37 +2,39 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-01
+**Last Updated**: 2026-05-01 (TAM-002A active)
 
 ---
 
 ## Current Canonical Status
 
-Status: Local DONE pending local commit
+Status: IN_PROGRESS
 
-Current Task: TAM-001 - Define Tour Availability Mini Product Instance
+Current Task: TAM-002A - Refine Tour Availability Rules Before Implementation
 
 ---
 
 ## Active Task
 
-ID: TAM-001
+ID: TAM-002A
 
-Title: Define Tour Availability Mini Product Instance
+Title: Refine Tour Availability Rules Before Implementation
 
-Status: Local DONE pending local commit
+Status: IN_PROGRESS — awaiting Trigger review
 
-Goal: Create the initial documentation for Tour Availability Mini before any implementation code exists. No code is written in TAM-001.
+Goal: Create `business-rules.md` to resolve all open rule questions before any implementation begins.
 
 ---
 
 ## Last Completed Task
 
-ID: None
+ID: TAM-001
 
-Title: None
+Title: Define Tour Availability Mini Product Instance
 
-Evidence: No task has been completed in this Product Instance yet.
+Evidence: Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; no TAM-002 READY task opened.
+
+Remote Evidence: Remote DONE at `862d848`.
 
 ---
 
@@ -40,13 +42,13 @@ Evidence: No task has been completed in this Product Instance yet.
 
 Branch: `main`
 
-Working Tree: Dirty only by authorized TAM-001 documentation files being created. No code, app, or implementation files exist.
+Working Tree: Dirty only by authorized TAM-002A documentation files. No code, app, or implementation files exist.
 
-Local HEAD: `fa00b68 docs: review service request mini official example`
+Local HEAD: `862d848 docs: define tour availability mini product instance`
 
-Local `origin/main` Reference: `fa00b68 docs: review service request mini official example`
+Local `origin/main` Reference: `862d848 docs: define tour availability mini product instance`
 
-Pending Local Commits: TAM-001 documentation is complete and Local DONE. Close pass passed. Pending Trigger commit authorization.
+Pending Local Commits: TAM-002A is complete and pending Trigger review before any commit is authorized.
 
 ---
 
@@ -62,7 +64,7 @@ No `app/` directory exists.
 
 No `index.html`, `styles.css`, or `app.js` files exist.
 
-Implementation is blocked until the Trigger approves TAM-002 through a separate Discussion Gate.
+Implementation is blocked until the Trigger approves TAM-002 through a separate Discussion Gate after TAM-002A review.
 
 ---
 
@@ -72,6 +74,7 @@ Implementation is blocked until the Trigger approves TAM-002 through a separate 
 - Tour Availability Mini answers only one question: given a tour, a date, and a number of people, is the tour available?
 - It does not book, pay, register, integrate, or persist anything.
 - The MVP boundary is defined in `mvp-scope.md`.
+- The exact business rules are now defined in `business-rules.md`.
 
 ---
 
@@ -83,10 +86,10 @@ Implementation is blocked until the Trigger approves TAM-002 through a separate 
 
 ## Current Objective
 
-TAM-001 is Local DONE. Close pass passed. Awaiting Trigger commit authorization. Do not commit, push, or open TAM-002 without Trigger authorization.
+TAM-002A documentation is complete. Awaiting Trigger review before any commit is authorized. Do not commit, push, or open TAM-002 without Trigger authorization.
 
 ---
 
 ## Next Recommended Action
 
-Trigger authorizes the TAM-001 documentation commit. After commit, Trigger decides on push and TAM-002 Discussion Gate. Do not promote TAM-002 or open any other task without explicit Trigger authorization.
+Trigger reviews `business-rules.md` and authorizes the TAM-002A commit. After commit and push, Trigger decides on TAM-002 Discussion Gate.

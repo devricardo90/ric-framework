@@ -2,40 +2,35 @@
 
 ## Current Objective
 
-TAM-001 - Define Tour Availability Mini Product Instance is Local DONE. Close pass passed. Awaiting Trigger commit authorization.
+TAM-002A - Refine Tour Availability Rules Before Implementation. `business-rules.md` created. Awaiting Trigger review before any commit is authorized.
 
 ## Active Task
 
-ID: TAM-001
+ID: TAM-002A
 
-Title: Define Tour Availability Mini Product Instance
+Title: Refine Tour Availability Rules Before Implementation
 
-Status: Local DONE pending local commit
+Status: IN_PROGRESS — awaiting Trigger review
 
 ## Last Completed Action
 
-Created 9 documentation files under `examples/tour-availability-mini/`, updated operational files, ran close pass validation (`git add -N`, `git diff --check`, `git diff --stat`, content review), all checks passed. TAM-001 promoted to Local DONE. RIC-020A is Remote DONE at `fa00b68`.
+TAM-001 confirmed Remote DONE at `862d848`. TAM-002A opened by Trigger Discussion Gate. Created `examples/tour-availability-mini/business-rules.md` with exact rule definitions, evaluation order, capacity model, user-facing messages, tour configuration shape, MVP display requirements, deferred behaviors, and all open questions resolved. Updated TAM instance files and root operational files.
 
 ## Current State
 
-TAM-001 is the only active task and is Local DONE pending local commit. Documentation is complete. Close pass passed. No implementation code exists. No commit has been made.
+TAM-002A is the only active task. `business-rules.md` is complete. No implementation code exists. No commit has been made for TAM-002A.
 
-The product is stopped and waiting for Trigger commit authorization.
+The product is stopped and waiting for Trigger review before any commit is authorized.
 
 ## Files Created
 
-- `examples/tour-availability-mini/README.md`
-- `examples/tour-availability-mini/prd.md`
-- `examples/tour-availability-mini/mvp-scope.md`
-- `examples/tour-availability-mini/stack-decision.md`
-- `examples/tour-availability-mini/backlog.md`
-- `examples/tour-availability-mini/status.md`
-- `examples/tour-availability-mini/decision-log.md`
-- `examples/tour-availability-mini/validation-gates.md`
-- `examples/tour-availability-mini/session-handoff.md`
+- `examples/tour-availability-mini/business-rules.md`
 
 ## Files Changed
 
+- `examples/tour-availability-mini/backlog.md`
+- `examples/tour-availability-mini/status.md`
+- `examples/tour-availability-mini/session-handoff.md`
 - `STATUS.md`
 - `backlog.md`
 - `docs/ops/session-handoff.md` (this file)
@@ -62,25 +57,25 @@ The product is stopped and waiting for Trigger commit authorization.
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize the TAM-001 documentation commit.
+- Whether to authorize the TAM-002A documentation commit.
 - Whether to authorize a push after commit.
-- Whether to open a Discussion Gate for TAM-002.
+- Whether to open TAM-002 Discussion Gate for implementation.
 
 ## Next 3 Steps
 
-1. Trigger authorizes TAM-001 documentation commit.
+1. Trigger reviews `business-rules.md` and authorizes the TAM-002A commit.
 2. Create one documentation commit; report commit hash and post-commit state.
-3. Wait for Trigger decision on push, TAM-002, or any next task.
+3. Wait for Trigger decision on push and TAM-002 Discussion Gate.
 
 ## Do Not Do Next
 
 - Do not commit without Trigger authorization.
 - Do not push.
 - Do not create any files under `examples/tour-availability-mini/app/`.
-- Do not create code, package.json, or dependency files.
-- Do not open TAM-002 or any other READY task.
+- Do not create `index.html`, `styles.css`, `app.js`, `package.json`, or any code/dependency file.
+- Do not open TAM-002, TAM-003, or any other READY task.
 - Do not modify any files under `examples/service-request-mini/`.
 
 ## Resume Instruction for Next Agent
 
-Continue from TAM-001 documentation complete, awaiting Trigger review. Run the validation commands and report the output. Do not commit, push, create code, or open new tasks without explicit Trigger authorization.
+Continue from TAM-002A documentation complete, awaiting Trigger review. Run `git status --short`, `git diff --check`, `git diff --stat` and report the output. Do not commit, push, create code, or open new tasks without explicit Trigger authorization.

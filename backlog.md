@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| TAM-001 | Define Tour Availability Mini Product Instance | Local DONE pending local commit | Create the initial documentation for Tour Availability Mini before any implementation code exists. | `git status --short`; `git diff --check`; `git diff --stat`; confirm no files under `examples/service-request-mini/` changed; confirm no app/code files created; confirm no `package.json` created; confirm no extra READY task opened. | One documentation commit authorized by Trigger after close pass review. Do not commit without authorization. |
+| TAM-002A | Refine Tour Availability Rules Before Implementation | IN_PROGRESS — awaiting Trigger review | Create `business-rules.md` to resolve all open rule questions before implementation begins. | `git status --short`; `git diff --check`; `git diff --stat`; confirm no app/code files created; confirm no TAM-002 or TAM-003 READY task opened. | One documentation commit authorized by Trigger after review. Do not commit without authorization. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| TAM-001 | Define Tour Availability Mini Product Instance | Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; no TAM-002 READY task opened |
 | RIC-020A | Review Service Request Mini Against Official Example Rule | Trigger authorized TAM-001 as next task; RIC-020A committed at `fa00b68 docs: review service request mini official example`; confirmed Remote DONE on `origin/main`; no SRM-004 or new READY task opened |
 | RIC-019A | Define Official Example Review and Portfolio Presentation Rule | Trigger confirmed Remote DONE; commit `b75f7a1 docs: define official example portfolio review rule` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `b75f7a1`, `2388ca7`, and `5c79ef3`; no SRM-004 or new READY task opened |
 | SRM-003 | Document Service Request Mini Demo and Validation Pack | Trigger confirmed Remote DONE; commit `2388ca7 docs: add service request mini demo validation pack` pushed to `origin/main`; post-push `git status --short` clean; `git status -sb` showed `## main...origin/main`; `git log --oneline -3 origin/main` confirmed `2388ca7`, `5c79ef3`, and `3449b22`; no SRM-004 or new READY task opened |
@@ -65,4 +66,4 @@
 
 ## Next Process Step
 
-TAM-001 is the only active task and is Local DONE pending local commit. Close pass passed. RIC-020A is Remote DONE at `fa00b68`. TAM-002 is Future only, not READY. No feature evolution task is open. Do not commit, push, or open TAM-002 without Trigger authorization.
+TAM-002A is the only active task and is IN_PROGRESS awaiting Trigger review. TAM-001 is Remote DONE at `862d848`. RIC-020A is Remote DONE at `fa00b68`. TAM-002 is Future only, not READY. TAM-003 is not open. Do not commit, push, or open TAM-002 without Trigger authorization.

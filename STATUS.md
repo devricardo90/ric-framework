@@ -2,41 +2,41 @@
 
 ## Current Canonical Status
 
-Status: Local DONE pending local commit
+Status: IN_PROGRESS
 
-Current Task: TAM-001 - Define Tour Availability Mini Product Instance
+Current Task: TAM-002A - Refine Tour Availability Rules Before Implementation
 
 Last Updated: 2026-05-01
 
 ## Active Task
 
+ID: TAM-002A
+
+Title: Refine Tour Availability Rules Before Implementation
+
+Status: IN_PROGRESS — awaiting Trigger review
+
+## Last Completed Task
+
 ID: TAM-001
 
 Title: Define Tour Availability Mini Product Instance
 
-Status: Local DONE pending local commit
+Evidence: Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
 
-## Last Completed Task
-
-ID: RIC-020A
-
-Title: Review Service Request Mini Against Official Example Rule
-
-Evidence: Trigger authorized TAM-001 as the next task. RIC-020A was committed at `fa00b68 docs: review service request mini official example` and is confirmed Remote DONE at `fa00b68` on `origin/main`.
-
-Remote Evidence: Remote DONE at `fa00b68`.
+Remote Evidence: Remote DONE at `862d848`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree at Verification: Dirty only by authorized TAM-001 documentation files. No code files exist. No commit has been made for TAM-001.
+Working Tree at Verification: Dirty only by authorized TAM-002A documentation files. No code files exist. No commit has been made for TAM-002A.
 
-Local HEAD: `fa00b68 docs: review service request mini official example`
+Local HEAD: `862d848 docs: define tour availability mini product instance`
 
-Local `origin/main` Reference: `fa00b68 docs: review service request mini official example`
+Local `origin/main` Reference: `862d848 docs: define tour availability mini product instance`
 
-Pending Local Commits: TAM-001 documentation is complete and pending Trigger review before any commit is authorized.
+Pending Local Commits: TAM-002A documentation is pending Trigger review before any commit is authorized.
 
 Pending Remote Commits: None.
 
@@ -46,8 +46,8 @@ Pending Remote Commits: None.
 
 ## Current Objective
 
-TAM-001 documentation is complete. Close pass passed. Awaiting Trigger commit authorization. Do not commit, push, or open TAM-002 without Trigger authorization.
+TAM-002A documentation is complete. Awaiting Trigger review. Do not commit, push, or open TAM-002 without Trigger authorization.
 
 ## Next Recommended Action
 
-Trigger authorizes the TAM-001 documentation commit. After commit, Trigger decides on push and TAM-002 Discussion Gate.
+Trigger reviews `business-rules.md` and authorizes the TAM-002A commit. After commit and push, Trigger decides on TAM-002 Discussion Gate.
