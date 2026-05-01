@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Availability Mini</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tour Availability Mini</h1>
+
+    <section class="check-section">
+      <h2>Check Availability</h2>
+
+      <div class="field">
+        <label for="tour-select">Tour</label>
+        <select id="tour-select">
+          <option value="">-- Select a tour --</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="date-input">Date</label>
+        <input type="date" id="date-input">
+      </div>
+
+      <div class="field">
+        <label for="party-size">Number of People</label>
+        <input type="number" id="party-size" min="1" step="1" placeholder="e.g. 4">
+      </div>
+
+      <div class="form-actions">
+        <button type="button" id="check-btn">Check Availability</button>
+      </div>
+
+      <div id="result" class="result" hidden></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

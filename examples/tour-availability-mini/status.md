@@ -2,7 +2,7 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-01 (TAM-002A active)
+**Last Updated**: 2026-05-01 (TAM-002 implementation complete, awaiting commit authorization)
 
 ---
 
@@ -10,31 +10,31 @@
 
 Status: IN_PROGRESS
 
-Current Task: TAM-002A - Refine Tour Availability Rules Before Implementation
+Current Task: TAM-002 - Implement Tour Availability Mini MVP
 
 ---
 
 ## Active Task
 
-ID: TAM-002A
+ID: TAM-002
 
-Title: Refine Tour Availability Rules Before Implementation
+Title: Implement Tour Availability Mini MVP
 
-Status: IN_PROGRESS — awaiting Trigger review
+Status: IN_PROGRESS — implementation complete, awaiting Trigger commit authorization
 
-Goal: Create `business-rules.md` to resolve all open rule questions before any implementation begins.
+Goal: Implement the browser-native availability checker that answers: given a tour, a date, and a number of people, is the tour available? If not, why?
 
 ---
 
 ## Last Completed Task
 
-ID: TAM-001
+ID: RIC-021A
 
-Title: Define Tour Availability Mini Product Instance
+Title: Define Untracked Files Evidence Rule
 
-Evidence: Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; no TAM-002 READY task opened.
+Evidence: Trigger confirmed Remote DONE; commit `8d8e4f7 docs: define untracked files evidence rule` pushed to `origin/main`; working tree clean after push.
 
-Remote Evidence: Remote DONE at `862d848`.
+Remote Evidence: Remote DONE at `8d8e4f7`.
 
 ---
 
@@ -42,39 +42,34 @@ Remote Evidence: Remote DONE at `862d848`.
 
 Branch: `main`
 
-Working Tree: Dirty only by authorized TAM-002A documentation files. No code, app, or implementation files exist.
+Working Tree: Dirty by authorized TAM-002 files only. Three new app files created. Six documentation files updated. No unauthorized files exist.
 
-Local HEAD: `862d848 docs: define tour availability mini product instance`
+Local HEAD: `8d8e4f7 docs: define untracked files evidence rule`
 
-Local `origin/main` Reference: `862d848 docs: define tour availability mini product instance`
+Local `origin/main` Reference: `8d8e4f7 docs: define untracked files evidence rule`
 
-Pending Local Commits: TAM-002A is complete and pending Trigger review before any commit is authorized.
+Pending Local Commits: TAM-002 implementation is complete and pending Trigger review before any commit is authorized.
 
 ---
 
 ## Implementation Status
 
-No implementation code exists.
+Implementation complete. Three app files created under `examples/tour-availability-mini/app/`:
 
-No code files have been created.
+- `index.html` — tour selector, date input, party size input, check button, result area.
+- `styles.css` — browser-native styles, no framework, no CDN.
+- `app.js` — two-tour configuration, five-rule evaluation in fixed order per `business-rules.md`.
 
-No `package.json` exists.
-
-No `app/` directory exists.
-
-No `index.html`, `styles.css`, or `app.js` files exist.
-
-Implementation is blocked until the Trigger approves TAM-002 through a separate Discussion Gate after TAM-002A review.
+The page opens and runs correctly by opening `index.html` directly in the browser (no server required).
 
 ---
 
 ## Limitations
 
-- This Product Instance has no code and cannot be run.
+- This product has no booking flow, no payment, no auth, no backend, no persistence.
 - Tour Availability Mini answers only one question: given a tour, a date, and a number of people, is the tour available?
-- It does not book, pay, register, integrate, or persist anything.
 - The MVP boundary is defined in `mvp-scope.md`.
-- The exact business rules are now defined in `business-rules.md`.
+- The exact business rules are defined in `business-rules.md`.
 
 ---
 
@@ -86,10 +81,14 @@ Implementation is blocked until the Trigger approves TAM-002 through a separate 
 
 ## Current Objective
 
-TAM-002A documentation is complete. Awaiting Trigger review before any commit is authorized. Do not commit, push, or open TAM-002 without Trigger authorization.
+TAM-002 implementation is complete. Awaiting Trigger review and commit authorization. Do not commit or push without Trigger authorization.
 
 ---
 
 ## Next Recommended Action
 
-Trigger reviews `business-rules.md` and authorizes the TAM-002A commit. After commit and push, Trigger decides on TAM-002 Discussion Gate.
+1. Trigger reviews manual browser validation report.
+2. Trigger authorizes the TAM-002 commit.
+3. Commit with message: `feat: implement tour availability mini mvp`.
+4. Report post-commit state.
+5. Wait for Trigger to confirm Remote DONE.

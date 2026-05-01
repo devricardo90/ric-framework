@@ -2,7 +2,7 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-01 (TAM-002A active)
+**Last Updated**: 2026-05-01 (TAM-002 implementation complete, awaiting commit authorization)
 
 ---
 
@@ -20,7 +20,7 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| TAM-002A | Refine Tour Availability Rules Before Implementation | IN_PROGRESS — awaiting Trigger review | Create `business-rules.md` to resolve all open business rule questions before implementation begins. | `git status --short`; `git diff --check`; `git diff --stat`; confirm no app/code files created; confirm no TAM-003 READY task opened. | One documentation commit authorized by Trigger after review. Do not commit without authorization. |
+| TAM-002 | Implement Tour Availability Mini MVP | IN_PROGRESS — implementation complete, awaiting commit authorization | Implement the browser-native availability checker using plain HTML/CSS/JS. | `git status --short --untracked-files=all`; explicit file list; `git diff --cached --name-only`; `git diff --cached --check`; `git diff --check`; manual browser validation; post-commit `git show --stat --oneline --name-only HEAD`. | One commit authorized by Trigger after validation. Message: `feat: implement tour availability mini mvp`. Do not commit without authorization. |
 
 ---
 
@@ -28,6 +28,7 @@
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| TAM-002A | Refine Tour Availability Rules Before Implementation | Trigger confirmed Remote DONE; commit `4bb5efc docs: refine tour availability business rules` pushed to `origin/main`; working tree clean after push; no TAM-002 READY task opened. |
 | TAM-001 | Define Tour Availability Mini Product Instance | Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; no TAM-002 READY task opened. |
 
 ---
@@ -46,7 +47,7 @@ Items that have been identified but are not READY. Trigger must approve before p
 
 | ID | Title | Status | Goal | Notes |
 | --- | --- | --- | --- | --- |
-| TAM-002 | Implement Tour Availability Mini MVP | Future only, not READY | Implement the browser-native availability checker using plain HTML/CSS/JS. | Do not open without explicit Trigger approval. Business rules are now defined in `business-rules.md`. Default stack recommendation is documented in `stack-decision.md`. |
+| TAM-003 | Extend Tour Availability Mini | Future only, not READY | Any post-MVP extension. | Do not open without explicit Trigger approval through a new Discussion Gate. |
 
 ---
 
@@ -75,4 +76,4 @@ Commit Rule:
 
 ## Next Process Step
 
-TAM-002A is the only active task and is IN_PROGRESS awaiting Trigger review. TAM-001 is Remote DONE at `862d848`. TAM-002 is Future only, not READY. TAM-003 is not open. No feature evolution task is open. Do not commit, push, or promote TAM-002 without Trigger authorization.
+TAM-002 is the only active task and is IN_PROGRESS awaiting Trigger commit authorization. Implementation is complete. Do not commit, push, or open TAM-003 without Trigger authorization.

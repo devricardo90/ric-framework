@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-021A | Define Untracked Files Evidence Rule | IN_PROGRESS — awaiting Trigger review | Add Section 13 to `docs/ops/post-commit-and-remote-done-rules.md` defining the permanent rule for untracked file evidence handling before commit. | `git status --short --untracked-files=all`; `git diff --check`; `git diff --stat`; confirm no app/code/product files created; confirm no new READY task opened. | One documentation commit authorized by Trigger after review. Do not commit without authorization. |
+| TAM-002 | Implement Tour Availability Mini MVP | IN_PROGRESS — implementation complete, awaiting commit authorization | Implement the browser-native availability checker using plain HTML/CSS/JS. | `git status --short --untracked-files=all`; explicit file list; `git diff --cached --name-only`; `git diff --cached --check`; `git diff --check`; manual browser validation; post-commit `git show --stat --oneline --name-only HEAD`; `git status --short`; `git status -sb`. | One commit authorized by Trigger after validation. Message: `feat: implement tour availability mini mvp`. Do not commit without authorization. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-021A | Define Untracked Files Evidence Rule | Trigger confirmed Remote DONE; commit `8d8e4f7 docs: define untracked files evidence rule` pushed to `origin/main`; working tree clean after push; no TAM-002 or other READY task opened |
 | TAM-002A | Refine Tour Availability Rules Before Implementation | Trigger confirmed Remote DONE; commit `4bb5efc docs: refine tour availability business rules` pushed to `origin/main`; working tree clean after push; no TAM-002 or TAM-003 READY task opened |
 | TAM-001 | Define Tour Availability Mini Product Instance | Trigger confirmed Remote DONE; commit `862d848 docs: define tour availability mini product instance` pushed to `origin/main`; working tree clean after push; no TAM-002 READY task opened |
 | RIC-020A | Review Service Request Mini Against Official Example Rule | Trigger authorized TAM-001 as next task; RIC-020A committed at `fa00b68 docs: review service request mini official example`; confirmed Remote DONE on `origin/main`; no SRM-004 or new READY task opened |
@@ -63,8 +64,8 @@
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| TAM-002 | Define Stack and Implement Tour Availability Mini MVP | Future only, not READY | Do not open without explicit Trigger approval through a separate Discussion Gate |
+| TAM-003 | Extend Tour Availability Mini | Future only, not READY | Do not open without explicit Trigger approval through a new Discussion Gate |
 
 ## Next Process Step
 
-RIC-021A is the only active task and is IN_PROGRESS awaiting Trigger review. TAM-002A is Remote DONE at `4bb5efc`. TAM-001 is Remote DONE at `862d848`. TAM-002 is Future only, not READY. No new READY task is open. Do not commit, push, or open TAM-002 without Trigger authorization.
+TAM-002 is the only active task and is IN_PROGRESS awaiting commit authorization. Implementation is complete. RIC-021A is Remote DONE at `8d8e4f7`. Do not commit, push, or open TAM-003 without Trigger authorization.
