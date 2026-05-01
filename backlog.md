@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-022A | Review TAM as Second Official Framework Example | IN_PROGRESS — review and classification complete, awaiting commit authorization | Apply RIC-019A criteria to Tour Availability Mini after TAM-002 and classify its status inside the RIC Framework. | `git status --short --untracked-files=all`; `git diff --stat`; `git diff --check`; confirmation that only 5 authorized files changed; no forbidden scope touched. | One commit authorized by Trigger after review. Message: `docs: review tour availability mini official example`. Do not commit without authorization. |
+| RIC-023A | Define Official Example Evolution Strategy | IN_PROGRESS — strategy document complete, awaiting commit authorization | Document the RIC Framework strategy for evolving an existing official example; record TAM-003 as future candidate only. | `git status --short --untracked-files=all`; `git diff --stat`; `git diff --check`; confirmation that only 5 authorized files changed; no app/code/example files changed; TAM-003 remains future/recommended only. | One commit authorized by Trigger after review. Message: `docs: define official example evolution strategy`. Do not commit without authorization. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-022A | Review TAM as Second Official Framework Example | Trigger confirmed Remote DONE; commit `130ef7f docs: review tour availability mini official example` pushed to `origin/main`; working tree clean after push; no TAM-003 or other READY task opened |
 | TAM-002 | Implement Tour Availability Mini MVP | Trigger confirmed Remote DONE; commit `8b22644 feat: implement tour availability mini mvp` pushed to `origin/main`; working tree clean after push; no TAM-003 or other READY task opened |
 | RIC-021A | Define Untracked Files Evidence Rule | Trigger confirmed Remote DONE; commit `8d8e4f7 docs: define untracked files evidence rule` pushed to `origin/main`; working tree clean after push; no TAM-002 or other READY task opened |
 | TAM-002A | Refine Tour Availability Rules Before Implementation | Trigger confirmed Remote DONE; commit `4bb5efc docs: refine tour availability business rules` pushed to `origin/main`; working tree clean after push; no TAM-002 or TAM-003 READY task opened |
@@ -69,4 +70,4 @@
 
 ## Next Process Step
 
-RIC-022A is the only active task and is IN_PROGRESS awaiting commit authorization. Review and classification are complete. TAM-002 is Remote DONE at `8b22644`. Do not commit, push, or open TAM-003 without Trigger authorization.
+RIC-023A is the only active task and is IN_PROGRESS awaiting commit authorization. Strategy document is complete. RIC-022A is Remote DONE at `130ef7f`. TAM-003 remains future/recommended only. Do not commit, push, or promote TAM-003 to READY without Trigger authorization.

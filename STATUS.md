@@ -4,39 +4,39 @@
 
 Status: IN_PROGRESS
 
-Current Task: RIC-022A — Review TAM as Second Official Framework Example
+Current Task: RIC-023A — Define Official Example Evolution Strategy
 
 Last Updated: 2026-05-01
 
 ## Active Task
 
+ID: RIC-023A
+
+Title: Define Official Example Evolution Strategy
+
+Status: IN_PROGRESS — strategy document complete, awaiting Trigger commit authorization
+
+## Last Completed Task
+
 ID: RIC-022A
 
 Title: Review TAM as Second Official Framework Example
 
-Status: IN_PROGRESS — review and classification complete, awaiting Trigger commit authorization
+Evidence: Trigger confirmed Remote DONE; commit `130ef7f docs: review tour availability mini official example` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
 
-## Last Completed Task
-
-ID: TAM-002
-
-Title: Implement Tour Availability Mini MVP
-
-Evidence: Trigger confirmed Remote DONE; commit `8b22644 feat: implement tour availability mini mvp` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
-
-Remote Evidence: Remote DONE at `8b22644`.
+Remote Evidence: Remote DONE at `130ef7f`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree: Dirty by authorized RIC-022A files only. One new review document created. Four operational files updated. No unauthorized files exist.
+Working Tree: Dirty by authorized RIC-023A files only. One new strategy document created. Four operational files updated. No unauthorized files exist.
 
-Local HEAD: `8b22644 feat: implement tour availability mini mvp`
+Local HEAD: `130ef7f docs: review tour availability mini official example`
 
-Local `origin/main` Reference: `8b22644 feat: implement tour availability mini mvp`
+Local `origin/main` Reference: `130ef7f docs: review tour availability mini official example`
 
-Pending Local Commits: RIC-022A review and classification is complete and pending Trigger review before any commit is authorized.
+Pending Local Commits: RIC-023A strategy document is complete and pending Trigger review before any commit is authorized.
 
 Pending Remote Commits: None.
 
@@ -46,8 +46,8 @@ Pending Remote Commits: None.
 
 ## Current Objective
 
-RIC-022A review is complete. TAM is classified as Official reference example, Portfolio candidate not ready. Awaiting Trigger commit authorization. Do not commit or push without Trigger authorization.
+RIC-023A strategy document is complete. TAM-003 is recorded as future candidate only, not READY. Awaiting Trigger commit authorization. Do not commit or push without Trigger authorization.
 
 ## Next Recommended Action
 
-Trigger reviews RIC-022A classification record and authorizes the RIC-022A commit. After commit and push, Trigger confirms Remote DONE.
+Trigger reviews RIC-023A strategy document and authorizes the RIC-023A commit. After commit and push, Trigger confirms Remote DONE.
