@@ -2,69 +2,64 @@
 
 ## Current Objective
 
-RIC-023A — Define Official Example Evolution Strategy. Strategy document complete. One new architecture document created and four operational files updated. Awaiting Trigger review before any commit is authorized.
+TAM-003 — Evolve Tour Availability Mini With Selectable Multi-Tour Rules. Discussion Gate completed. Operational files updated. No code written. Awaiting Trigger review before any commit is authorized.
 
 ## Active Task
 
-ID: RIC-023A
+ID: TAM-003
 
-Title: Define Official Example Evolution Strategy
+Title: Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
-Status: IN_PROGRESS — strategy document complete, awaiting commit authorization
+Status: READY — Discussion Gate completed 2026-05-03; awaiting execution agent start
 
 ## Last Completed Action
 
-RIC-022A confirmed Remote DONE at `130ef7f`. RIC-023A opened by Trigger authorization. Created `docs/architecture/official-example-evolution-strategy.md` documenting the decision to evolve TAM using selectable multi-tour rules, the learning question, pre-implementation required reads, controlled evolution criteria, framework failure definition, and TAM-003 candidate scope as future only, not READY.
+RIC-023A confirmed Remote DONE at `c77f816`. Discussion Gate opened for TAM-003 by Trigger. Gate questions answered. TAM-003 recommended for READY promotion. Operational files updated across root and TAM product instance. TAM Evolution Track created with TAM-004/005/006 as Future only.
 
 ## Current State
 
-RIC-023A is the only active task. Strategy document is complete. No commit has been made for RIC-023A.
+TAM-003 READY. Operational files updated. No commit made. No app code written. Stopped waiting for Trigger review.
 
-Stopped and waiting for Trigger review before any commit is authorized.
+## Files Changed (Discussion Gate Operational Updates)
 
-## Files Created
+- `STATUS.md` — updated to TAM-003 READY; RIC-023A Remote DONE at `c77f816`.
+- `backlog.md` — RIC-023A moved to Completed; TAM-003 promoted to Active/READY with full definition; TAM Evolution Track created.
+- `docs/ops/session-handoff.md` (this file) — updated to TAM-003 state.
+- `docs/ops/execution-log.md` — Discussion Gate record prepended.
+- `examples/tour-availability-mini/status.md` — updated to TAM-003 READY.
+- `examples/tour-availability-mini/backlog.md` — TAM-003 READY with full definition; TAM-002 to Completed; track created.
+- `examples/tour-availability-mini/session-handoff.md` — updated to TAM-003 state.
 
-- `docs/architecture/official-example-evolution-strategy.md` — RIC-023A strategy record: target example (TAM), rationale over SRM, evolution type (selectable multi-tour rules), learning question, required pre-implementation documents, controlled evolution proof criteria, framework failure definition, explicit out-of-scope list, and TAM-003 candidate definition (future only, not READY).
-
-## Files Changed
-
-- `backlog.md` — RIC-022A moved to Completed at `130ef7f`; RIC-023A registered as active task; next process step updated.
-- `STATUS.md` — Current task updated to RIC-023A; RIC-022A recorded as last completed Remote DONE at `130ef7f`.
-- `docs/ops/session-handoff.md` (this file) — updated to RIC-023A state.
-- `docs/ops/execution-log.md` — RIC-023A execution record prepended.
-
-## Commands Executed
-
-- Confirmed current git state: HEAD = origin/main = `130ef7f`, working tree clean.
-- Read: `docs/architecture/` directory listing to confirm no existing evolution strategy document.
-- Composed `docs/architecture/official-example-evolution-strategy.md` from scratch.
+No app files changed.
 
 ## Blockers
 
-- No commit is authorized until the Trigger explicitly authorizes it.
+- No commit is authorized until Trigger reviews Discussion Gate output and operational updates.
 - Push is not authorized.
-- TAM-003 is not READY and must not be promoted without a new Discussion Gate and explicit Trigger authorization.
+- TAM-004, TAM-005, TAM-006 must not be promoted without a new Discussion Gate.
 
 ## Pending Decisions for the Trigger
 
-- Whether to authorize the RIC-023A commit after reviewing the strategy document.
-- Whether to authorize a push after commit.
-- Whether to open a TAM-003 Discussion Gate.
+- Whether to authorize the Discussion Gate operational updates commit.
+- Whether to authorize push after commit.
+- When to start execution agent for TAM-003.
 
 ## Next 3 Steps
 
-1. Trigger reviews RIC-023A strategy document.
-2. After Trigger authorizes: stage only the 5 authorized files, run diff checks, report, wait for commit authorization.
-3. Commit with message `docs: define official example evolution strategy`. Report post-commit state.
+1. Trigger reviews Discussion Gate output and all 7 operational files updated.
+2. After Trigger authorizes: commit with message `docs: open discussion gate for TAM-003`. Report post-commit state.
+3. Trigger confirms Remote DONE. Execution agent reads the 7 required pre-implementation documents. TAM-003 execution begins.
 
 ## Do Not Do Next
 
 - Do not commit without Trigger authorization.
 - Do not push.
-- Do not add any files not in the authorized list.
-- Do not promote TAM-003 to READY or open any other READY task.
-- Do not change any TAM app files or TAM product instance documentation.
+- Do not write any app code before commit is authorized and pre-implementation documents are read.
+- Do not promote TAM-004, TAM-005, or TAM-006 to READY.
+- Do not open any new READY task outside TAM-003.
 
 ## Resume Instruction for Next Agent
 
-RIC-023A strategy document is complete. One new architecture document and four updated operational files are in the working tree. No commit has been made. Run `git status --short --untracked-files=all` and report the full file list to the Trigger. Do not commit, push, or open new tasks without explicit Trigger authorization.
+TAM-003 Discussion Gate is complete. Seven operational files updated. No commit made. No code written.
+
+Run `git status --short --untracked-files=all` and confirm only the 7 authorized operational files are dirty. Report to Trigger. Do not commit, push, or begin implementation without explicit Trigger authorization.

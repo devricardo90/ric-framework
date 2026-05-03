@@ -2,41 +2,41 @@
 
 ## Current Canonical Status
 
-Status: IN_PROGRESS
+Status: READY
 
-Current Task: RIC-023A — Define Official Example Evolution Strategy
+Current Task: TAM-003 — Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
-Last Updated: 2026-05-01
+Last Updated: 2026-05-03
 
 ## Active Task
+
+ID: TAM-003
+
+Title: Evolve Tour Availability Mini With Selectable Multi-Tour Rules
+
+Status: READY — Discussion Gate completed; awaiting execution agent start
+
+## Last Completed Task
 
 ID: RIC-023A
 
 Title: Define Official Example Evolution Strategy
 
-Status: IN_PROGRESS — strategy document complete, awaiting Trigger commit authorization
+Evidence: Trigger authorized Discussion Gate for TAM-003; commit `c77f816 docs: define official example evolution strategy` confirmed on `origin/main`; working tree clean; RIC-023A Remote DONE.
 
-## Last Completed Task
-
-ID: RIC-022A
-
-Title: Review TAM as Second Official Framework Example
-
-Evidence: Trigger confirmed Remote DONE; commit `130ef7f docs: review tour availability mini official example` pushed to `origin/main`; working tree clean after push; main synchronized with origin/main.
-
-Remote Evidence: Remote DONE at `130ef7f`.
+Remote Evidence: Remote DONE at `c77f816`.
 
 ## Repository State
 
 Branch: `main`
 
-Working Tree: Dirty by authorized RIC-023A files only. One new strategy document created. Four operational files updated. No unauthorized files exist.
+Working Tree: Dirty by authorized TAM-003 Discussion Gate files only. Operational records updated. No app code changed. No unauthorized files exist.
 
-Local HEAD: `130ef7f docs: review tour availability mini official example`
+Local HEAD: `c77f816 docs: define official example evolution strategy`
 
-Local `origin/main` Reference: `130ef7f docs: review tour availability mini official example`
+Local `origin/main` Reference: `c77f816 docs: define official example evolution strategy`
 
-Pending Local Commits: RIC-023A strategy document is complete and pending Trigger review before any commit is authorized.
+Pending Local Commits: TAM-003 Discussion Gate operational updates pending Trigger review before any commit is authorized.
 
 Pending Remote Commits: None.
 
@@ -46,8 +46,8 @@ Pending Remote Commits: None.
 
 ## Current Objective
 
-RIC-023A strategy document is complete. TAM-003 is recorded as future candidate only, not READY. Awaiting Trigger commit authorization. Do not commit or push without Trigger authorization.
+TAM-003 promoted to READY following completed Discussion Gate. Operational files updated to reflect READY status and TAM Evolution Track. No code written. Awaiting Trigger review before any commit is authorized.
 
 ## Next Recommended Action
 
-Trigger reviews RIC-023A strategy document and authorizes the RIC-023A commit. After commit and push, Trigger confirms Remote DONE.
+Trigger reviews Discussion Gate output and operational file updates. After Trigger authorizes: commit operational updates with message `docs: open discussion gate for TAM-003`. Then execution agent begins TAM-003 implementation.

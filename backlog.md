@@ -10,12 +10,13 @@
 
 | ID | Title | Status | Goal | Validation | Commit Rule |
 | --- | --- | --- | --- | --- | --- |
-| RIC-023A | Define Official Example Evolution Strategy | IN_PROGRESS — strategy document complete, awaiting commit authorization | Document the RIC Framework strategy for evolving an existing official example; record TAM-003 as future candidate only. | `git status --short --untracked-files=all`; `git diff --stat`; `git diff --check`; confirmation that only 5 authorized files changed; no app/code/example files changed; TAM-003 remains future/recommended only. | One commit authorized by Trigger after review. Message: `docs: define official example evolution strategy`. Do not commit without authorization. |
+| TAM-003 | Evolve Tour Availability Mini With Selectable Multi-Tour Rules | READY — Discussion Gate completed; awaiting execution | Evolve the TAM MVP so each tour has its own structured configuration (name, capacity, operating days, blocked dates, messages) and availability validation applies the selected tour's rules via configuration, not scattered conditionals; all existing scenarios pass; new scenarios prove behavioral differences. | `git status --short --untracked-files=all`; manual browser validation all existing + new cross-tour scenarios; `git diff --cached --name-only`; `git diff --cached --check`; `git diff --check`; post-commit `git show --stat --oneline --name-only HEAD`; `git status --short`. | One commit authorized by Trigger after validation. Message: `feat: evolve tour availability mini with selectable multi-tour rules`. Do not commit without authorization. |
 
 ## Completed Items
 
 | ID | Title | Evidence |
 | --- | --- | --- |
+| RIC-023A | Define Official Example Evolution Strategy | Trigger confirmed Remote DONE; commit `c77f816 docs: define official example evolution strategy` pushed to `origin/main`; working tree clean after push; TAM-003 Discussion Gate authorized as next step |
 | RIC-022A | Review TAM as Second Official Framework Example | Trigger confirmed Remote DONE; commit `130ef7f docs: review tour availability mini official example` pushed to `origin/main`; working tree clean after push; no TAM-003 or other READY task opened |
 | TAM-002 | Implement Tour Availability Mini MVP | Trigger confirmed Remote DONE; commit `8b22644 feat: implement tour availability mini mvp` pushed to `origin/main`; working tree clean after push; no TAM-003 or other READY task opened |
 | RIC-021A | Define Untracked Files Evidence Rule | Trigger confirmed Remote DONE; commit `8d8e4f7 docs: define untracked files evidence rule` pushed to `origin/main`; working tree clean after push; no TAM-002 or other READY task opened |
@@ -62,12 +63,18 @@
 | --- | --- | --- |
 | None | None | None |
 
-## Recommended Next Items
+## TAM Evolution Track
+
+TAM-003 is READY. TAM-004 through TAM-006 are Future only. Do not promote any of these without a new Discussion Gate and explicit Trigger authorization.
 
 | ID | Title | Status | Notes |
 | --- | --- | --- | --- |
-| TAM-003 | Extend Tour Availability Mini | Future only, not READY | Do not open without explicit Trigger approval through a new Discussion Gate |
+| TAM-004 | Refactor Availability Rules If Evolution Pressure Appears | Future only, not READY | Open only if TAM-003 reveals genuine structural pressure; do not open preemptively |
+| TAM-005 | Add Evolution Validation Pack | Future only, not READY | Formal validation artifact for evolved TAM; depends on TAM-003 DONE |
+| TAM-006 | Portfolio Readiness Review | Future only, not READY | External-facing packaging of TAM Evolution Track; depends on TAM-005 DONE |
+
+Track exit criterion: successful only when TAM-003 eventually produces one runnable demo or deploy path, a README explaining evolved behavior, one documented technical/product decision, and validation evidence for old and new scenarios.
 
 ## Next Process Step
 
-RIC-023A is the only active task and is IN_PROGRESS awaiting commit authorization. Strategy document is complete. RIC-022A is Remote DONE at `130ef7f`. TAM-003 remains future/recommended only. Do not commit, push, or promote TAM-003 to READY without Trigger authorization.
+TAM-003 is READY following the completed Discussion Gate. RIC-023A is Remote DONE at `c77f816`. Trigger reviews Discussion Gate output and operational updates. After Trigger authorizes: commit Discussion Gate operational updates, then execution agent begins TAM-003 implementation. Do not commit or push without Trigger authorization.

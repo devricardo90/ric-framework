@@ -2,39 +2,39 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-01 (TAM-002 implementation complete, awaiting commit authorization)
+**Last Updated**: 2026-05-03 (TAM-003 promoted to READY following Discussion Gate)
 
 ---
 
 ## Current Canonical Status
 
-Status: IN_PROGRESS
+Status: READY
 
-Current Task: TAM-002 - Implement Tour Availability Mini MVP
+Current Task: TAM-003 — Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
 ---
 
 ## Active Task
 
-ID: TAM-002
+ID: TAM-003
 
-Title: Implement Tour Availability Mini MVP
+Title: Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
-Status: IN_PROGRESS — implementation complete, awaiting Trigger commit authorization
+Status: READY — Discussion Gate completed 2026-05-03; awaiting execution agent start
 
-Goal: Implement the browser-native availability checker that answers: given a tour, a date, and a number of people, is the tour available? If not, why?
+Goal: Evolve the TAM MVP so each tour has its own structured configuration (name, capacity, operating days, blocked dates, messages) and availability validation applies the selected tour's rules via configuration, not scattered conditionals. All existing scenarios pass. New scenarios prove behavioral differences between tours.
 
 ---
 
 ## Last Completed Task
 
-ID: RIC-021A
+ID: TAM-002
 
-Title: Define Untracked Files Evidence Rule
+Title: Implement Tour Availability Mini MVP
 
-Evidence: Trigger confirmed Remote DONE; commit `8d8e4f7 docs: define untracked files evidence rule` pushed to `origin/main`; working tree clean after push.
+Evidence: Trigger confirmed Remote DONE; commit `8b22644 feat: implement tour availability mini mvp` pushed to `origin/main`; working tree clean after push; RIC-022A and RIC-023A completed; TAM-003 Discussion Gate opened.
 
-Remote Evidence: Remote DONE at `8d8e4f7`.
+Remote Evidence: Remote DONE at `8b22644`.
 
 ---
 
@@ -42,25 +42,27 @@ Remote Evidence: Remote DONE at `8d8e4f7`.
 
 Branch: `main`
 
-Working Tree: Dirty by authorized TAM-002 files only. Three new app files created. Six documentation files updated. No unauthorized files exist.
+Working Tree: Dirty by authorized TAM-003 Discussion Gate files only. Operational records updated. No app code changed. No unauthorized files exist.
 
-Local HEAD: `8d8e4f7 docs: define untracked files evidence rule`
+Local HEAD: `c77f816 docs: define official example evolution strategy`
 
-Local `origin/main` Reference: `8d8e4f7 docs: define untracked files evidence rule`
+Local `origin/main` Reference: `c77f816 docs: define official example evolution strategy`
 
-Pending Local Commits: TAM-002 implementation is complete and pending Trigger review before any commit is authorized.
+Pending Local Commits: Discussion Gate operational updates pending Trigger review before any commit is authorized.
 
 ---
 
 ## Implementation Status
 
-Implementation complete. Three app files created under `examples/tour-availability-mini/app/`:
+TAM-002 implementation complete and Remote DONE at `8b22644`. Three app files exist under `examples/tour-availability-mini/app/`:
 
 - `index.html` — tour selector, date input, party size input, check button, result area.
 - `styles.css` — browser-native styles, no framework, no CDN.
-- `app.js` — two-tour configuration, five-rule evaluation in fixed order per `business-rules.md`.
+- `app.js` — two-tour TOURS configuration array, five-rule evaluation in fixed order per `business-rules.md`.
 
 The page opens and runs correctly by opening `index.html` directly in the browser (no server required).
+
+TAM-003 evolution has not yet begun. No app files have been changed.
 
 ---
 
@@ -81,14 +83,14 @@ The page opens and runs correctly by opening `index.html` directly in the browse
 
 ## Current Objective
 
-TAM-002 implementation is complete. Awaiting Trigger review and commit authorization. Do not commit or push without Trigger authorization.
+TAM-003 is READY following the completed Discussion Gate. Operational files updated. No code written. Awaiting Trigger review before any commit is authorized.
 
 ---
 
 ## Next Recommended Action
 
-1. Trigger reviews manual browser validation report.
-2. Trigger authorizes the TAM-002 commit.
-3. Commit with message: `feat: implement tour availability mini mvp`.
-4. Report post-commit state.
-5. Wait for Trigger to confirm Remote DONE.
+1. Trigger reviews Discussion Gate output and operational updates.
+2. After Trigger authorizes: commit Discussion Gate operational updates.
+3. Execution agent reads the seven required pre-implementation documents.
+4. Execution agent begins TAM-003 implementation.
+5. Report full pre-execution evidence before touching any app file.
