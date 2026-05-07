@@ -2,7 +2,7 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-03 (TAM-003 promoted to READY following Discussion Gate)
+**Last Updated**: 2026-05-07 (TAM-003 implementation complete; awaiting Trigger commit authorization)
 
 ---
 
@@ -21,7 +21,7 @@
 ```
 ID:     TAM-003
 Title:  Evolve Tour Availability Mini With Selectable Multi-Tour Rules
-Status: READY — Discussion Gate completed 2026-05-03; awaiting execution
+Status: IN_PROGRESS — Implementation complete 2026-05-07; manual browser validation completed by Trigger; commit authorized
 
 Goal:
   Evolve the TAM MVP so each tour has its own structured configuration object
@@ -107,8 +107,8 @@ Validation:
 
 Commit Rule:
   One commit authorized by Trigger after full validation evidence is reported.
-  Message: feat: evolve tour availability mini with selectable multi-tour rules
-  Do not commit without Trigger authorization.
+  Message: docs: prove tour availability multi-tour behavior (Trigger-authorized message, 2026-05-07)
+  Manual browser validation completed by Trigger before commit authorization.
 ```
 
 ---
@@ -168,4 +168,4 @@ Commit Rule:
 
 ## Next Process Step
 
-TAM-003 is READY following the completed Discussion Gate. Trigger reviews Discussion Gate output and operational updates. After Trigger authorizes: commit Discussion Gate operational updates, then execution agent reads the seven required pre-implementation documents and begins TAM-003 execution. Do not commit or push without Trigger authorization. Do not promote TAM-004, TAM-005, or TAM-006 to READY without a new Discussion Gate.
+TAM-003 implementation complete. Manual browser validation completed by Trigger. Commit authorized. Commit with message `docs: prove tour availability multi-tour behavior`. Report post-commit state. Await push authorization. Trigger confirms Remote DONE. Do not promote TAM-004, TAM-005, or TAM-006 to READY without a new Discussion Gate.

@@ -2,13 +2,13 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-03
+**Last Updated**: 2026-05-07
 
 ---
 
 ## Current State
 
-TAM-003 promoted to READY following completed Discussion Gate. Operational files updated. No app code written yet. Awaiting Trigger review before any commit is authorized.
+TAM-003 implementation complete. App code and documentation updated. Validation evidence produced. Awaiting Trigger review before any commit is authorized.
 
 ---
 
@@ -18,83 +18,71 @@ ID: TAM-003
 
 Title: Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
-Status: READY — Discussion Gate completed 2026-05-03; awaiting execution agent start
+Status: IN_PROGRESS — Implementation complete 2026-05-07; manual browser validation completed by Trigger; commit authorized
 
-Goal: Evolve the TAM MVP so each tour has its own structured configuration (name, capacity, operating days, blocked dates, messages), availability validation applies the selected tour's rules via configuration, all existing scenarios pass, and new scenarios prove behavioral differences between tours.
-
----
-
-## Files Changed (Discussion Gate Operational Updates)
-
-- `examples/tour-availability-mini/status.md` — updated to TAM-003 READY, TAM-002 Remote DONE at `8b22644`.
-- `examples/tour-availability-mini/backlog.md` — TAM-003 promoted to READY with full task definition; TAM-002 moved to Completed; TAM Evolution Track created with TAM-004/005/006 as Future.
-- `examples/tour-availability-mini/session-handoff.md` (this file) — updated to TAM-003 state.
-- `STATUS.md` — updated to TAM-003 READY; RIC-023A Remote DONE at `c77f816`.
-- `backlog.md` — RIC-023A moved to Completed; TAM-003 promoted to Active/READY; TAM Evolution Track created.
-- `docs/ops/session-handoff.md` — updated to TAM-003 state.
-- `docs/ops/execution-log.md` — Discussion Gate record prepended.
-
-No app files changed. No code written.
+Goal: Evolve the TAM MVP so each tour has its own structured configuration (name, capacity, operating days, blocked dates, messages) and availability validation applies the selected tour's rules via configuration, not scattered conditionals. All existing scenarios pass. New scenarios prove behavioral differences between tours.
 
 ---
 
-## Required Pre-Implementation Documents
+## Files Changed (TAM-003 Implementation)
 
-Before touching any app file, the execution agent must read all seven of these documents:
+- `examples/tour-availability-mini/app/app.js` — one change: `tour-001.blockedDates` updated from `['2026-05-10', '2026-06-01']` to `['2026-05-14', '2026-06-04']` so that Rule 3 (blocked date) is demonstrable for tour-001. Both new dates are Thursdays, which are operating days for tour-001.
+- `examples/tour-availability-mini/business-rules.md` — updated to v2.0; added TAM-003 evolution record, updated tour configuration with rationale for blocked-date change, and cross-tour behavioral scenario documentation.
+- `examples/tour-availability-mini/validation-gates.md` — updated; added Gate 5 (TAM-003 Evolution Gate) with full required evidence list.
+- `examples/tour-availability-mini/status.md` — updated to IN_PROGRESS; implementation details recorded.
+- `examples/tour-availability-mini/backlog.md` — TAM-003 status updated to IN_PROGRESS.
+- `examples/tour-availability-mini/session-handoff.md` (this file) — updated to post-implementation state.
+- `STATUS.md` — updated to TAM-003 IN_PROGRESS.
+- `backlog.md` — TAM-003 status updated.
+- `docs/ops/execution-log.md` — TAM-003 execution record prepended.
+- `docs/ops/session-handoff.md` — updated to post-implementation state.
 
-1. `examples/tour-availability-mini/business-rules.md`
-2. `examples/tour-availability-mini/mvp-scope.md`
-3. `examples/tour-availability-mini/stack-decision.md`
-4. `examples/tour-availability-mini/validation-gates.md`
-5. `docs/architecture/official-example-review-and-portfolio-rule.md`
-6. `docs/architecture/tour-availability-mini-official-example-review.md`
-7. `docs/architecture/examples-and-automation-boundaries.md`
-
----
-
-## Execution Notes
-
-The existing `app.js` already uses a `TOURS` array with the correct configuration shape:
-- Each tour has: `id`, `name`, `operatingDays`, `blockedDates`, `maxCapacity`
-- The `checkAvailability(tour, dateStr, partySize)` function already receives the selected tour object
-
-TAM-003 evolution should extend the config objects if needed and ensure the rule engine uses selected tour's config without introducing tour-specific conditionals.
+index.html and styles.css were not changed.
 
 ---
 
-## Next Safe Step
+## Implementation Notes
 
-1. Trigger reviews Discussion Gate output and all operational file updates.
-2. After Trigger authorizes: commit Discussion Gate operational updates with message `docs: open discussion gate for TAM-003`.
-3. Report post-commit Git state.
-4. Trigger confirms Remote DONE.
-5. Execution agent reads the seven required pre-implementation documents.
-6. Execution agent confirms pre-execution Git state (clean working tree).
-7. Execution begins.
+The existing app.js architecture already satisfied TAM-003's configuration-driven requirement. The `checkAvailability(tour, dateStr, partySize)` function receives the selected tour object as its first argument and reads all rule parameters from the configuration — no tour-identity conditionals exist.
+
+The only substantive code change was correcting `tour-001.blockedDates` so that the blocked-date rule path is demonstrable. The original dates (May 10 = Sunday, June 1 = Monday) were days tour-001 does not operate, so Rule 4 fired before Rule 3 could be reached for tour-001.
+
+---
+
+## Cross-Tour Scenarios for Manual Validation
+
+**Scenario A — Weekday difference**
+Date: 2026-05-12 (Tuesday), Party: 4
+- tour-001: Available (Tuesday is an operating day)
+- tour-002: "This tour does not operate on Tuesday. It runs on: Friday, Saturday, Sunday."
+
+**Scenario B — Capacity difference**
+Date: 2026-05-23 (Saturday), Party: 12
+- tour-001: "This tour has a maximum capacity of 10 people per session. Please reduce your party size."
+- tour-002: Available (12 ≤ 15)
 
 ---
 
 ## Blockers and Risks
 
-- No commit is authorized until Trigger reviews and authorizes it.
-- Push is not authorized.
+- Commit authorized by Trigger — manual browser validation completed.
+- Push not yet authorized — await Trigger push authorization after post-commit evidence.
 - TAM-004, TAM-005, TAM-006 are Future only and must not be opened without a new Discussion Gate.
 
 ---
 
 ## Do Not Do Next
 
-- Do not commit without Trigger authorization.
-- Do not push.
-- Do not write any app code before the commit is authorized and pre-implementation documents are read.
-- Do not add any files not in the authorized scope list.
-- Do not use localStorage, backend, framework, build step, or external dependencies.
+- Do not push without Trigger push authorization.
+- Do not add a third tour.
+- Do not add localStorage, backend, framework, build step, or external dependencies.
 - Do not promote TAM-004, TAM-005, or TAM-006 to READY.
+- Do not open any new READY task.
 
 ---
 
 ## Resume Instruction for Next Agent
 
-TAM-003 Discussion Gate is complete. Operational files updated. No code written. No commit made.
+TAM-003 implementation complete. Manual browser validation completed by Trigger. Commit authorized with message `docs: prove tour availability multi-tour behavior`.
 
-Run `git status --short --untracked-files=all` and confirm only the authorized operational files are dirty. Report to Trigger. Do not commit, push, or begin implementation without explicit Trigger authorization.
+Run `git status --short --untracked-files=all` to confirm state. If commit is not yet made, stage only the 10 authorized files and commit with the authorized message. Report post-commit evidence. Do not push without Trigger push authorization.

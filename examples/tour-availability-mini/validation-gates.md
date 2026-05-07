@@ -2,7 +2,7 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-01
+**Last Updated**: 2026-05-07
 
 ---
 
@@ -102,6 +102,37 @@ No task may be marked DONE without passing its applicable gates and reporting ev
 - Manual browser validation must confirm all seven MVP rules pass before DONE.
 
 **Status**: Not active. TAM-002 is Future only, not READY.
+
+---
+
+## Gate 5 — TAM-003 Evolution Gate
+
+**Applies to**: TAM-003
+
+**Trigger**: Before closing TAM-003 as DONE.
+
+**Required Evidence**:
+
+- [x] `app.js` TOURS array contains exactly two tour configuration objects matching the documented shape: id, name, operatingDays, blockedDates, maxCapacity.
+- [x] `tour-001.blockedDates` contains at least one date that falls on an operating day (Tuesday, Thursday, or Saturday) so that Rule 3 can be independently demonstrated for tour-001.
+- [x] `tour-002.blockedDates` contains at least one date that falls on an operating day (Friday, Saturday, or Sunday) so that Rule 3 can be independently demonstrated for tour-002.
+- [x] No `if (tourId === ...)` or equivalent tour-identity conditional exists anywhere in the rule engine functions.
+- [x] All five rule paths are demonstrable for both tours individually — manual browser validation completed by Trigger.
+- [x] Cross-tour scenario A passes: 2026-05-12 (Tuesday) — tour-001 available, tour-002 unavailable-weekday — confirmed by Trigger manual browser validation.
+- [x] Cross-tour scenario B passes: 2026-05-23 (Saturday), party 12 — tour-001 capacity exceeded, tour-002 available — confirmed by Trigger manual browser validation.
+- [x] `business-rules.md` updated to v2.0 with TAM-003 evolution record, updated tour configuration, and cross-tour scenario documentation.
+- [x] `validation-gates.md` updated with this Gate 5 entry.
+- [x] No forbidden scope introduced: no backend, API, auth, database, localStorage, framework, build step, external dependency, or third tour.
+
+**Git Evidence** — confirmed at commit authorized by Trigger (2026-05-07):
+
+- `git status --short --untracked-files=all`: 10 files modified, all within TAM-003 authorized scope.
+- `git diff --check`: PASS — no whitespace errors, no conflict markers.
+- `git diff --stat`: only authorized TAM-003 files in diff.
+- No files under `examples/service-request-mini/` changed: confirmed.
+- No package.json, .github/, scripts/, or build files created: confirmed.
+- No new READY task opened: TAM-004, TAM-005, TAM-006 remain Future only.
+- Post-commit `git show --stat --oneline --name-only HEAD`: to be recorded after Trigger-authorized commit.
 
 ---
 

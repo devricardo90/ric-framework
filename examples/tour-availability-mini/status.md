@@ -2,13 +2,13 @@
 
 **Project**: Tour Availability Mini
 
-**Last Updated**: 2026-05-03 (TAM-003 promoted to READY following Discussion Gate)
+**Last Updated**: 2026-05-07 (TAM-003 implementation complete; awaiting Trigger commit authorization)
 
 ---
 
 ## Current Canonical Status
 
-Status: READY
+Status: IN_PROGRESS
 
 Current Task: TAM-003 — Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
@@ -20,7 +20,7 @@ ID: TAM-003
 
 Title: Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
-Status: READY — Discussion Gate completed 2026-05-03; awaiting execution agent start
+Status: IN_PROGRESS — Implementation complete 2026-05-07; manual browser validation completed by Trigger; commit authorized
 
 Goal: Evolve the TAM MVP so each tour has its own structured configuration (name, capacity, operating days, blocked dates, messages) and availability validation applies the selected tour's rules via configuration, not scattered conditionals. All existing scenarios pass. New scenarios prove behavioral differences between tours.
 
@@ -42,27 +42,27 @@ Remote Evidence: Remote DONE at `8b22644`.
 
 Branch: `main`
 
-Working Tree: Dirty by authorized TAM-003 Discussion Gate files only. Operational records updated. No app code changed. No unauthorized files exist.
+Working Tree: Dirty by authorized TAM-003 files only. App code and documentation updated. No unauthorized files exist.
 
-Local HEAD: `c77f816 docs: define official example evolution strategy`
+Local HEAD: `ce979be docs: promote TAM-003 to READY`
 
-Local `origin/main` Reference: `c77f816 docs: define official example evolution strategy`
+Local `origin/main` Reference: `ce979be docs: promote TAM-003 to READY`
 
-Pending Local Commits: Discussion Gate operational updates pending Trigger review before any commit is authorized.
+Pending Local Commits: TAM-003 commit authorized by Trigger — manual browser validation completed.
 
 ---
 
 ## Implementation Status
 
-TAM-002 implementation complete and Remote DONE at `8b22644`. Three app files exist under `examples/tour-availability-mini/app/`:
+TAM-002 implementation complete and Remote DONE at `8b22644`. TAM-003 evolution complete. Manual browser validation completed by Trigger. Commit authorized.
 
-- `index.html` — tour selector, date input, party size input, check button, result area.
-- `styles.css` — browser-native styles, no framework, no CDN.
-- `app.js` — two-tour TOURS configuration array, five-rule evaluation in fixed order per `business-rules.md`.
+App files under `examples/tour-availability-mini/app/`:
+
+- `index.html` — unchanged from TAM-002; tour selector, date input, party size input, check button, result area.
+- `styles.css` — unchanged from TAM-002; browser-native styles, no framework, no CDN.
+- `app.js` — one change: `tour-001.blockedDates` updated from `['2026-05-10', '2026-06-01']` to `['2026-05-14', '2026-06-04']` so that blocked-date Rule 3 is demonstrable for tour-001 (both dates are Thursdays, which are operating days). All other code unchanged.
 
 The page opens and runs correctly by opening `index.html` directly in the browser (no server required).
-
-TAM-003 evolution has not yet begun. No app files have been changed.
 
 ---
 
@@ -83,14 +83,13 @@ TAM-003 evolution has not yet begun. No app files have been changed.
 
 ## Current Objective
 
-TAM-003 is READY following the completed Discussion Gate. Operational files updated. No code written. Awaiting Trigger review before any commit is authorized.
+TAM-003 implementation complete. Manual browser validation completed by Trigger. Commit authorized. Ready to commit.
 
 ---
 
 ## Next Recommended Action
 
-1. Trigger reviews Discussion Gate output and operational updates.
-2. After Trigger authorizes: commit Discussion Gate operational updates.
-3. Execution agent reads the seven required pre-implementation documents.
-4. Execution agent begins TAM-003 implementation.
-5. Report full pre-execution evidence before touching any app file.
+1. Commit with message `docs: prove tour availability multi-tour behavior` (Trigger-authorized message).
+2. Report post-commit `git show --stat --oneline --name-only HEAD` and `git status --short`.
+3. Await push authorization from Trigger.
+4. Trigger confirms Remote DONE.

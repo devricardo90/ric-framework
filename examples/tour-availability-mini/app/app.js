@@ -12,7 +12,7 @@ var TOURS = [
     id: 'tour-001',
     name: 'Old Town Walking Tour',
     operatingDays: [2, 4, 6],
-    blockedDates: ['2026-05-10', '2026-06-01'],
+    blockedDates: ['2026-05-14', '2026-06-04'],
     maxCapacity: 10
   },
   {

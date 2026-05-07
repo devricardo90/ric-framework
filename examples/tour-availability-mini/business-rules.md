@@ -4,13 +4,15 @@
 
 **Document ID**: TAM-BR-001
 
-**Version**: 1.0
+**Version**: 2.0
 
-**Date**: 2026-05-01
+**Date**: 2026-05-07
 
-**Task**: TAM-002A — Refine Tour Availability Rules Before Implementation
+**Task**: TAM-003 — Evolve Tour Availability Mini With Selectable Multi-Tour Rules
 
-**Status**: Approved by Trigger
+**Previous Version**: 1.0 (TAM-002A — Refine Tour Availability Rules Before Implementation)
+
+**Status**: Approved by Trigger (v1.0); Evolved by TAM-003 (v2.0 — manual browser validation completed by Trigger; commit authorized)
 
 ---
 
@@ -258,6 +260,72 @@ The validation sequence on Check button press:
 
 ## Approval
 
-This business rules document is approved as part of TAM-002A documentation.
+Version 1.0 of this document was approved as part of TAM-002A documentation.
 
-It does not authorize implementation. TAM-002 implementation remains blocked until the Trigger approves a separate implementation task.
+Version 2.0 is produced by TAM-003 execution. It records the evolved two-tour configuration and cross-tour behavioral evidence. Manual browser validation was completed by Trigger. Commit authorized.
+
+---
+
+## TAM-003 Evolution Record
+
+**Task**: TAM-003 — Evolve Tour Availability Mini With Selectable Multi-Tour Rules
+
+**Date**: 2026-05-07
+
+**Change Summary**: The TAM-003 evolution proves that the configuration-driven rule engine handles two tours with genuinely different operating schedules, blocked dates, and capacities. No new rules were added. No rule logic changed. No conditional branching on tour identity was introduced.
+
+---
+
+### Updated Tour Configuration
+
+The two tours in `app.js` after TAM-003:
+
+```
+{
+  id:            'tour-001'
+  name:          'Old Town Walking Tour'
+  operatingDays: [2, 4, 6]          — Tuesday, Thursday, Saturday
+  blockedDates:  ['2026-05-14', '2026-06-04']
+  maxCapacity:   10
+}
+
+{
+  id:            'tour-002'
+  name:          'Harbor Sunset Cruise'
+  operatingDays: [5, 6, 0]          — Friday, Saturday, Sunday
+  blockedDates:  ['2026-05-15', '2026-05-29']
+  maxCapacity:   15
+}
+```
+
+**Change from v1.0**: `tour-001.blockedDates` was updated from `['2026-05-10', '2026-06-01']` to `['2026-05-14', '2026-06-04']`. The original dates (May 10 = Sunday, June 1 = Monday) fell on days tour-001 does not operate. Rule 4 would fire before Rule 3 could demonstrate a blocked-date result for tour-001. The updated dates (May 14 = Thursday, June 4 = Thursday) are operating days for tour-001, making the blocked-date rule demonstrable for both tours.
+
+---
+
+### Cross-Tour Behavioral Evidence
+
+The following scenarios demonstrate that tour-001 and tour-002 behave differently under the same inputs. All five rules are evaluated from the same `checkAvailability` function with no tour-specific conditional branching.
+
+**Scenario A — Weekday difference (same date, different availability)**
+
+Input: date = 2026-05-12 (Tuesday), party size = 4.
+
+| Tour | Rule | Result |
+| --- | --- | --- |
+| Old Town Walking Tour (tour-001) | Rule 4: Tuesday (2) is in operatingDays [2,4,6]. All rules pass. | Available on Tuesday, May 12, 2026 for 4 people. |
+| Harbor Sunset Cruise (tour-002) | Rule 4: Tuesday (2) is not in operatingDays [5,6,0]. Rule fires. | This tour does not operate on Tuesday. It runs on: Friday, Saturday, Sunday. |
+
+**Scenario B — Capacity difference (same party size, different capacity ceiling)**
+
+Input: date = 2026-05-23 (Saturday), party size = 12.
+
+| Tour | Rule | Result |
+| --- | --- | --- |
+| Old Town Walking Tour (tour-001) | Rule 5: 12 > maxCapacity 10. Rule fires. | This tour has a maximum capacity of 10 people per session. Please reduce your party size. |
+| Harbor Sunset Cruise (tour-002) | Rule 5: 12 ≤ maxCapacity 15. All rules pass. | Available on Saturday, May 23, 2026 for 12 people. |
+
+---
+
+### Configuration-Driven Architecture Confirmation
+
+The `checkAvailability(tour, dateStr, partySize)` function in `app.js` receives the selected tour object as its first argument. It reads `tour.operatingDays`, `tour.blockedDates`, and `tour.maxCapacity` directly from the configuration object. No `if (tourId === 'tour-001')` or equivalent branching exists anywhere in the rule engine. Adding a new tour requires only a new entry in the `TOURS` array; the rule functions require no modification.
